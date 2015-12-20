@@ -1,5 +1,4 @@
 # Pixelbits
--
 
 Pixelbits is a swift based library that reads a YAML (or multiple) file and applies styles to the `UIView` objects you create in your iOS application.
 
