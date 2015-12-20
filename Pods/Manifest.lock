@@ -1,0 +1,10 @@
+PODS:
+  - YamlSwift (1.2.1)
+
+DEPENDENCIES:
+  - YamlSwift
+
+SPEC CHECKSUMS:
+  YamlSwift: 297225be9d8e342f38c566b770289507862d06a1
+
+COCOAPODS: 0.39.0
