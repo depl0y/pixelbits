@@ -1,6 +1,6 @@
-# Pixelbits
+# ![Pixelbits logo](http://cocoa.ninja/pixelbits/pixelbits-32.png) Pixelbits
 
-Pixelbits is a swift based library that reads a [FORMAT TBD] (or multiple) file and applies styles to the `UIView` objects you create in your iOS application.
+Pixelbits is a Swift 2 based library that reads a [FORMAT TBD] file and applies styles to the `UIView` objects you create in your iOS application.
 
 ## Format
 The format for pixelbits has not been decided yet.
