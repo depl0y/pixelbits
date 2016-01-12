@@ -9,5 +9,6 @@
 import UIKit
 
 struct AssociationKeys {
-	static var UIViewStyle = "akUIViewClassName"
+	static var UIViewStyle = "akUIViewStyle"
+	static var UIViewClassName = "akUIViewClassName"
 }
