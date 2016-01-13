@@ -10,6 +10,7 @@ import UIKit
 
 public extension UIView {
 	
+	/// A property that can be used to specifically target this `UIView` for styling
 	public var style: String? {
 		set {
 			objc_setAssociatedObject(
@@ -28,89 +29,37 @@ public extension UIView {
 		}
 	}
 	
-	public var className: String? {
-		set {
-			objc_setAssociatedObject(
-				self,
-				&AssociationKeys.UIViewClassName,
-				newValue,
-				objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
-			
-			self.setNeedsDisplay()
-		}
-		get {
-			return objc_getAssociatedObject(
-				self,
-				&AssociationKeys.UIViewClassName
-				) as? String
-		}
-	}
-	
-	public var stylingExpression: String {
-		get {
-			return self.stylingRegularExpression(nil)
-		}
-	}
-	
+	/**
+	Update styling for this `UIView` and it's subviews
+	*/
 	public func updateStyling() {
-		var path = self.stylingRegularExpression(nil)
-		path = "^(\(path))$"
 		
-		self.setNeedsDisplay()
+		Pixelbits.sharedInstance.applyStyle(self)
 		
-		let style = Pixelbits.sharedInstance.getStyle(path)
-		style.apply(self)
-
-		for v in self.subviews {
-			v.updateStyling();
+		for subview in self.subviews {
+			subview.updateStyling()
 		}
+		
 	}
 	
+	/**
+	Set a value by calling the `set<key>:forState:` selector.
+	This is included to support the `UIControlState`.
+	
+	- parameter value: The value to be set
+	- parameter key:   The key of the value to be set, eg. `Title` to perform `setTitle:forState`
+	- parameter state: The `UIControlState` to set this value for
+	*/
 	public func setValue(value: AnyObject, forKey key: String, forState state: UIControlState) {
 		
 		let methodName = "set" + key + ":forState:"
 		let sel = Selector(methodName)
 		
-		if self.respondsToSelector(sel) {
-			typealias setValueForControlStateIMP = @convention(c) (UIView, Selector, AnyObject, UIControlState) -> Void
-			
-			Log.info("\(className!) responds to \(methodName) : \(value)")
-			
-			let methodSignature = self.methodForSelector(sel)
-			let callback = unsafeBitCast(methodSignature, setValueForControlStateIMP.self)
-			callback(self, sel, value, state)
-		}
-		else {
-			Log.error("\(className!) DOES NOT respond to \(methodName)")
-		}
+		typealias setValueForControlStateIMP = @convention(c) (UIView, Selector, AnyObject, UIControlState) -> Void
+		
+		let methodSignature = self.methodForSelector(sel)
+		let callback = unsafeBitCast(methodSignature, setValueForControlStateIMP.self)
+		callback(self, sel, value, state)
 	}
-	
-	private func stylingRegularExpression(path: String?) -> String {
-		
-		let mirror = Mirror(reflecting: self)
-		let seperator = " > "
-		
-		self.className = "\(mirror.subjectType)"
-		
-		var stylingPath = "\(mirror.subjectType)"
-		if (self.style != nil) {
-			stylingPath += "(.\(self.style!))?"
-			
-			self.className = "\(self.className!).\(self.style!)"
-		}
-		
-		if path != nil {
-			stylingPath += seperator
-			stylingPath += path!;
-		}
-		
-		if self.superview != nil {
-			stylingPath = self.superview!.stylingRegularExpression(stylingPath)
-		}
-		
-		return stylingPath;
-	}
-	
-	
 	
 }

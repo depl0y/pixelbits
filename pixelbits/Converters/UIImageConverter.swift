@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class UIImageConverter: NSObject {
+class UIImageConverter: NSObject {
 
-	public static func fromString(imageString: String) -> String? {
+	static func fromString(imageString: String) -> String? {
 		
 		if !imageString.hasPrefix("image(") || !imageString.hasSuffix(")") {
 			return nil

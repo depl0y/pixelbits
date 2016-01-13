@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class UIFontConverter: NSObject {
+class UIFontConverter: NSObject {
 	
-	public static func fromString(fontString: String) -> UIFont? {
+	static func fromString(fontString: String) -> UIFont? {
 		
 		var parts = fontString.characters.split { $0 == "," }.map(String.init)
 		

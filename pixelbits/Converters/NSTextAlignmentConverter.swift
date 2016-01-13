@@ -8,12 +8,11 @@
 
 import UIKit
 
-public class NSTextAlignmentConverter: NSObject {
+class NSTextAlignmentConverter: NSObject {
 	
-	
-	public static func fromString(alignmentString: String) -> NSTextAlignment? {
+	static func fromString(alignmentString: String) -> NSTextAlignment? {
 		
-		var alignments = [
+		let alignments = [
 			"left" : NSTextAlignment.Left,
 			"right" : NSTextAlignment.Right,
 			"center" : NSTextAlignment.Center,

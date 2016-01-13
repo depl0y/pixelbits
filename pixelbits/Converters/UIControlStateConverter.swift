@@ -11,7 +11,7 @@ import UIKit
 class UIControlStateConverter: NSObject {
 	
 	
-	internal static func fromString(controlState: String) -> UIControlState {
+	static func fromString(controlState: String) -> UIControlState {
 		
 		var states = [
 			"normal" : UIControlState.Normal,

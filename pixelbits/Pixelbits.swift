@@ -13,7 +13,7 @@ public class Pixelbits {
 	static let sharedInstance = Pixelbits()
 	private var stylesheets = Array<String>()
 	
-	private var nodes = Array<PBNode>()
+	private var rootNodes = PBNodeCollection()
 	
 	private init() {
 		
@@ -37,7 +37,7 @@ public class Pixelbits {
 		Pixelbits.sharedInstance.stylesheets.append(resourceName)
 		Log.debug("Loaded stylesheet \(stylesheet)")
 		
-		//Pixelbits.sharedInstance.loadStylesheets()
+		Pixelbits.sharedInstance.loadStylesheets()
 	}
 	
 	
@@ -48,23 +48,14 @@ public class Pixelbits {
 		}
 		
 	}
-	
-	public func getStyle(path: String) -> PBNode {
+
+	public func applyStyle(view: UIView) {
 		
-		let style: Dictionary<String, AnyObject> = [
-			"background-color": "gray",
-			"font" : "HelveticaNeue-Light, 18",
-			"text-color" : "white",
-			"Title:normal" : "Pixelbits rules",
-			"textAlignment" : "center",
-			"@titleLabel" : [
-				"text-color" : "yellow",
-				"font" : "HelveticaNeue-Light, 12",
-			]
-		]
+		let location = UIViewLocation.fromView(view)
+		Log.debug(location.toString())
 		
-		let node = PBNode(key: path, style: style)
-		return node
+		let style = self.rootNodes.compileNodeForLocation(location)
+		style.apply(view)
 	}
 	
 	private func loadStylesheets() {
@@ -74,15 +65,14 @@ public class Pixelbits {
 			if let jsonData = NSData(contentsOfFile: $0) {
 				if let jsonResult = try! NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers) as? Dictionary<String, AnyObject> {
 					
-					self.nodes = PBNode.load(jsonResult)
-					
+					let nodes = PBNode.load(jsonResult)
+					rootNodes.appendContentsOf(nodes)
 				}
 			}
 			
 		}
 		
-		Log.debug("Nodes loaded: \(self.nodes.count)")
-		
+		Log.debug("Nodes loaded: \(self.rootNodes.count)")
 	}
 	
 }

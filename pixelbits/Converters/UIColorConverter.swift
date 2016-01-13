@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class UIColorConverter: NSObject {
+class UIColorConverter: NSObject {
 
-	public static func fromString(colorString: String) -> UIColor? {
+	static func fromString(colorString: String) -> UIColor? {
 		
 		var colorValue = colorString.lowercaseString
 		
@@ -40,7 +40,7 @@ public class UIColorConverter: NSObject {
 		return nil
 	}
 	
-	private static func fromHex(hexString: String) -> UIColor? {
+	static func fromHex(hexString: String) -> UIColor? {
 
 		let hex = hexString.stringByTrimmingCharactersInSet(NSCharacterSet.alphanumericCharacterSet().invertedSet)
 		

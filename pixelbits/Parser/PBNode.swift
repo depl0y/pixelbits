@@ -8,23 +8,23 @@
 
 import UIKit
 
-public class PBNode: NSObject {
+internal class PBNode: NSObject {
 	
 	/// Parent `PBNode` for this node, nil if found in the root of the stylesheet.
-	var parentNode: PBNode?
+	var parent: PBNode?
 	
 	var key: String
 	
 	var nodes = Array<PBNode>()
 	
-	var subViewNodes = Array<PBNode>()
-
+	var subviews = Array<PBNode>()
+	
 	var properties = Array<PBProperty>()
 	
 	init(key: String, parent: PBNode? = nil) {
 		
 		self.key = key
-		self.parentNode = parent
+		self.parent = parent
 		
 		super.init()
 		
@@ -33,7 +33,7 @@ public class PBNode: NSObject {
 	init(key: String, style: Dictionary<String, AnyObject>, parent: PBNode? = nil) {
 		
 		self.key = key
-		self.parentNode = parent
+		self.parent = parent
 		
 		super.init()
 		
@@ -80,52 +80,153 @@ public class PBNode: NSObject {
 			
 			if let childDictionary = value as? Dictionary<String, AnyObject> {
 				
-				let childNode = PBNode(key: key, style: childDictionary, parent: self)
-				
 				if key.hasPrefix("@") {
-					childNode.key = key.substringFromIndex(key.startIndex.advancedBy(1))
-					self.subViewNodes.append(childNode)
+					let subviewKey = key.substringFromIndex(key.startIndex.advancedBy(1))
+					let subViewNode = PBNode(key: subviewKey, style: childDictionary, parent: self)
+					//self.subviews.append(subViewNode)
+					self.addSubview(subViewNode)
 				}
 				else {
+					let childNode = PBNode(key: key, style: childDictionary, parent: self)
 					self.nodes.append(childNode)
 				}
-				
 			}
 			
 			if let valueString = value as? String {
 				
 				if let color = UIColorConverter.fromString(valueString) {
-					self.properties.append(PBProperty(key: key, value: color, type: PBPropertyType.Color))
+					self.addProperty(key, value: color, type: .Color)
 				}
 				else if let font = UIFontConverter.fromString(valueString) {
-					self.properties.append(PBProperty(key: key, value: font, type: PBPropertyType.Font));
+					self.addProperty(key, value: font, type: .Font)
 				}
 				else if let imagePath = UIImageConverter.fromString(valueString) {
-					self.properties.append(PBProperty(key: key, value: imagePath, type: PBPropertyType.Image))
+					self.addProperty(key, value: imagePath, type: .Image)
 				}
 				else if let textAlignment = NSTextAlignmentConverter.fromString(valueString) {
-					self.properties.append(PBProperty(key: key, value: textAlignment.rawValue, type: PBPropertyType.TextAlignment))
+					self.addProperty(key, value: textAlignment.rawValue, type: .TextAlignment)
+				}
+				else if let contentHorizontalAlignment = UIControlContentHorizontalAlignmentConverter.fromString(valueString) {
+					self.addProperty(key, value: contentHorizontalAlignment.rawValue, type: .ContentHorizontalAlignment)
 				}
 				else {
-					self.properties.append(PBProperty(key: key, value: valueString, type: PBPropertyType.Other))
+					self.addProperty(key, value: valueString, type: .Other)
 				}
-
+				
 			}
 			else {
-				self.properties.append(PBProperty(key: key, value: value, type: PBPropertyType.Other))
+				self.addProperty(key, value: value, type: .Other)
 			}
-			
 		}
 		
 	}
 	
-	public func apply(view: UIView) {
+	/**
+	Add a property to the `properties` of this node, when a property with this key already exists, it is replaced.
+	
+	- parameter key:   The key of the property
+	- parameter value: The value for the property
+	- parameter type:  The type of `PBPropertyType` that is stored
+	*/
+	func addProperty(key: String, value: AnyObject, type: PBPropertyType) {
+		
+		let prop = PBProperty(key: key, value: value, type: type)
+
+		if self.hasProperty(prop.key) {
+			self.removeProperty(prop.key)
+		}
+		
+		self.properties.append(prop)
+	}
+	
+	/**
+	Add a `PBProperty` object to the `properties` collection. If a property with the key of the supplied property
+	already exists, the property is replaced
+	
+	- parameter property: `PBProperty` object that is added
+	*/
+	func addProperty(property: PBProperty) {
+		
+		if self.hasProperty(property.key) {
+			self.removeProperty(property.key)
+		}
+		
+		let prop = PBProperty(key: property.key, value: property.value, type: property.type)
+		prop.controlState = property.controlState
+		self.properties.append(prop)
+	}
+	
+	/**
+	Looks in the `properties` collection to see if a property with this key already exists.
+	
+	- parameter key: The key of the property to look for
+	
+	- returns: `true` if a property with this key already exists, otherwise `false`
+	*/
+	func hasProperty(key: String) -> Bool {
+		
+		let props = self.properties.filter { (prop) -> Bool in
+			return prop.key == key
+		}
+		
+		return props.count > 0
+	
+	}
+	
+	/**
+	Remove a property with supplied key from the `properties` collection
+	
+	- parameter key: The key of the property to remove
+	*/
+	func removeProperty(key: String) {
+		let props = self.properties.filter { (prop) -> Bool in
+			return prop.key == key
+		}
+		
+		for prop in props {
+			self.properties.removeObject(prop)
+		}
+	}
+	
+	func addSubview(subview: PBNode) {
+		if self.hasSubview(subview.key) {
+			self.removeSubview(subview.key)
+		}
+		
+		self.subviews.append(subview)
+	}
+	
+	func hasSubview(key: String) -> Bool {
+		let results = self.subviews.filter { (subview) -> Bool in
+			return subview.key == key
+		}
+		
+		return results.count > 0
+	}
+	
+	func removeSubview(key: String) {
+		let results = self.subviews.filter { (subview) -> Bool in
+			return subview.key == key
+		}
+		
+		for subview in results {
+			self.subviews.removeObject(subview)
+		}
+	}
+	
+
+	/**
+	Apply the styling of this node to the supplied `UIView`.
+	
+	- parameter view: The `UIView` this styling should be applied to
+	*/
+	func apply(view: UIView) {
 		
 		for property in self.properties {
 			property.apply(view)
 		}
 		
-		for subViewNode in self.subViewNodes {
+		for subViewNode in self.subviews {
 			if view.respondsToSelector(Selector(subViewNode.key)) {
 				let value = view.valueForKey(subViewNode.key)
 				
@@ -135,7 +236,6 @@ public class PBNode: NSObject {
 			}
 			
 		}
-		
 	}
 	
 	
@@ -167,6 +267,18 @@ public class PBNode: NSObject {
 		
 		return replacedStyle
 		
+	}
+	
+	func pathString() -> String {
+		var result = ""
+		
+		if parent != nil {
+			result = parent!.pathString()
+		}
+		
+		result += "/" + key
+		
+		return result
 	}
 	
 	

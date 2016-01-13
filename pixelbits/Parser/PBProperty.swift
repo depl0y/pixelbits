@@ -8,15 +8,16 @@
 
 import UIKit
 
-public class PBProperty: NSObject {
-
-	public var key: String
-	public var value: AnyObject
-	public var type: PBPropertyType = PBPropertyType.Other
+internal class PBProperty: NSObject {
 	
-	public var controlState: UIControlState?
+	var key: String
+	var value: AnyObject
+	var type: PBPropertyType = PBPropertyType.Other
 	
-	public init(key: String, value: AnyObject, type: PBPropertyType = PBPropertyType.Other) {
+	/// Is a `UIControlState` set for this property
+	var controlState: UIControlState?
+	
+	init(key: String, value: AnyObject, type: PBPropertyType = PBPropertyType.Other) {
 		
 		if key.containsString(":") {
 			var keyParts = key.characters.split { $0 == ":" }.map(String.init)
@@ -39,11 +40,7 @@ public class PBProperty: NSObject {
 		super.init()
 	}
 	
-	public func apply(view: UIView) {
-		
-		if (view.className != nil) {
-			Log.debug("\(view.className!).\(key)")
-		}
+	func apply(view: UIView) {
 		
 		var applyValue = self.value
 		
@@ -51,30 +48,29 @@ public class PBProperty: NSObject {
 			applyValue = UIImage(contentsOfFile: applyValue as! String)!
 		}
 		
-		if self.controlState != nil {
+		if self.controlState != nil && view.respondsToSelector(self.selector) {
 			view.setValue(applyValue, forKey: key, forState: self.controlState!)
 		}
+		else if self.controlState == nil && view.respondsToSelector(self.selector) {
+			view.setValue(applyValue, forKey: key)
+		}
 		else {
-			let sel = Selector(key)
-			
-			if view.respondsToSelector(sel) {
-				view.setValue(applyValue, forKey: key)
-			}
-			else {
-				if (view.className != nil) {
-					Log.error("Could not apply '\(key)' to '\(view.className!)', property does not exist")
-				}
-			}
+			Log.error("Could not apply '\(key)' to '\(view), property does not exist")
 		}
 		
 	}
 	
+	private var selector: Selector {
+		if self.controlState != nil {
+			let selectorString = "set\(self.key):forState:"
+			return Selector(selectorString)
+		}
+		else {
+			return Selector(self.key)
+		}
+	}
+	
+	
+	
 }
 
-public enum PBPropertyType: Int {
-	case Color = 0
-	case Image
-	case Font
-	case TextAlignment
-	case Other
-}
