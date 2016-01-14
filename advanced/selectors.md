@@ -10,7 +10,7 @@ Let's use our example image again:
 
 <div class="row">
 <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
-	<img src="{{ "/images/hierarchy-example.jpg" | prepend: site.baseurl }}" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" />
+	<img src="{{ "/images/Hierarchy-example.jpg" | prepend: site.baseurl }}" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" />
 	<br/><br/>
 </div>
 <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
