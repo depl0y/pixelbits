@@ -58,6 +58,17 @@ class UIViewLocation : Hashable {
 		}
 	}
 	
+	var styleString: String {
+		get {
+			if self.style != nil {
+				return ".\(self.style!)"
+			}
+			else {
+				return ""
+			}
+		}
+	}
+	
 	/**
 	Get `UIViewLocation` for the supplied `UIView`.
 	

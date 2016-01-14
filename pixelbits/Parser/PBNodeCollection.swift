@@ -82,7 +82,7 @@ class PBNodeCollection {
 	*/
 	private func isNodeValid(node: PBNode, location: UIViewLocation) -> Bool {
 		
-		if node.key == location.className || node.key == location.fullName {
+		if node.key == location.className || node.key == location.fullName || node.key == location.styleString {
 			if node.parent != nil && location.parent != nil {
 				return isNodeValid(node.parent!, location: location.parent!)
 			}
@@ -106,7 +106,11 @@ class PBNodeCollection {
 	private func findNodesForLocation(location: UIViewLocation) -> [PBNode] {
 		
 		var result = self.findNodesWithKey(self.nodes, key: location.className)
-		result.appendContentsOf(self.findNodesWithKey(self.nodes, key: location.fullName))
+		
+		if (location.style != nil) {
+			result.appendContentsOf(self.findNodesWithKey(self.nodes, key: location.styleString))
+			result.appendContentsOf(self.findNodesWithKey(self.nodes, key: location.fullName))
+		}
 		
 		for node in result {
 			if !isNodeValid(node, location: location) {
