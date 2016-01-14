@@ -62,6 +62,70 @@
         <div class="container">
     <h1 id="selectors">Selectors</h1>
 
+<p>Pixelbits supports CSS like selectors. You can target views through a really specific path or parts of the part.</p>
+
+<p>Let’s use our example image again:</p>
+
+<div class="row">
+<div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+	<img src="/pixelbits/images/hierarchy-example.jpg" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" />
+	<br /><br />
+</div>
+<div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
+	1. <code>MyViewController</code> (inherits of `UIViewController`) as the base of course<br />
+	2. A <code>UIView</code>, which is part of your <code>UIViewController</code><br />
+	3. <code>MyCustomView</code> is a view, you created yourself, inheriting from <code>UIView</code>.<br />
+	4. You added a <code>UIButton</code> to your <code>MyCustomView</code>.
+</div>
+</div>
+<p><br /></p>
+
+<p>If you want to style the <code class="highlighter-rouge">UIButton</code> in this hierarchy, it is very important you understand how Pixelbits handles this:</p>
+
+<p>First Pixelbits will figure out the path to this UIButton, which is: <code class="highlighter-rouge">/MyViewController/UIView/MyCustomView/UIButton</code>. Pixelbits will generate this
+path based on the <strong>types</strong> of the objects found.</p>
+
+<p>Now, targeting the <code class="highlighter-rouge">UIButton</code> is fairly easy if you understand the concept.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">"MyViewController"</span> <span class="err">:</span> <span class="p">{</span>
+		<span class="s2">"UIView"</span> <span class="err">:</span> <span class="p">{</span>
+			<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"#dedede"</span><span class="p">,</span>
+
+			<span class="s2">"MyCustomView"</span> <span class="err">:</span> <span class="p">{</span>
+				<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"blue"</span><span class="p">,</span>
+				
+				<span class="s2">"UIButton"</span> <span class="err">:</span> <span class="p">{</span>
+					<span class="s2">"Title:normal"</span> <span class="err">:</span> <span class="s2">"My button"</span><span class="p">,</span>
+					<span class="s2">"TitleColor:normal"</span> <span class="err">:</span> <span class="s2">"white"</span><span class="p">,</span>
+					<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>You can also target <strong>every</strong> <code class="highlighter-rouge">UIButton</code> within a <code class="highlighter-rouge">MyCustomView</code>. Just move the <code class="highlighter-rouge">MyCustomView</code> key outside the <code class="highlighter-rouge">MyViewController</code> and it will be applied to every <code class="highlighter-rouge">UIButton</code>
+which is a subview of a <code class="highlighter-rouge">MyCustomView</code>.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">"MyViewController"</span> <span class="err">:</span> <span class="p">{</span>
+		<span class="s2">"UIView"</span> <span class="err">:</span> <span class="p">{</span>
+			<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"#dedede"</span><span class="p">,</span>
+		<span class="p">}</span>
+	<span class="p">},</span>
+	
+	<span class="s2">"MyCustomView"</span> <span class="err">:</span> <span class="p">{</span>
+		<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"blue"</span><span class="p">,</span>
+		
+		<span class="s2">"UIButton"</span> <span class="err">:</span> <span class="p">{</span>
+			<span class="s2">"Title:normal"</span> <span class="err">:</span> <span class="s2">"My button"</span><span class="p">,</span>
+			<span class="s2">"TitleColor:normal"</span> <span class="err">:</span> <span class="s2">"white"</span><span class="p">,</span>
+			<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
 </div>
 
       </div>

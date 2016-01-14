@@ -21,11 +21,11 @@ Let's say you have the following simple hierarchy in your app:
 
 <div class="row">
 <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
-	<img src="{{ "/images/hierarchy-1.png" | prepend: site.baseurl }}" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" />
+	<img src="{{ "/images/hierarchy-example.jpg" | prepend: site.baseurl }}" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" />
 	<br/><br/>
 </div>
 <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
-	1. A <code>UIViewController</code> as the base of course<br/>
+	1. <code>MyViewController</code> (inherits of `UIViewController`) as the base of course<br/>
 	2. A <code>UIView</code>, which is inside your <code>UIViewController</code><br/>
 	3. <code>MyCustomView</code> is a view, you created yourself, inheriting from <code>UIView</code>.<br/>
 	4. You added a <code>UIButton</code> to your <code>MyCustomView</code>.
@@ -40,7 +40,7 @@ To style a <code>UIButton</code>, specifically targeting this hierarchy, you can
 
 {% highlight JS %}
 {
-	"UIViewController" : {
+	"MyViewController" : {
 		"UIView" : {
 			"MyCustomView" : {
 				"UIButton" : {
@@ -63,7 +63,7 @@ Now if you update your stylesheet like this, it will only make the one with the 
 
 {% highlight json %}
 {
-	"UIViewController" : {
+	"MyViewController" : {
 		"UIView" : {
 			"MyCustomView" : {
 				"UIButton.yellow-background" : {
