@@ -77,7 +77,6 @@ class UIViewLocation : Hashable {
 			let parent = UIViewLocation.fromView(view.superview!, child: location)
 			location.parent = parent
 		}
-			/*
 		else if view.viewController != nil {
 			
 			var viewController = view.viewController!
@@ -86,7 +85,7 @@ class UIViewLocation : Hashable {
 			
 			let parent = UIViewLocation(className: viewControllerClassName, child: location)
 			location.parent = parent
-		}*/
+		}
 		
 		return location
 		

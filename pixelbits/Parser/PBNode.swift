@@ -91,8 +91,7 @@ internal class PBNode: NSObject {
 					self.nodes.append(childNode)
 				}
 			}
-			
-			if let valueString = value as? String {
+			else if let valueString = value as? String {
 				
 				if let color = UIColorConverter.fromString(valueString) {
 					self.addProperty(key, value: color, type: .Color)
