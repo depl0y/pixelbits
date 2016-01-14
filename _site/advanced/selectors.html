@@ -72,7 +72,7 @@
 	<br /><br />
 </div>
 <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
-	1. <code>MyViewController</code> (inherits of `UIViewController`) as the base of course<br />
+	1. <code>MyViewController</code> (inherits of <code>UIViewController</code>) as the base of course<br />
 	2. A <code>UIView</code>, which is part of your <code>UIViewController</code><br />
 	3. <code>MyCustomView</code> is a view, you created yourself, inheriting from <code>UIView</code>.<br />
 	4. You added a <code>UIButton</code> to your <code>MyCustomView</code>.
@@ -80,51 +80,93 @@
 </div>
 <p><br /></p>
 
-<p>If you want to style the <code class="highlighter-rouge">UIButton</code> in this hierarchy, it is very important you understand how Pixelbits handles this:</p>
+<p>You desperately want the UIButton to be styled. To do this, you have a couple of options, we will be going from less-specific to really specific.</p>
 
-<p>First Pixelbits will figure out the path to this UIButton, which is: <code class="highlighter-rouge">/MyViewController/UIView/MyCustomView/UIButton</code>. Pixelbits will generate this
-path based on the <strong>types</strong> of the objects found.</p>
+<h3 id="based-on-class">Based on class</h3>
 
-<p>Now, targeting the <code class="highlighter-rouge">UIButton</code> is fairly easy if you understand the concept.</p>
+<p>To style every <code class="highlighter-rouge">UIButton</code> you have, just add a simple rule to your stylesheet.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
-	<span class="s2">"MyViewController"</span> <span class="err">:</span> <span class="p">{</span>
-		<span class="s2">"UIView"</span> <span class="err">:</span> <span class="p">{</span>
-			<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"#dedede"</span><span class="p">,</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">"UIButton"</span> <span class="err">:</span> <span class="p">{</span>
+	<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span>
+<span class="p">}</span></code></pre></figure>
 
-			<span class="s2">"MyCustomView"</span> <span class="err">:</span> <span class="p">{</span>
-				<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"blue"</span><span class="p">,</span>
-				
-				<span class="s2">"UIButton"</span> <span class="err">:</span> <span class="p">{</span>
-					<span class="s2">"Title:normal"</span> <span class="err">:</span> <span class="s2">"My button"</span><span class="p">,</span>
-					<span class="s2">"TitleColor:normal"</span> <span class="err">:</span> <span class="s2">"white"</span><span class="p">,</span>
-					<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span>
-				<span class="p">}</span>
+<h3 id="based-on-class-and-parents">Based on class and parents</h3>
+
+<p>Of course, you don’t want every <code class="highlighter-rouge">UIButton</code> to have the same look. Maybe you want that <code class="highlighter-rouge">UIButton</code> that is located within <code class="highlighter-rouge">MyCustomView</code>
+to have a different background color.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">"MyCustomView"</span> <span class="err">:</span> <span class="p">{</span>
+	<span class="s2">"UIButton"</span> <span class="err">:</span> <span class="p">{</span>
+		<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="based-on-class-and-style">Based on class and style</h3>
+
+<p>Pixelbits adds a new property to every view which inherits from <code class="highlighter-rouge">UIView</code>. The property is called <code class="highlighter-rouge">style</code> and it can be used to identify
+a single <strong>or</strong> multiple views and style them accordingly.</p>
+
+<p><strong>Add a style to your <code class="highlighter-rouge">UIButton</code></strong></p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">btn</span> <span class="o">=</span> <span class="n">UIButton</span><span class="p">(</span><span class="n">type</span><span class="o">:</span> <span class="n">UIButtonType</span><span class="p">.</span><span class="n">Custom</span><span class="p">)</span>
+<span class="n">btn</span><span class="p">.</span><span class="n">style</span> <span class="o">=</span> <span class="s">"red-background"</span></code></pre></figure>
+
+<p><strong>Target this style</strong><br />
+Now the background color will be applied to every <code class="highlighter-rouge">UIView</code> that has the style <code class="highlighter-rouge">red-background</code> assigned.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">".red-background"</span> <span class="err">:</span> <span class="p">{</span>
+	<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><strong>Target a class with a style</strong><br />
+Now the background color will be applied to every <code class="highlighter-rouge">UIButton</code> that has the style <code class="highlighter-rouge">red-background</code> assigned.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">"UIButton.red-background"</span> <span class="err">:</span> <span class="p">{</span>
+	<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 id="based-on-class-style-and-parents">Based on class, style and parents</h3>
+
+<p>This is the most specific way to target your views. You look at the hierarchy you are using within your app and make sure you stick to that in your
+stylesheet.</p>
+
+<p>So in our <code class="highlighter-rouge">UIButton</code> case, if we were to give this UIButton a red background, we would do it like this.</p>
+
+<p><strong>Add a style to your <code class="highlighter-rouge">UIButton</code></strong></p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">let</span> <span class="n">btn</span> <span class="o">=</span> <span class="n">UIButton</span><span class="p">(</span><span class="n">type</span><span class="o">:</span> <span class="n">UIButtonType</span><span class="p">.</span><span class="n">Custom</span><span class="p">)</span>
+<span class="n">btn</span><span class="p">.</span><span class="n">style</span> <span class="o">=</span> <span class="s">"my-unique-style"</span></code></pre></figure>
+
+<p><strong>Add this style, with its exact location to your stylesheet</strong></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">"MyViewController"</span> <span class="err">:</span> <span class="p">{</span>
+	<span class="s2">"UIView"</span> <span class="err">:</span> <span class="p">{</span>
+		<span class="s2">"MyCustomView"</span> <span class="err">:</span> <span class="p">{</span>
+			<span class="s2">"UIButton.my-unique-style"</span> <span class="err">:</span> <span class="p">{</span>
+				<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span>
 			<span class="p">}</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>You can also target <strong>every</strong> <code class="highlighter-rouge">UIButton</code> within a <code class="highlighter-rouge">MyCustomView</code>. Just move the <code class="highlighter-rouge">MyCustomView</code> key outside the <code class="highlighter-rouge">MyViewController</code> and it will be applied to every <code class="highlighter-rouge">UIButton</code>
-which is a subview of a <code class="highlighter-rouge">MyCustomView</code>.</p>
+<h3 id="mix-it-up">Mix it up!</h3>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
-	<span class="s2">"MyViewController"</span> <span class="err">:</span> <span class="p">{</span>
-		<span class="s2">"UIView"</span> <span class="err">:</span> <span class="p">{</span>
-			<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"#dedede"</span><span class="p">,</span>
-		<span class="p">}</span>
-	<span class="p">},</span>
-	
-	<span class="s2">"MyCustomView"</span> <span class="err">:</span> <span class="p">{</span>
-		<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"blue"</span><span class="p">,</span>
-		
-		<span class="s2">"UIButton"</span> <span class="err">:</span> <span class="p">{</span>
-			<span class="s2">"Title:normal"</span> <span class="err">:</span> <span class="s2">"My button"</span><span class="p">,</span>
-			<span class="s2">"TitleColor:normal"</span> <span class="err">:</span> <span class="s2">"white"</span><span class="p">,</span>
-			<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span>
+<p>But that’s not all. You can also mix styles up and based on rule priority Pixelbits will create the style for your button.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">"MyViewController"</span> <span class="err">:</span> <span class="p">{</span>
+	<span class="s2">"UIView"</span> <span class="err">:</span> <span class="p">{</span>
+		<span class="s2">"MyCustomView"</span> <span class="err">:</span> <span class="p">{</span>
+			<span class="s2">"UIButton"</span> <span class="err">:</span> <span class="p">{</span>
+				<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span>
+			<span class="p">}</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
+<span class="p">},</span>
+<span class="s2">"UIButton"</span> <span class="err">:</span> <span class="p">{</span>
+	<span class="s2">"TitleColor:normal"</span> <span class="err">:</span> <span class="s2">"white"</span>
 <span class="p">}</span></code></pre></figure>
+
+<p>This example will give <strong>every</strong> <code class="highlighter-rouge">UIButton</code> in your app a <code class="highlighter-rouge">white</code> title color, but only a really specific one a <code class="highlighter-rouge">red</code> background.</p>
 
 </div>
 
