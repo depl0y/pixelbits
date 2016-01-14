@@ -1,0 +1,24 @@
+.navbar {
+	min-height: 62px;
+}
+
+.navbar-title {
+	font-size: 26px;
+	margin-top: 6px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 22px;
+    padding-bottom: 20px;
+}
+
+.pixel-image {
+	width: 12px;
+	height: 12px;
+	margin-right: 3px;
+	margin-top: -2px;
+}
+
+.pixelbits {
+	font-weight: 900;
+}

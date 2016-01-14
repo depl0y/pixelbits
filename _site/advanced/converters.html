@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Pixelbits</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  
+  <script type="text/javascript" src="/js/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<head>
+
+
+  <body>
+
+    
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Brand" src="/images/pixelbits-32.png">
+      </a>
+	  <a class="navbar-brand navbar-title" href="/">Pixelbits</a>
+    </div>
+	
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home <span class="sr-only">(current)</span></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Advanced <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/advanced/converters">Converters</a></li>
+            <li><a href="/advanced/selectors">Selectors</a></li>
+            <li><a href="/advanced/rule-priority">Rule priority</a></li>
+          </ul>
+        </li>
+        <li><a href="https://github.com/depl0y/pixelbits/tree/master">Github</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container">
+    <h1 id="converters">Converters</h1>
+
+<p><span class="pixelbits"><img class="pixel-image" src="/images/pixelbits-16.png" />Pixelbits</span> relies heavily on it’s so-called ‘Converters’, these translate the values you
+put in your stylesheets to values Swift actually understands.</p>
+
+<p>Currently these are the converters that are supported, but the list could be infinitly long, so we still will probably never have everything covered.</p>
+
+<ol>
+  <li><a href="#DictionaryKey">Dictionary Keys</a></li>
+  <li><a href="#UIColor">UIColor</a></li>
+  <li><a href="#UIControlState">UIControlState</a></li>
+  <li><a href="#UIFont">UIFont</a></li>
+  <li><a href="#UIImage">UIImage</a></li>
+  <li><a href="#NSTextAlignment">NSTextAlignment</a></li>
+  <li><a href="#UIControlContentHorizontalAlignment">UIControlContentHorizontalAlignment</a></li>
+</ol>
+
+<p><a name="DictionaryKey"></a></p>
+
+<h2 id="dictionary-key">Dictionary Key</h2>
+<p>Handled by: <code>DictionaryKeyConverter</code></p>
+
+<p>This converts the keys in your stylesheet to the property names on an <code class="highlighter-rouge">UIView</code>. I <strong>recommend</strong> using the EXACT name of the property in your stylesheet, but you can deviate from 
+that a bit, for readability.</p>
+
+<p>It uses a very simple conversion:</p>
+
+<p><code class="highlighter-rouge">background-color</code> will be translated to <code class="highlighter-rouge">backgroundColor</code>. The dash will be removed from your property name and the next character after that will be converted to uppercase.</p>
+
+<p><strong>Example</strong></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span> <span class="c1">// The key background-color will be converted to match the property backgroundColor</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><a name="UIColor"></a></p>
+
+<h2 id="uicolor">UIColor</h2>
+<p>Handled by: <code>UIColorConverter</code></p>
+
+<p>You have 2 methods of defining colors in your stylesheet, you can either use the web-based hexadecimal way of describing them, or you can use the named colors Swift already understands.</p>
+
+<p>The hexadecimal way <strong>requires</strong> you to prefix your color with the <code class="highlighter-rouge">#</code>, so it can recognize you are using a color. e.g. <code class="highlighter-rouge">#ff0000</code> will produce a bright red color. 
+The hexadecimal way supports RGB (12 bits), RGB (24 bits) and ARGB (32 bits).</p>
+
+<p>Using named colors is a bit different, so if specify a named color, you need to make sure it is an exact match to the method on the <code class="highlighter-rouge">UIColor</code> class. For example, if you want to use
+the red color that <code class="highlighter-rouge">UIColor.redColor()</code> gives you, you need to put <code class="highlighter-rouge">red</code> as the value for your color in your stylesheet.</p>
+
+<p>Take a look at the <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIColor_Class/#//apple_ref/doc/uid/TP40006892-CH3-SW18">Apple Documentation</a> to see 
+which colors are support using this method.</p>
+
+<p><strong>Example</strong></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span><span class="p">,</span> <span class="c1">// triggers the UIColor.redColor() method</span>
+	<span class="s2">"text-color"</span> <span class="err">:</span> <span class="s2">"#efefef"</span> <span class="c1">// converts the color from HEX to light gray</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><a name="UIControlState"></a></p>
+
+<h2 id="uicontrolstate">UIControlState</h2>
+<p>Handled by: <code>UIControlStateConverter</code></p>
+
+<p>A conversion from a <code class="highlighter-rouge">String</code> value to <code class="highlighter-rouge">UIControlState</code>, according to the following table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>String</th>
+      <th>UIControlState</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">normal</code></td>
+      <td><code class="highlighter-rouge">UIControlState.Normal</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">highlighted</code></td>
+      <td><code class="highlighter-rouge">UIControlState.Highlighted</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">disabled</code></td>
+      <td><code class="highlighter-rouge">UIControlState.Disabled</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">selected</code></td>
+      <td><code class="highlighter-rouge">UIControlState.Selected</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">focused</code></td>
+      <td><code class="highlighter-rouge">UIControlState.Focused</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">application</code></td>
+      <td><code class="highlighter-rouge">UIControlState.Application</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">reserved</code></td>
+      <td><code class="highlighter-rouge">UIControlState.Reserved</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <code class="highlighter-rouge">UIControlState</code> should be specified in the <strong>key</strong> of your definition and should be <strong>lowercase</strong>.</p>
+
+<p><strong>Example</strong></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">"title:normal"</span> <span class="err">:</span> <span class="s2">"An awesome title"</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><a name="UIFont"></a></p>
+
+<h2 id="uifont">UIFont</h2>
+<p>Handled by: <code>UIFontConverter</code></p>
+
+<p>The UIFontConverter will try to convert a <code class="highlighter-rouge">String</code> value to an UIFont. You can also specify the font-size in the string value.</p>
+
+<p>The value for the font name should be the <strong>exact</strong> font name, as you can look up on <a href="http://iosfonts.com/">iosfonts.com</a></p>
+
+<p><strong>Example</strong></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">"font"</span> <span class="err">:</span> <span class="s2">"HelveticaNeue-Light"</span><span class="p">,</span>
+	<span class="s2">"some-other-font"</span> <span class="err">:</span> <span class="s2">"AvenirNext-Italic, 18"</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Currently dynamic font sizing is not supported yet, but it is high on our to-do list.</p>
+
+<p><a name="UIImage"></a></p>
+
+<h2 id="uiimage">UIImage</h2>
+<p>Handled by: <code>UIImageConverter</code></p>
+
+<p>For loading <code class="highlighter-rouge">UIImage</code> objects we use an approach a bit more like CSS. You need to put the name of the image between <code class="highlighter-rouge">image(</code> and <code class="highlighter-rouge">)</code>.</p>
+
+<p><strong>Example</strong></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">"background-image"</span> <span class="err">:</span> <span class="s2">"image(my-image-name.jpg)"</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Currently only images from the <code class="highlighter-rouge">mainBundle</code> are supported.</p>
+
+<p><a name="NSTextAlignment"></a></p>
+
+<h2 id="nstextalignment">NSTextAlignment</h2>
+<p>Handled by: <code>NSTextAlignment</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>String</th>
+      <th>NSTextAlignment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">left</code></td>
+      <td><code class="highlighter-rouge">NSTextAlignment.Left</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">right</code></td>
+      <td><code class="highlighter-rouge">NSTextAlignment.Right</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">center</code></td>
+      <td><code class="highlighter-rouge">NSTextAlignment.Center</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">justified</code></td>
+      <td><code class="highlighter-rouge">NSTextAlignment.Justified</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">natural</code></td>
+      <td><code class="highlighter-rouge">NSTextAlignment.Natural</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example</strong></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">"text-alignment"</span> <span class="err">:</span> <span class="s2">"left"</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The string should be <strong>lowercase</strong>.</p>
+
+<p><a name="UIControlContentHorizontalAlignment"></a></p>
+
+<h2 id="uicontrolcontenthorizontalalignment">UIControlContentHorizontalAlignment</h2>
+<p>Handled by: <code>UIControlContentHorizontalAlignmentConveter</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>String</th>
+      <th>UIControlContentHorizontalAlignment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">content-horizontal-left</code></td>
+      <td><code class="highlighter-rouge">UIControlContentHorizontalAlignment.Left</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">content-horizontal-right</code></td>
+      <td><code class="highlighter-rouge">UIControlContentHorizontalAlignment.Right</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">content-horizontal-center</code></td>
+      <td><code class="highlighter-rouge">UIControlContentHorizontalAlignment.Center</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">content-horizontal-fill</code></td>
+      <td><code class="highlighter-rouge">UIControlContentHorizontalAlignment.Fill</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example</strong></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">"UIButton"</span> <span class="err">:</span> <span class="p">{</span>
+	<span class="s2">"contentHorizontalAlignment"</span> <span class="err">:</span> <span class="s2">"content-horizontal-right"</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The string should be <strong>lowercase</strong>.</p>
+
+</div>
+
+      </div>
+    </div>
+
+    <script type="text/javascript">
+	$(document).ready(function() {
+    	$("table").addClass("table").addClass("table-bordered");
+	});
+</script>
+
+  </body>
+
+</html>
