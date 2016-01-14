@@ -19,7 +19,7 @@ class UIControlContentHorizontalAlignmentConverter: NSObject {
 			"content-horizontal-fill" : UIControlContentHorizontalAlignment.Fill
 		]
 		
-		return alignments[alignmentString.lowercaseString]
+		return alignments[alignmentString]
 	}
 
 }

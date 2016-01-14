@@ -20,7 +20,7 @@ class NSTextAlignmentConverter: NSObject {
 			"natural" : NSTextAlignment.Natural
 		]
 		
-		return alignments[alignmentString.lowercaseString]		
+		return alignments[alignmentString]		
 	}
 
 }

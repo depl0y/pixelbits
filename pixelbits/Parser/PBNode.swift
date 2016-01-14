@@ -249,19 +249,8 @@ internal class PBNode: NSObject {
 				replacedStyle[key] = value
 			}
 			
-			var newKey = ""
-			
-			let keyParts = key.characters.split { $0 == "-" }.map(String.init)
-			
-			for (index, keypart) in keyParts.enumerate() {
-				if (index == 0) {
-					newKey += keypart
-				}
-				else {
-					newKey += keypart.capitalizedString
-				}
-			}
-			
+			let newKey = DictionaryKeyConverter.fromString(key)
+
 			replacedStyle[newKey] = value
 		}
 		

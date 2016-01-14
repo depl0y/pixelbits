@@ -12,7 +12,7 @@ class UIColorConverter: NSObject {
 
 	static func fromString(colorString: String) -> UIColor? {
 		
-		var colorValue = colorString.lowercaseString
+		var colorValue = colorString
 		
 		let sel = NSSelectorFromString(colorValue + "Color")
 		

@@ -29,6 +29,17 @@ public extension UIView {
 		}
 	}
 	
+	public var viewController: UIViewController? {
+		get {
+			if let viewController = self.nextResponder() as? UIViewController {
+				return viewController
+			}
+			else {
+				return nil
+			}
+		}
+	}
+	
 	/**
 	Update styling for this `UIView` and it's subviews
 	*/

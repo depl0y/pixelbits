@@ -77,6 +77,16 @@ class UIViewLocation : Hashable {
 			let parent = UIViewLocation.fromView(view.superview!, child: location)
 			location.parent = parent
 		}
+			/*
+		else if view.viewController != nil {
+			
+			var viewController = view.viewController!
+			let viewControllerMirror = Mirror(reflecting: viewController)
+			let viewControllerClassName: String = "\(viewControllerMirror.subjectType)"
+			
+			let parent = UIViewLocation(className: viewControllerClassName, child: location)
+			location.parent = parent
+		}*/
 		
 		return location
 		

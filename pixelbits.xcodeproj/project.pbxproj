@@ -22,6 +22,7 @@
 		AB4CDBAC1C44C81C00E670E9 /* NSTextAlignmentConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4CDBAA1C44C81C00E670E9 /* NSTextAlignmentConverter.swift */; };
 		AB4CDBAD1C44C81C00E670E9 /* UIControlStateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4CDBAB1C44C81C00E670E9 /* UIControlStateConverter.swift */; };
 		AB68BACD1C46AB8400362733 /* UIControlContentHorizontalAlignmentConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68BACC1C46AB8400362733 /* UIControlContentHorizontalAlignmentConverter.swift */; };
+		AB68BACF1C475B0300362733 /* DictionaryKeyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68BACE1C475B0300362733 /* DictionaryKeyConverter.swift */; };
 		ABE17D1D1C42FF6B00755B1F /* PBNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE17D1C1C42FF6B00755B1F /* PBNode.swift */; };
 		ABE17D1F1C4398A900755B1F /* UIImageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE17D1E1C4398A900755B1F /* UIImageConverter.swift */; };
 		ABE17D231C439CA400755B1F /* PBProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE17D221C439CA400755B1F /* PBProperty.swift */; };
@@ -46,6 +47,7 @@
 		AB4CDBAA1C44C81C00E670E9 /* NSTextAlignmentConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSTextAlignmentConverter.swift; path = Converters/NSTextAlignmentConverter.swift; sourceTree = "<group>"; };
 		AB4CDBAB1C44C81C00E670E9 /* UIControlStateConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIControlStateConverter.swift; path = Converters/UIControlStateConverter.swift; sourceTree = "<group>"; };
 		AB68BACC1C46AB8400362733 /* UIControlContentHorizontalAlignmentConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIControlContentHorizontalAlignmentConverter.swift; path = Converters/UIControlContentHorizontalAlignmentConverter.swift; sourceTree = "<group>"; };
+		AB68BACE1C475B0300362733 /* DictionaryKeyConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryKeyConverter.swift; path = Converters/DictionaryKeyConverter.swift; sourceTree = "<group>"; };
 		ABE17D1C1C42FF6B00755B1F /* PBNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBNode.swift; sourceTree = "<group>"; };
 		ABE17D1E1C4398A900755B1F /* UIImageConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageConverter.swift; path = Converters/UIImageConverter.swift; sourceTree = "<group>"; };
 		ABE17D221C439CA400755B1F /* PBProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBProperty.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				AB364C7F1C41A8DD00FDCA5C /* UIFontConverter.swift */,
 				ABE17D1E1C4398A900755B1F /* UIImageConverter.swift */,
 				AB68BACC1C46AB8400362733 /* UIControlContentHorizontalAlignmentConverter.swift */,
+				AB68BACE1C475B0300362733 /* DictionaryKeyConverter.swift */,
 			);
 			name = Converters;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				ABE17D1D1C42FF6B00755B1F /* PBNode.swift in Sources */,
 				AB68BACD1C46AB8400362733 /* UIControlContentHorizontalAlignmentConverter.swift in Sources */,
 				AB35DD461C467BA300E60F32 /* Array+remove.swift in Sources */,
+				AB68BACF1C475B0300362733 /* DictionaryKeyConverter.swift in Sources */,
 				AB4CDBAC1C44C81C00E670E9 /* NSTextAlignmentConverter.swift in Sources */,
 				AB35DD441C46675400E60F32 /* PBNodeCollection.swift in Sources */,
 				AB3A4A4E1C44DA9200BB44FE /* PBPropertyType.swift in Sources */,
