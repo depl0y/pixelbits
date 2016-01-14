@@ -4,7 +4,7 @@ layout: page
 
 # Converters
 
-<span class="pixelbits"><img class="pixel-image" src="/images/pixelbits-16.png">Pixelbits</span> relies heavily on it's so-called 'Converters', these translate the values you
+Pixelbits relies heavily on it's so-called 'Converters', these translate the values you
 put in your stylesheets to values Swift actually understands.
 
 Currently these are the converters that are supported, but the list could be infinitly long, so we still will probably never have everything covered.

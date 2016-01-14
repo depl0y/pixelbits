@@ -21,7 +21,7 @@ Let's say you have the following simple hierarchy in your app:
 
 <div class="row">
 <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
-	<img src="/images/hierarchy-1.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" />
+	<img src="{{ "/images/hierarchy-1.png" | prepend: site.baseurl }}" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" />
 	<br/><br/>
 </div>
 <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
@@ -32,7 +32,7 @@ Let's say you have the following simple hierarchy in your app:
 </div>
 </div><br/>
 
-Now you would like to give the <code>UIButton</code> a specific style, this is a piece of cake with <span class="pixelbits"><img class="pixel-image" src="/images/pixelbits-16.png">Pixelbits</span>. 
+Now you would like to give the <code>UIButton</code> a specific style, this is a piece of cake with Pixelbits. 
 
 First things first, you need to add a JSON file to your project, in our example we are going to call it **stylesheet.json**.
 
@@ -56,7 +56,7 @@ This will target every `UIButton` that is within this hierarchy, so if you added
 
 #### Style
 
-This is the exact reason that <span class="pixelbits"><img class="pixel-image" src="/images/pixelbits-16.png">Pixelbits</span> has added a nice `style` property to **all** your `UIView` objects. 
+This is the exact reason that Pixelbits has added a nice `style` property to **all** your `UIView` objects. 
 This way you can set the `style`-property to (for example) `yellow-background`. 
 
 Now if you update your stylesheet like this, it will only make the one with the applied style yellow.
