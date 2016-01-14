@@ -34,7 +34,8 @@ It uses a very simple conversion:
 **Example**
 {% highlight JS %}
 {
-	"background-color" : "red" // The key background-color will be converted to match the property backgroundColor
+	// The key background-color will be converted to match the property backgroundColor
+	"background-color" : "red" 
 }
 {% endhighlight %}
 
@@ -51,9 +52,6 @@ The hexadecimal way supports RGB (12 bits), RGB (24 bits) and ARGB (32 bits).
 Using named colors is a bit different, so if specify a named color, you need to make sure it is an exact match to the method on the `UIColor` class. For example, if you want to use
 the red color that `UIColor.redColor()` gives you, you need to put `red` as the value for your color in your stylesheet.
 
-Take a look at the [Apple Documentation](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIColor_Class/#//apple_ref/doc/uid/TP40006892-CH3-SW18) to see 
-which colors are support using this method.
-
 **Example**
 {% highlight js %}
 {
@@ -61,6 +59,13 @@ which colors are support using this method.
 	"text-color" : "#efefef" // converts the color from HEX to light gray
 }
 {% endhighlight %}
+
+<div class="alert alert-info">
+Take a look at the <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIColor_Class/#//apple_ref/doc/uid/TP40006892-CH3-SW18">Apple Documentation</a> to see 
+which colors are support using this method.
+</div>
+
+
 
 <a name="UIControlState"></a>
 
@@ -79,8 +84,6 @@ A conversion from a `String` value to `UIControlState`, according to the followi
 | `application` | `UIControlState.Application` |
 | `reserved` | `UIControlState.Reserved` |
 
-The `UIControlState` should be specified in the **key** of your definition and should be **lowercase**.
-			
 **Example**
 {% highlight JS %}
 {
@@ -88,14 +91,16 @@ The `UIControlState` should be specified in the **key** of your definition and s
 }
 {% endhighlight %}
 
+<div class="alert alert-info">
+The `UIControlState` should be specified in the <code>key</code> of your definition and should be <strong>lowercase</strong>.
+</div>
+			
 <a name="UIFont"></a>
 
 ## UIFont
 Handled by: <code>UIFontConverter</code>
 
 The UIFontConverter will try to convert a `String` value to an UIFont. You can also specify the font-size in the string value.
-
-The value for the font name should be the **exact** font name, as you can look up on [iosfonts.com](http://iosfonts.com/)
 
 **Example**
 {% highlight JS %}
@@ -105,7 +110,47 @@ The value for the font name should be the **exact** font name, as you can look u
 }
 {% endhighlight %}
 
-Currently dynamic font sizing is not supported yet, but it is high on our to-do list.
+<div class="alert alert-info">
+The value for the font name should be the <strong>exact</strong> font name, as you can look up on <a href="http://iosfonts.com/">iosfonts.com</a>.
+</div>
+
+<div class="alert alert-warning">
+It is now recommended to use "dynamic font sizing" for the fonts you use in your application. This uses the font sizes the user set up in
+the settings screen.
+</div>
+
+### Dynamic font sizing
+
+| String | UIFontTextStyle |
+| ------ | -------------- |
+| `UIFontTextStyleTitle1` | `UIFontTextStyleTitle1` |
+| `title1` | `UIFontTextStyleTitle1` |
+| `UIFontTextStyleTitle2` | `UIFontTextStyleTitle2` |
+| `title2` | `UIFontTextStyleTitle2` |
+| `UIFontTextStyleTitle3` | `UIFontTextStyleTitle3` |
+| `title3` | `UIFontTextStyleTitle3` |
+| `UIFontTextStyleHeadline` | `UIFontTextStyleHeadline` |
+| `headline` | `UIFontTextStyleHeadline` |
+| `UIFontTextStyleSubheadline` | `UIFontTextStyleSubheadline` |
+| `subheadline` | `UIFontTextStyleSubheadline` |
+| `UIFontTextStyleBody` | `UIFontTextStyleBody` |
+| `body` | `UIFontTextStyleBody` |
+| `UIFontTextStyleFootnote` | `UIFontTextStyleFootnote` |
+| `footnote` | `UIFontTextStyleFootnote` |
+| `UIFontTextStyleCaption1` | `UIFontTextStyleCaption1` |
+| `caption1` | `UIFontTextStyleCaption1` |
+| `UIFontTextStyleCaption2` | `UIFontTextStyleCaption2` |
+| `caption2` | `UIFontTextStyleCaption2` |
+| `UIFontTextStyleCallout` | `UIFontTextStyleCallout` |
+| `callout` | `UIFontTextStyleCallout` |
+
+**Example**
+{% highlight JS %}
+{
+	"font" : "title1",
+	"some-other-font" : "UIFontTextStyleHeadline"
+}
+{% endhighlight %}
 
 <a name="UIImage"></a>
 
@@ -121,7 +166,9 @@ For loading `UIImage` objects we use an approach a bit more like CSS. You need t
 }
 {% endhighlight %}
 
-Currently only images from the `mainBundle` are supported.
+<div class="alert alert-danger">
+Currently only images from the <code>mainBundle</code> are supported.
+</div>
 
 <a name="NSTextAlignment"></a>
 
@@ -143,7 +190,9 @@ Handled by: <code>NSTextAlignment</code>
 }
 {% endhighlight %}
 
-The string should be **lowercase**.
+<div class="alert alert-info">
+The string should be <strong>lowercase</strong>.
+</div>
 
 <a name="UIControlContentHorizontalAlignment"></a>
 
@@ -164,7 +213,9 @@ Handled by: <code>UIControlContentHorizontalAlignmentConverter</code>
 }
 {% endhighlight %}
 
-The string should be **lowercase**.
+<div class="alert alert-info">
+The string should be <strong>lowercase</strong>.
+</div>
 
 <a name="UIControlContentVerticalAlignment"></a>
 
@@ -185,4 +236,6 @@ Handled by: <code>UIControlContentVerticalAlignmentConverter</code>
 }
 {% endhighlight %}
 
-The string should be **lowercase**.
+<div class="alert alert-info">
+The string should be <strong>lowercase</strong>.
+</div>

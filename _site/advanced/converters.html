@@ -93,7 +93,8 @@ that a bit, for readability.</p>
 <p><strong>Example</strong></p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
-	<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span> <span class="c1">// The key background-color will be converted to match the property backgroundColor</span>
+	<span class="c1">// The key background-color will be converted to match the property backgroundColor</span>
+	<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span> 
 <span class="p">}</span></code></pre></figure>
 
 <p><a name="UIColor"></a></p>
@@ -109,15 +110,17 @@ The hexadecimal way supports RGB (12 bits), RGB (24 bits) and ARGB (32 bits).</p
 <p>Using named colors is a bit different, so if specify a named color, you need to make sure it is an exact match to the method on the <code class="highlighter-rouge">UIColor</code> class. For example, if you want to use
 the red color that <code class="highlighter-rouge">UIColor.redColor()</code> gives you, you need to put <code class="highlighter-rouge">red</code> as the value for your color in your stylesheet.</p>
 
-<p>Take a look at the <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIColor_Class/#//apple_ref/doc/uid/TP40006892-CH3-SW18">Apple Documentation</a> to see 
-which colors are support using this method.</p>
-
 <p><strong>Example</strong></p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
 	<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span><span class="p">,</span> <span class="c1">// triggers the UIColor.redColor() method</span>
 	<span class="s2">"text-color"</span> <span class="err">:</span> <span class="s2">"#efefef"</span> <span class="c1">// converts the color from HEX to light gray</span>
 <span class="p">}</span></code></pre></figure>
+
+<div class="alert alert-info">
+Take a look at the <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIColor_Class/#//apple_ref/doc/uid/TP40006892-CH3-SW18">Apple Documentation</a> to see 
+which colors are support using this method.
+</div>
 
 <p><a name="UIControlState"></a></p>
 
@@ -165,13 +168,15 @@ which colors are support using this method.</p>
   </tbody>
 </table>
 
-<p>The <code class="highlighter-rouge">UIControlState</code> should be specified in the <strong>key</strong> of your definition and should be <strong>lowercase</strong>.</p>
-
 <p><strong>Example</strong></p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
 	<span class="s2">"title:normal"</span> <span class="err">:</span> <span class="s2">"An awesome title"</span>
 <span class="p">}</span></code></pre></figure>
+
+<div class="alert alert-info">
+The `UIControlState` should be specified in the <code>key</code> of your definition and should be <strong>lowercase</strong>.
+</div>
 
 <p><a name="UIFont"></a></p>
 
@@ -180,8 +185,6 @@ which colors are support using this method.</p>
 
 <p>The UIFontConverter will try to convert a <code class="highlighter-rouge">String</code> value to an UIFont. You can also specify the font-size in the string value.</p>
 
-<p>The value for the font name should be the <strong>exact</strong> font name, as you can look up on <a href="http://iosfonts.com/">iosfonts.com</a></p>
-
 <p><strong>Example</strong></p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
@@ -189,7 +192,114 @@ which colors are support using this method.</p>
 	<span class="s2">"some-other-font"</span> <span class="err">:</span> <span class="s2">"AvenirNext-Italic, 18"</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Currently dynamic font sizing is not supported yet, but it is high on our to-do list.</p>
+<div class="alert alert-info">
+The value for the font name should be the <strong>exact</strong> font name, as you can look up on <a href="http://iosfonts.com/">iosfonts.com</a>.
+</div>
+
+<div class="alert alert-warning">
+It is now recommended to use "dynamic font sizing" for the fonts you use in your application. This uses the font sizes the user set up in
+the settings screen.
+</div>
+
+<h3 id="dynamic-font-sizing">Dynamic font sizing</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>String</th>
+      <th>UIFontTextStyle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">UIFontTextStyleTitle1</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleTitle1</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">title1</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleTitle1</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIFontTextStyleTitle2</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleTitle2</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">title2</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleTitle2</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIFontTextStyleTitle3</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleTitle3</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">title3</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleTitle3</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIFontTextStyleHeadline</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleHeadline</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">headline</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleHeadline</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIFontTextStyleSubheadline</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleSubheadline</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">subheadline</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleSubheadline</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIFontTextStyleBody</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleBody</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">body</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleBody</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIFontTextStyleFootnote</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleFootnote</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">footnote</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleFootnote</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIFontTextStyleCaption1</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleCaption1</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">caption1</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleCaption1</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIFontTextStyleCaption2</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleCaption2</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">caption2</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleCaption2</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIFontTextStyleCallout</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleCallout</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">callout</code></td>
+      <td><code class="highlighter-rouge">UIFontTextStyleCallout</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example</strong></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">"font"</span> <span class="err">:</span> <span class="s2">"title1"</span><span class="p">,</span>
+	<span class="s2">"some-other-font"</span> <span class="err">:</span> <span class="s2">"UIFontTextStyleHeadline"</span>
+<span class="p">}</span></code></pre></figure>
 
 <p><a name="UIImage"></a></p>
 
@@ -204,7 +314,9 @@ which colors are support using this method.</p>
 	<span class="s2">"background-image"</span> <span class="err">:</span> <span class="s2">"image(my-image-name.jpg)"</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>Currently only images from the <code class="highlighter-rouge">mainBundle</code> are supported.</p>
+<div class="alert alert-danger">
+Currently only images from the <code>mainBundle</code> are supported.
+</div>
 
 <p><a name="NSTextAlignment"></a></p>
 
@@ -248,7 +360,9 @@ which colors are support using this method.</p>
 	<span class="s2">"text-alignment"</span> <span class="err">:</span> <span class="s2">"left"</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>The string should be <strong>lowercase</strong>.</p>
+<div class="alert alert-info">
+The string should be <strong>lowercase</strong>.
+</div>
 
 <p><a name="UIControlContentHorizontalAlignment"></a></p>
 
@@ -288,7 +402,9 @@ which colors are support using this method.</p>
 	<span class="s2">"contentHorizontalAlignment"</span> <span class="err">:</span> <span class="s2">"content-horizontal-right"</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>The string should be <strong>lowercase</strong>.</p>
+<div class="alert alert-info">
+The string should be <strong>lowercase</strong>.
+</div>
 
 <p><a name="UIControlContentVerticalAlignment"></a></p>
 
@@ -328,7 +444,9 @@ which colors are support using this method.</p>
 	<span class="s2">"contentVerticalAlignment"</span> <span class="err">:</span> <span class="s2">"content-vertical-bottom"</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>The string should be <strong>lowercase</strong>.</p>
+<div class="alert alert-info">
+The string should be <strong>lowercase</strong>.
+</div>
 
 </div>
 
