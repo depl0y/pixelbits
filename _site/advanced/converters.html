@@ -75,6 +75,7 @@ put in your stylesheets to values Swift actually understands.</p>
   <li><a href="#UIImage">UIImage</a></li>
   <li><a href="#NSTextAlignment">NSTextAlignment</a></li>
   <li><a href="#UIControlContentHorizontalAlignment">UIControlContentHorizontalAlignment</a></li>
+  <li><a href="#UIControlContentVerticalAlignment">UIControlContentVerticalAlignment</a></li>
 </ol>
 
 <p><a name="DictionaryKey"></a></p>
@@ -252,7 +253,7 @@ which colors are support using this method.</p>
 <p><a name="UIControlContentHorizontalAlignment"></a></p>
 
 <h2 id="uicontrolcontenthorizontalalignment">UIControlContentHorizontalAlignment</h2>
-<p>Handled by: <code>UIControlContentHorizontalAlignmentConveter</code></p>
+<p>Handled by: <code>UIControlContentHorizontalAlignmentConverter</code></p>
 
 <table>
   <thead>
@@ -285,6 +286,46 @@ which colors are support using this method.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">"UIButton"</span> <span class="err">:</span> <span class="p">{</span>
 	<span class="s2">"contentHorizontalAlignment"</span> <span class="err">:</span> <span class="s2">"content-horizontal-right"</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The string should be <strong>lowercase</strong>.</p>
+
+<p><a name="UIControlContentVerticalAlignment"></a></p>
+
+<h2 id="uicontrolcontentverticalalignment">UIControlContentVerticalAlignment</h2>
+<p>Handled by: <code>UIControlContentVerticalAlignmentConverter</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>String</th>
+      <th>UIControlContentVerticalAlignment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">content-vertical-top</code></td>
+      <td><code class="highlighter-rouge">UIControlContentVerticalAlignment.Top</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">content-vertical-bottom</code></td>
+      <td><code class="highlighter-rouge">UIControlContentVerticalAlignment.Bottom</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">content-vertical-center</code></td>
+      <td><code class="highlighter-rouge">UIControlContentVerticalAlignment.Center</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">content-horizontal-fill</code></td>
+      <td><code class="highlighter-rouge">UIControlContentVerticalAlignment.Fill</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example</strong></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">"UIButton"</span> <span class="err">:</span> <span class="p">{</span>
+	<span class="s2">"contentVerticalAlignment"</span> <span class="err">:</span> <span class="s2">"content-vertical-bottom"</span>
 <span class="p">}</span></code></pre></figure>
 
 <p>The string should be <strong>lowercase</strong>.</p>

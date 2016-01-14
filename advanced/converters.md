@@ -16,6 +16,7 @@ Currently these are the converters that are supported, but the list could be inf
 5. [UIImage](#UIImage)
 6. [NSTextAlignment](#NSTextAlignment)
 7. [UIControlContentHorizontalAlignment](#UIControlContentHorizontalAlignment)
+8. [UIControlContentVerticalAlignment](#UIControlContentVerticalAlignment)
 
 
 <a name="DictionaryKey"></a>
@@ -147,7 +148,7 @@ The string should be **lowercase**.
 <a name="UIControlContentHorizontalAlignment"></a>
 
 ## UIControlContentHorizontalAlignment
-Handled by: <code>UIControlContentHorizontalAlignmentConveter</code>
+Handled by: <code>UIControlContentHorizontalAlignmentConverter</code>
 
 | String | UIControlContentHorizontalAlignment |
 | ------ | -------------- |
@@ -160,6 +161,27 @@ Handled by: <code>UIControlContentHorizontalAlignmentConveter</code>
 {% highlight JS %}
 "UIButton" : {
 	"contentHorizontalAlignment" : "content-horizontal-right"
+}
+{% endhighlight %}
+
+The string should be **lowercase**.
+
+<a name="UIControlContentVerticalAlignment"></a>
+
+## UIControlContentVerticalAlignment
+Handled by: <code>UIControlContentVerticalAlignmentConverter</code>
+
+| String | UIControlContentVerticalAlignment |
+| ------ | -------------- |
+| `content-vertical-top` | `UIControlContentVerticalAlignment.Top` |
+| `content-vertical-bottom` | `UIControlContentVerticalAlignment.Bottom` |
+| `content-vertical-center` | `UIControlContentVerticalAlignment.Center` |
+| `content-horizontal-fill` | `UIControlContentVerticalAlignment.Fill` |
+
+**Example**
+{% highlight JS %}
+"UIButton" : {
+	"contentVerticalAlignment" : "content-vertical-bottom"
 }
 {% endhighlight %}
 
