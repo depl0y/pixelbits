@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIControlContentHorizontalAlignmentConverter: NSObject {
+class UIControlContentHorizontalAlignmentConverter {
 	
 	static func fromString(alignmentString: String) -> UIControlContentHorizontalAlignment? {
 		

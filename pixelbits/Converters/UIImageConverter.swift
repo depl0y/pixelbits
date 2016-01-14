@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIImageConverter: NSObject {
+class UIImageConverter {
 
 	static func fromString(imageString: String) -> String? {
 		

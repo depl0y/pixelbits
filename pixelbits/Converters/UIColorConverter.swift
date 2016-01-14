@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIColorConverter: NSObject {
+class UIColorConverter {
 
 	static func fromString(colorString: String) -> UIColor? {
 		

@@ -14,5 +14,6 @@ enum PBPropertyType: Int {
 	case Font
 	case TextAlignment
 	case ContentHorizontalAlignment
+	case ContentVerticalAlignment
 	case Other
 }

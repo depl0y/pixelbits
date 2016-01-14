@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NSTextAlignmentConverter: NSObject {
+class NSTextAlignmentConverter {
 	
 	static func fromString(alignmentString: String) -> NSTextAlignment? {
 		

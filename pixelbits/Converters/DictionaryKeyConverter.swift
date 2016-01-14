@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DictionaryKeyConverter: NSObject {
+class DictionaryKeyConverter {
 
 	static func fromString(key: String) -> String {
 		

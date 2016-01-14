@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIControlStateConverter: NSObject {
+class UIControlStateConverter {
 	
 	
 	static func fromString(controlState: String) -> UIControlState {

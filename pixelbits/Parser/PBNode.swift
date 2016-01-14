@@ -108,6 +108,9 @@ internal class PBNode: NSObject {
 				else if let contentHorizontalAlignment = UIControlContentHorizontalAlignmentConverter.fromString(valueString) {
 					self.addProperty(key, value: contentHorizontalAlignment.rawValue, type: .ContentHorizontalAlignment)
 				}
+				else if let contentVerticalAlignment = UIControlContentVerticalAlignmentConverter.fromString(valueString) {
+					self.addProperty(key, value: contentVerticalAlignment.rawValue, type: .ContentVerticalAlignment)
+				}
 				else {
 					self.addProperty(key, value: valueString, type: .Other)
 				}
