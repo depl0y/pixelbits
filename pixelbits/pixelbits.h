@@ -16,4 +16,5 @@ FOUNDATION_EXPORT const unsigned char pixelbitsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <pixelbits/PublicHeader.h>
 
+#import <pixelbits/TryCatch.h>
 

@@ -10,15 +10,24 @@ import UIKit
 
 class UIImageConverter {
 
-	static func fromString(imageString: String) -> String? {
+	static func fromString(imageString: String) -> UIImage? {
 		
-		if !imageString.hasPrefix("image(") || !imageString.hasSuffix(")") {
+		let expression = "image\\((.+?)\\)"
+		
+		let imageMatches = imageString.matches(expression)
+		
+		if imageMatches.count == 0 {
 			return nil
 		}
 		
-		let resourcePath = NSBundle.mainBundle().pathForResource("fnf.jpg", ofType: nil)
+		var imageName = imageMatches[0]
+		var img = UIImage(named: imageName)
 		
-		return resourcePath
+		if img == nil {
+			img = UIImage()
+		}
+		
+		return img
 	}
 	
 	

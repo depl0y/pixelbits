@@ -9,11 +9,12 @@
 import UIKit
 
 enum PBPropertyType: Int {
-	case Color = 0
-	case Image
-	case Font
-	case TextAlignment
-	case ContentHorizontalAlignment
-	case ContentVerticalAlignment
+	case UIColor = 0
+	case UIImage
+	case UIFont
+	case NSTextAlignment
+	case UIContentHorizontalAlignment
+	case UIContentVerticalAlignment
+	case UIFontTextStyle
 	case Other
 }

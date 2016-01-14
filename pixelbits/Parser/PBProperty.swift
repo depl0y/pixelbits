@@ -42,17 +42,27 @@ internal class PBProperty: NSObject {
 	
 	func apply(view: UIView) {
 		
-		var applyValue = self.value
-		
-		if self.type == .Image {
-			applyValue = UIImage(contentsOfFile: applyValue as! String)!
-		}
-		
 		if self.controlState != nil && view.respondsToSelector(self.selector) {
-			view.setValue(applyValue, forKey: key, forState: self.controlState!)
+			
+			do {
+				try TryCatch.tryBlock({ () -> Void in
+					view.setValue(self.value, forKey: self.key, forState: self.controlState!)
+				})
+			} catch {
+				Log.debug("Could not apply \(self.value) to \(self.key)")
+			}
+			
 		}
 		else if self.controlState == nil && view.respondsToSelector(self.selector) {
-			view.setValue(applyValue, forKey: key)
+			
+			do {
+				try TryCatch.tryBlock({ () -> Void in
+					view.setValue(self.value, forKey: self.key)
+				})
+			} catch {
+				Log.debug("Could not apply \(self.value) to \(self.key)")
+			}
+			
 		}
 		else {
 			Log.error("Could not apply '\(key)' to '\(view), property does not exist")

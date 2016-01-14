@@ -21,9 +21,14 @@
 		AB3A4A4E1C44DA9200BB44FE /* PBPropertyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3A4A4D1C44DA9200BB44FE /* PBPropertyType.swift */; };
 		AB4CDBAC1C44C81C00E670E9 /* NSTextAlignmentConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4CDBAA1C44C81C00E670E9 /* NSTextAlignmentConverter.swift */; };
 		AB4CDBAD1C44C81C00E670E9 /* UIControlStateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4CDBAB1C44C81C00E670E9 /* UIControlStateConverter.swift */; };
+		AB637E5F1C47A61B00B0A845 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB637E5E1C47A61B00B0A845 /* String+Regex.swift */; };
+		AB637E631C47AC4200B0A845 /* TryCatch.h in Headers */ = {isa = PBXBuildFile; fileRef = AB637E611C47AC4200B0A845 /* TryCatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB637E641C47AC4200B0A845 /* TryCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = AB637E621C47AC4200B0A845 /* TryCatch.m */; };
+		AB637E6D1C483D3700B0A845 /* UIFontTextStyleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB637E6C1C483D3700B0A845 /* UIFontTextStyleConverter.swift */; };
 		AB68BACD1C46AB8400362733 /* UIControlContentHorizontalAlignmentConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68BACC1C46AB8400362733 /* UIControlContentHorizontalAlignmentConverter.swift */; };
 		AB68BACF1C475B0300362733 /* DictionaryKeyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68BACE1C475B0300362733 /* DictionaryKeyConverter.swift */; };
 		AB68BAD11C47818100362733 /* UIControlContentVerticalAlignmentConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68BAD01C47818100362733 /* UIControlContentVerticalAlignmentConverter.swift */; };
+		ABDF430A1C47967500F01EB4 /* ValueConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDF43091C47967500F01EB4 /* ValueConverter.swift */; };
 		ABE17D1D1C42FF6B00755B1F /* PBNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE17D1C1C42FF6B00755B1F /* PBNode.swift */; };
 		ABE17D1F1C4398A900755B1F /* UIImageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE17D1E1C4398A900755B1F /* UIImageConverter.swift */; };
 		ABE17D231C439CA400755B1F /* PBProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE17D221C439CA400755B1F /* PBProperty.swift */; };
@@ -47,9 +52,14 @@
 		AB3A4A4D1C44DA9200BB44FE /* PBPropertyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBPropertyType.swift; sourceTree = "<group>"; };
 		AB4CDBAA1C44C81C00E670E9 /* NSTextAlignmentConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSTextAlignmentConverter.swift; path = Converters/NSTextAlignmentConverter.swift; sourceTree = "<group>"; };
 		AB4CDBAB1C44C81C00E670E9 /* UIControlStateConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIControlStateConverter.swift; path = Converters/UIControlStateConverter.swift; sourceTree = "<group>"; };
+		AB637E5E1C47A61B00B0A845 /* String+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Regex.swift"; path = "Extensions/String+Regex.swift"; sourceTree = "<group>"; };
+		AB637E611C47AC4200B0A845 /* TryCatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TryCatch.h; path = Other/TryCatch.h; sourceTree = "<group>"; };
+		AB637E621C47AC4200B0A845 /* TryCatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TryCatch.m; path = Other/TryCatch.m; sourceTree = "<group>"; };
+		AB637E6C1C483D3700B0A845 /* UIFontTextStyleConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIFontTextStyleConverter.swift; path = Converters/UIFontTextStyleConverter.swift; sourceTree = "<group>"; };
 		AB68BACC1C46AB8400362733 /* UIControlContentHorizontalAlignmentConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIControlContentHorizontalAlignmentConverter.swift; path = Converters/UIControlContentHorizontalAlignmentConverter.swift; sourceTree = "<group>"; };
 		AB68BACE1C475B0300362733 /* DictionaryKeyConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryKeyConverter.swift; path = Converters/DictionaryKeyConverter.swift; sourceTree = "<group>"; };
 		AB68BAD01C47818100362733 /* UIControlContentVerticalAlignmentConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIControlContentVerticalAlignmentConverter.swift; path = Converters/UIControlContentVerticalAlignmentConverter.swift; sourceTree = "<group>"; };
+		ABDF43091C47967500F01EB4 /* ValueConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValueConverter.swift; path = Converters/ValueConverter.swift; sourceTree = "<group>"; };
 		ABE17D1C1C42FF6B00755B1F /* PBNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBNode.swift; sourceTree = "<group>"; };
 		ABE17D1E1C4398A900755B1F /* UIImageConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageConverter.swift; path = Converters/UIImageConverter.swift; sourceTree = "<group>"; };
 		ABE17D221C439CA400755B1F /* PBProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBProperty.swift; sourceTree = "<group>"; };
@@ -86,7 +96,9 @@
 				AB68BAD01C47818100362733 /* UIControlContentVerticalAlignmentConverter.swift */,
 				AB4CDBAB1C44C81C00E670E9 /* UIControlStateConverter.swift */,
 				AB364C7F1C41A8DD00FDCA5C /* UIFontConverter.swift */,
+				AB637E6C1C483D3700B0A845 /* UIFontTextStyleConverter.swift */,
 				ABE17D1E1C4398A900755B1F /* UIImageConverter.swift */,
+				ABDF43091C47967500F01EB4 /* ValueConverter.swift */,
 			);
 			name = Converters;
 			sourceTree = "<group>";
@@ -112,14 +124,14 @@
 		AB3984C11C26906A00A38589 /* pixelbits */ = {
 			isa = PBXGroup;
 			children = (
-				ABE17D191C42FF2500755B1F /* Parsing */,
-				AB364C7C1C41569A00FDCA5C /* Converters */,
 				AB3984CF1C26962C00A38589 /* AssociationKeys.swift */,
+				AB364C7C1C41569A00FDCA5C /* Converters */,
 				AB3984CC1C26925200A38589 /* Extensions */,
 				AB3984C41C26906A00A38589 /* Info.plist */,
+				AB637E601C47AC2C00B0A845 /* Other */,
+				ABE17D191C42FF2500755B1F /* Parsing */,
 				AB3984C21C26906A00A38589 /* pixelbits.h */,
 				AB3984CA1C2690EC00A38589 /* Pixelbits.swift */,
-				AB364C811C41B2FF00FDCA5C /* Log.swift */,
 			);
 			path = pixelbits;
 			sourceTree = "<group>";
@@ -127,20 +139,31 @@
 		AB3984CC1C26925200A38589 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AB3984CD1C26927300A38589 /* UIView+Bits.swift */,
 				AB35DD451C467BA300E60F32 /* Array+remove.swift */,
+				AB637E5E1C47A61B00B0A845 /* String+Regex.swift */,
+				AB3984CD1C26927300A38589 /* UIView+Bits.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		AB637E601C47AC2C00B0A845 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				AB364C811C41B2FF00FDCA5C /* Log.swift */,
+				AB637E611C47AC4200B0A845 /* TryCatch.h */,
+				AB637E621C47AC4200B0A845 /* TryCatch.m */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 		ABE17D191C42FF2500755B1F /* Parsing */ = {
 			isa = PBXGroup;
 			children = (
 				ABE17D1C1C42FF6B00755B1F /* PBNode.swift */,
+				AB35DD431C46675400E60F32 /* PBNodeCollection.swift */,
 				ABE17D221C439CA400755B1F /* PBProperty.swift */,
 				AB3A4A4D1C44DA9200BB44FE /* PBPropertyType.swift */,
 				AB35DD411C45093600E60F32 /* UIViewLocation.swift */,
-				AB35DD431C46675400E60F32 /* PBNodeCollection.swift */,
 			);
 			name = Parsing;
 			path = Parser;
@@ -162,6 +185,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB637E631C47AC4200B0A845 /* TryCatch.h in Headers */,
 				AB3984C31C26906A00A38589 /* pixelbits.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,11 +219,13 @@
 		AB3984B61C26906A00A38589 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Wim Haanstra";
 				TargetAttributes = {
 					AB3984BE1C26906A00A38589 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = VL6GQ32BN6;
 					};
 				};
 			};
@@ -270,9 +296,13 @@
 			files = (
 				AB4CDBAD1C44C81C00E670E9 /* UIControlStateConverter.swift in Sources */,
 				ABE17D1F1C4398A900755B1F /* UIImageConverter.swift in Sources */,
+				AB637E6D1C483D3700B0A845 /* UIFontTextStyleConverter.swift in Sources */,
+				ABDF430A1C47967500F01EB4 /* ValueConverter.swift in Sources */,
 				AB3984D01C26962C00A38589 /* AssociationKeys.swift in Sources */,
 				AB364C821C41B2FF00FDCA5C /* Log.swift in Sources */,
+				AB637E641C47AC4200B0A845 /* TryCatch.m in Sources */,
 				AB35DD421C45093600E60F32 /* UIViewLocation.swift in Sources */,
+				AB637E5F1C47A61B00B0A845 /* String+Regex.swift in Sources */,
 				AB3984CE1C26927300A38589 /* UIView+Bits.swift in Sources */,
 				ABE17D231C439CA400755B1F /* PBProperty.swift in Sources */,
 				ABE17D1D1C42FF6B00755B1F /* PBNode.swift in Sources */,
@@ -386,6 +416,7 @@
 			baseConfigurationReference = 91ED8E759875735D7D64A2B6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -402,6 +433,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sortedbits.pixelbits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -411,6 +443,7 @@
 			baseConfigurationReference = 62D502DC563920273B59A114 /* Pods.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -427,6 +460,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sortedbits.pixelbits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

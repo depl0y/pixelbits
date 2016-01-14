@@ -83,42 +83,18 @@ internal class PBNode: NSObject {
 				if key.hasPrefix("@") {
 					let subviewKey = key.substringFromIndex(key.startIndex.advancedBy(1))
 					let subViewNode = PBNode(key: subviewKey, style: childDictionary, parent: self)
-					//self.subviews.append(subViewNode)
 					self.addSubview(subViewNode)
 				}
 				else {
 					let childNode = PBNode(key: key, style: childDictionary, parent: self)
 					self.nodes.append(childNode)
 				}
-			}
-			else if let valueString = value as? String {
-				
-				if let color = UIColorConverter.fromString(valueString) {
-					self.addProperty(key, value: color, type: .Color)
-				}
-				else if let font = UIFontConverter.fromString(valueString) {
-					self.addProperty(key, value: font, type: .Font)
-				}
-				else if let imagePath = UIImageConverter.fromString(valueString) {
-					self.addProperty(key, value: imagePath, type: .Image)
-				}
-				else if let textAlignment = NSTextAlignmentConverter.fromString(valueString) {
-					self.addProperty(key, value: textAlignment.rawValue, type: .TextAlignment)
-				}
-				else if let contentHorizontalAlignment = UIControlContentHorizontalAlignmentConverter.fromString(valueString) {
-					self.addProperty(key, value: contentHorizontalAlignment.rawValue, type: .ContentHorizontalAlignment)
-				}
-				else if let contentVerticalAlignment = UIControlContentVerticalAlignmentConverter.fromString(valueString) {
-					self.addProperty(key, value: contentVerticalAlignment.rawValue, type: .ContentVerticalAlignment)
-				}
-				else {
-					self.addProperty(key, value: valueString, type: .Other)
-				}
 				
 			}
 			else {
-				self.addProperty(key, value: value, type: .Other)
+				self.addProperty(ValueToPropertyConverter.fromAnyObject(key, value: value))
 			}
+
 		}
 		
 	}
