@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PBNodeCollection {
+internal class PBNodeCollection {
 
 	private var nodes: [PBNode] = [PBNode]()
 	

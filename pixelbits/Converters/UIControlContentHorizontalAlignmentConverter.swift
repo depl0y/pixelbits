@@ -8,18 +8,10 @@
 
 import UIKit
 
-class UIControlContentHorizontalAlignmentConverter {
+internal class UIControlContentHorizontalAlignmentConverter {
 	
 	static func fromString(alignmentString: String) -> UIControlContentHorizontalAlignment? {
-		
-		let alignments = [
-			"content-horizontal-left" : UIControlContentHorizontalAlignment.Left,
-			"content-horizontal-right" : UIControlContentHorizontalAlignment.Right,
-			"content-horizontal-center" : UIControlContentHorizontalAlignment.Center,
-			"content-horizontal-fill" : UIControlContentHorizontalAlignment.Fill
-		]
-		
-		return alignments[alignmentString]
+		return Conversions.UIControlContentHorizontalAlignments[alignmentString]
 	}
 
 }

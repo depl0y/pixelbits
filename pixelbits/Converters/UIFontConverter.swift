@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIFontConverter {
+internal class UIFontConverter {
 	
 	static func fromString(fontString: String) -> UIFont? {
 		

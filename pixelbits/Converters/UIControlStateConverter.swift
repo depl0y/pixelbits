@@ -8,28 +8,16 @@
 
 import UIKit
 
-class UIControlStateConverter {
+internal class UIControlStateConverter {
 	
 	
 	static func fromString(controlState: String) -> UIControlState {
 		
-		var states = [
-			"normal" : UIControlState.Normal,
-			"highlighted" : UIControlState.Highlighted,
-			"disabled" : UIControlState.Disabled,
-			"selected" : UIControlState.Selected,
-			"focused" : UIControlState.Focused,
-			"application" : UIControlState.Application,
-			"reserved" : UIControlState.Reserved
-		]
+		if let controlState = Conversions.UIControlStates[controlState.lowercaseString] {
+			return controlState
+		}
 
-		if states[controlState.lowercaseString] == nil {
-			return UIControlState.Normal
-		}
-		else {
-			return states[controlState.lowercaseString]!
-		}
-		
+		return UIControlState.Normal
 	}
 	
 }

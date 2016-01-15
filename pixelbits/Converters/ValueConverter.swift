@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ValueToPropertyConverter {
+internal class ValueToPropertyConverter {
 
 	static func fromAnyObject(key: String, value: AnyObject) -> PBProperty {
 		

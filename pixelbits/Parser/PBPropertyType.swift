@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum PBPropertyType: Int {
+internal enum PBPropertyType: Int {
 	case UIColor = 0
 	case UIImage
 	case UIFont

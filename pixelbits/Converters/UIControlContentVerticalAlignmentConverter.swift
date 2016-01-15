@@ -8,18 +8,10 @@
 
 import UIKit
 
-class UIControlContentVerticalAlignmentConverter {
+internal class UIControlContentVerticalAlignmentConverter {
 
 	static func fromString(alignmentString: String) -> UIControlContentVerticalAlignment? {
-
-		let alignments = [
-			"content-vertical-bottom" : UIControlContentVerticalAlignment.Bottom,
-			"content-vertical-fill" : UIControlContentVerticalAlignment.Fill,
-			"content-vertical-center" : UIControlContentVerticalAlignment.Center,
-			"content-vertical-top" : UIControlContentVerticalAlignment.Top
-		]
-		
-		return alignments[alignmentString]
+		return Conversions.UIControlContentVerticalAlignments[alignmentString]
 	}
 	
 }

@@ -13,7 +13,7 @@ import UIKit
 
 	This will create a reference which can be used to reference in the stylesheets.
 */
-class UIViewLocation : Hashable {
+internal class UIViewLocation : Hashable {
 
 	var parent: UIViewLocation?
 	var child: UIViewLocation?
