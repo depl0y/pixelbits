@@ -17,13 +17,9 @@ internal class UIColorConverter {
 		let sel = NSSelectorFromString(colorValue + "Color")
 		
 		if UIColor.respondsToSelector(sel) {
-			
-			Log.info("Performing UIColor.\(colorValue)Color")
-			
 			let result = UIColor.performSelector(sel)
-			let resultColor = result.takeRetainedValue() as? UIColor
-			
-			if (resultColor != nil) {
+
+			if let resultColor = result.takeRetainedValue() as? UIColor {
 				return resultColor
 			}
 		}
