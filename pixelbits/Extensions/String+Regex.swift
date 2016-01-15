@@ -21,6 +21,9 @@ extension String {
 			return results.map { nsstring.substringWithRange($0.rangeAtIndex(1)) }
 		}
 		catch let error as NSError {
+			
+			Log.error("\(error) occured")
+			
 			return []
 		}
 		

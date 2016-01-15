@@ -20,7 +20,7 @@ internal class UIImageConverter {
 			return nil
 		}
 		
-		var imageName = imageMatches[0]
+		let imageName = imageMatches[0]
 		var img = UIImage(named: imageName)
 		
 		if img == nil {

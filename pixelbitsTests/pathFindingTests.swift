@@ -46,14 +46,13 @@ class pathFindingTests: XCTestCase {
 		XCTAssertEqual(buttonPath, "/UIViewController/UIView/UIView.custom-view/UIButton.my-sample-button")
 		
     }
-    
-    func testPathGenerationPerformance() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-			
-			UIViewLocation.fromView(self.button).toString()
-			
-        }
-    }
+	
+	func testViewViewControllerRelation() {
+		XCTAssertEqual(viewController.view.viewController, viewController)
+	}
+	
+	func testViewNoViewControllerRelation() {
+		XCTAssertNil(button.viewController)
+	}
     
 }

@@ -31,7 +31,17 @@
 		AB7C54DF1C48B681005FDF1B /* pixelbits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3984BF1C26906A00A38589 /* pixelbits.framework */; };
 		AB7C54E61C48B6CC005FDF1B /* pathFindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7C54E51C48B6CC005FDF1B /* pathFindingTests.swift */; };
 		AB7C54E81C48BCF2005FDF1B /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7C54E71C48BCF2005FDF1B /* Conversions.swift */; };
-		AB7C54EA1C48BE8B005FDF1B /* converterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7C54E91C48BE8B005FDF1B /* converterTests.swift */; };
+		ABB440261C48E946009028B8 /* UIColorConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440251C48E946009028B8 /* UIColorConverterTest.swift */; };
+		ABB440281C48EF79009028B8 /* NSTextAlignmentConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440271C48EF79009028B8 /* NSTextAlignmentConverterTest.swift */; };
+		ABB4402A1C48F571009028B8 /* UIControlContentVerticalAlignmentConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440291C48F571009028B8 /* UIControlContentVerticalAlignmentConverterTest.swift */; };
+		ABB4402C1C48F60C009028B8 /* UIControlContentHorizontalAlignmentConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB4402B1C48F60C009028B8 /* UIControlContentHorizontalAlignmentConverterTest.swift */; };
+		ABB4402E1C48F634009028B8 /* UIControlStateConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB4402D1C48F634009028B8 /* UIControlStateConverterTest.swift */; };
+		ABB440301C490875009028B8 /* UIImageConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB4402F1C490875009028B8 /* UIImageConverterTest.swift */; };
+		ABB440321C49094B009028B8 /* UIFontTextStyleConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440311C49094B009028B8 /* UIFontTextStyleConverterTest.swift */; };
+		ABB440341C490A78009028B8 /* DictionaryKeyConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440331C490A78009028B8 /* DictionaryKeyConverterTest.swift */; };
+		ABB440361C4915A9009028B8 /* UIFontConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440351C4915A9009028B8 /* UIFontConverterTest.swift */; };
+		ABB440381C494257009028B8 /* UIViewExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440371C494257009028B8 /* UIViewExtensionTest.swift */; };
+		ABB4403A1C494381009028B8 /* ArrayExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440391C494381009028B8 /* ArrayExtensionTest.swift */; };
 		ABDF430A1C47967500F01EB4 /* ValueConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDF43091C47967500F01EB4 /* ValueConverter.swift */; };
 		ABE17D1D1C42FF6B00755B1F /* PBNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE17D1C1C42FF6B00755B1F /* PBNode.swift */; };
 		ABE17D1F1C4398A900755B1F /* UIImageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE17D1E1C4398A900755B1F /* UIImageConverter.swift */; };
@@ -77,7 +87,17 @@
 		AB7C54DE1C48B681005FDF1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB7C54E51C48B6CC005FDF1B /* pathFindingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pathFindingTests.swift; sourceTree = "<group>"; };
 		AB7C54E71C48BCF2005FDF1B /* Conversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Conversions.swift; path = Other/Conversions.swift; sourceTree = "<group>"; };
-		AB7C54E91C48BE8B005FDF1B /* converterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = converterTests.swift; sourceTree = "<group>"; };
+		ABB440251C48E946009028B8 /* UIColorConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorConverterTest.swift; sourceTree = "<group>"; };
+		ABB440271C48EF79009028B8 /* NSTextAlignmentConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTextAlignmentConverterTest.swift; sourceTree = "<group>"; };
+		ABB440291C48F571009028B8 /* UIControlContentVerticalAlignmentConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlContentVerticalAlignmentConverterTest.swift; sourceTree = "<group>"; };
+		ABB4402B1C48F60C009028B8 /* UIControlContentHorizontalAlignmentConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlContentHorizontalAlignmentConverterTest.swift; sourceTree = "<group>"; };
+		ABB4402D1C48F634009028B8 /* UIControlStateConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlStateConverterTest.swift; sourceTree = "<group>"; };
+		ABB4402F1C490875009028B8 /* UIImageConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageConverterTest.swift; sourceTree = "<group>"; };
+		ABB440311C49094B009028B8 /* UIFontTextStyleConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontTextStyleConverterTest.swift; sourceTree = "<group>"; };
+		ABB440331C490A78009028B8 /* DictionaryKeyConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryKeyConverterTest.swift; sourceTree = "<group>"; };
+		ABB440351C4915A9009028B8 /* UIFontConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontConverterTest.swift; sourceTree = "<group>"; };
+		ABB440371C494257009028B8 /* UIViewExtensionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTest.swift; sourceTree = "<group>"; };
+		ABB440391C494381009028B8 /* ArrayExtensionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTest.swift; sourceTree = "<group>"; };
 		ABDF43091C47967500F01EB4 /* ValueConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValueConverter.swift; path = Converters/ValueConverter.swift; sourceTree = "<group>"; };
 		ABE17D1C1C42FF6B00755B1F /* PBNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBNode.swift; sourceTree = "<group>"; };
 		ABE17D1E1C4398A900755B1F /* UIImageConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageConverter.swift; path = Converters/UIImageConverter.swift; sourceTree = "<group>"; };
@@ -189,7 +209,17 @@
 		AB7C54DB1C48B681005FDF1B /* pixelbitsTests */ = {
 			isa = PBXGroup;
 			children = (
-				AB7C54E91C48BE8B005FDF1B /* converterTests.swift */,
+				ABB440391C494381009028B8 /* ArrayExtensionTest.swift */,
+				ABB440371C494257009028B8 /* UIViewExtensionTest.swift */,
+				ABB440351C4915A9009028B8 /* UIFontConverterTest.swift */,
+				ABB440331C490A78009028B8 /* DictionaryKeyConverterTest.swift */,
+				ABB440311C49094B009028B8 /* UIFontTextStyleConverterTest.swift */,
+				ABB4402F1C490875009028B8 /* UIImageConverterTest.swift */,
+				ABB4402D1C48F634009028B8 /* UIControlStateConverterTest.swift */,
+				ABB4402B1C48F60C009028B8 /* UIControlContentHorizontalAlignmentConverterTest.swift */,
+				ABB440291C48F571009028B8 /* UIControlContentVerticalAlignmentConverterTest.swift */,
+				ABB440271C48EF79009028B8 /* NSTextAlignmentConverterTest.swift */,
+				ABB440251C48E946009028B8 /* UIColorConverterTest.swift */,
 				AB7C54E51C48B6CC005FDF1B /* pathFindingTests.swift */,
 				AB7C54DE1C48B681005FDF1B /* Info.plist */,
 			);
@@ -393,8 +423,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB7C54EA1C48BE8B005FDF1B /* converterTests.swift in Sources */,
+				ABB440321C49094B009028B8 /* UIFontTextStyleConverterTest.swift in Sources */,
+				ABB440341C490A78009028B8 /* DictionaryKeyConverterTest.swift in Sources */,
+				ABB4402E1C48F634009028B8 /* UIControlStateConverterTest.swift in Sources */,
+				ABB4402C1C48F60C009028B8 /* UIControlContentHorizontalAlignmentConverterTest.swift in Sources */,
+				ABB440381C494257009028B8 /* UIViewExtensionTest.swift in Sources */,
 				AB7C54E61C48B6CC005FDF1B /* pathFindingTests.swift in Sources */,
+				ABB440361C4915A9009028B8 /* UIFontConverterTest.swift in Sources */,
+				ABB4402A1C48F571009028B8 /* UIControlContentVerticalAlignmentConverterTest.swift in Sources */,
+				ABB440301C490875009028B8 /* UIImageConverterTest.swift in Sources */,
+				ABB440281C48EF79009028B8 /* NSTextAlignmentConverterTest.swift in Sources */,
+				ABB440261C48E946009028B8 /* UIColorConverterTest.swift in Sources */,
+				ABB4403A1C494381009028B8 /* ArrayExtensionTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +641,7 @@
 				AB7C54E41C48B681005FDF1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

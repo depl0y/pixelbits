@@ -36,14 +36,14 @@ internal class UIColorConverter {
 		return nil
 	}
 	
-	static func fromHex(hexString: String) -> UIColor? {
+	private static func fromHex(hexString: String) -> UIColor? {
 
 		let hex = hexString.stringByTrimmingCharactersInSet(NSCharacterSet.alphanumericCharacterSet().invertedSet)
 		
 		let regex = try! NSRegularExpression(pattern: "^[0-9a-f]*$", options: .CaseInsensitive)
 		
 		let found = regex.firstMatchInString(hex, options: [], range: NSMakeRange(0, hex.characters.count))
-		if found == nil || found?.range.location == NSNotFound || hex.characters.count % 2 != 0 {
+		if found == nil || found?.range.location == NSNotFound {
 			return nil
 		}
 		

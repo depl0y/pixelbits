@@ -90,7 +90,7 @@ internal class UIViewLocation : Hashable {
 		}
 		else if view.viewController != nil {
 			
-			var viewController = view.viewController!
+			let viewController = view.viewController!
 			let viewControllerMirror = Mirror(reflecting: viewController)
 			let viewControllerClassName: String = "\(viewControllerMirror.subjectType)"
 			
