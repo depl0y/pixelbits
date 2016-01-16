@@ -16,5 +16,6 @@ internal enum PBPropertyType: Int {
 	case UIContentHorizontalAlignment
 	case UIContentVerticalAlignment
 	case UIFontTextStyle
+	case UIViewContentMode
 	case Other
 }

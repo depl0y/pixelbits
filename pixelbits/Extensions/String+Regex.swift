@@ -13,7 +13,7 @@ extension String {
 	func matches(pattern: String) -> [String] {
 		
 		do {
-			let regex = try! NSRegularExpression(pattern: pattern, options: [])
+			let regex = try NSRegularExpression(pattern: pattern, options: [])
 			let nsstring = self as NSString
 			
 			let results = regex.matchesInString(self, options: [], range: NSMakeRange(0, nsstring.length))

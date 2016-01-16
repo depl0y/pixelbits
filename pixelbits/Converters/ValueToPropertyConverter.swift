@@ -35,6 +35,9 @@ internal class ValueToPropertyConverter {
 			else if let contentVerticalAlignment = UIControlContentVerticalAlignmentConverter.fromString(valueString) {
 				return PBProperty(key: key, value: contentVerticalAlignment.rawValue, type: PBPropertyType.UIContentVerticalAlignment)
 			}
+			else if let contentMode = UIViewContentModeConverter.fromString(valueString) {
+				return PBProperty(key: key, value: contentMode.rawValue, type: PBPropertyType.UIViewContentMode)
+			}
 		}
 
 		return PBProperty(key: key, value: value, type: .Other)

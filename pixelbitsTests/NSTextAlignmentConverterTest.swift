@@ -22,11 +22,15 @@ class NSTextAlignmentConverterTest: XCTestCase {
     }
     
 	func testFromString() {
-		XCTAssertEqual(NSTextAlignmentConverter.fromString("left"), NSTextAlignment.Left)
-		XCTAssertEqual(NSTextAlignmentConverter.fromString("right"), NSTextAlignment.Right)
-		XCTAssertEqual(NSTextAlignmentConverter.fromString("center"), NSTextAlignment.Center)
-		XCTAssertEqual(NSTextAlignmentConverter.fromString("justified"), NSTextAlignment.Justified)
-		XCTAssertEqual(NSTextAlignmentConverter.fromString("natural"), NSTextAlignment.Natural)
+		XCTAssertEqual(NSTextAlignmentConverter.fromString("NSTextAlignmentLeft"), NSTextAlignment.Left)
+		XCTAssertEqual(NSTextAlignmentConverter.fromString("NSTextAlignmentRight"), NSTextAlignment.Right)
+		XCTAssertEqual(NSTextAlignmentConverter.fromString("NSTextAlignmentCenter"), NSTextAlignment.Center)
+		XCTAssertEqual(NSTextAlignmentConverter.fromString("NSTextAlignmentJustified"), NSTextAlignment.Justified)
+		XCTAssertEqual(NSTextAlignmentConverter.fromString("NSTextAlignmentNatural"), NSTextAlignment.Natural)
+	}
+	
+	func testInvalidAlignmentFromString() {
+		XCTAssertNil(NSTextAlignmentConverter.fromString("some-alignment"))
 	}
     
 }
