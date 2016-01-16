@@ -22,8 +22,8 @@ class UIControlContentVerticalAlignmentConverterTest: XCTestCase {
     }
     
 	func testFromString() {
-		XCTAssertEqual(UIControlContentVerticalAlignmentConverter.fromString("content-vertical-bottom"), UIControlContentVerticalAlignment.Bottom)
-		XCTAssertEqual(UIControlContentVerticalAlignmentConverter.fromString("content-vertical-top"), UIControlContentVerticalAlignment.Top)
+		XCTAssertEqual(UIControlContentVerticalAlignmentConverter.fromString("content-bottom"), UIControlContentVerticalAlignment.Bottom)
+		XCTAssertEqual(UIControlContentVerticalAlignmentConverter.fromString("content-top"), UIControlContentVerticalAlignment.Top)
 	}
     
 }

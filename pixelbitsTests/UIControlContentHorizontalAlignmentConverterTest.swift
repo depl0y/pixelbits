@@ -22,8 +22,8 @@ class UIControlContentHorizontalAlignmentConverterTest: XCTestCase {
     }
     
 	func testFromString() {
-		XCTAssertEqual(UIControlContentHorizontalAlignmentConverter.fromString("content-horizontal-left"), UIControlContentHorizontalAlignment.Left)
-		XCTAssertEqual(UIControlContentHorizontalAlignmentConverter.fromString("content-horizontal-right"), UIControlContentHorizontalAlignment.Right)
+		XCTAssertEqual(UIControlContentHorizontalAlignmentConverter.fromString("content-left"), UIControlContentHorizontalAlignment.Left)
+		XCTAssertEqual(UIControlContentHorizontalAlignmentConverter.fromString("content-right"), UIControlContentHorizontalAlignment.Right)
 	}
 
     
