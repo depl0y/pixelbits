@@ -1,0 +1,55 @@
+---
+layout: page
+---
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+			<br/>
+			<div class="list-group">
+				<a href="{{ "/advanced/converters" | prepend: site.baseurl }}" 
+					class="list-group-item {% if page.url == "/advanced/converters.html" %}active{% endif %}">
+						Converters
+				</a>
+				<a href="{{ "/advanced/dictionary-key" | prepend: site.baseurl }}" 
+					class="list-group-item {% if page.url == "/advanced/dictionary-key.html" %}active{% endif %}">
+						Dictionary Key
+				</a>
+				<a href="{{ "/advanced/UIColor" | prepend: site.baseurl }}" 
+					class="list-group-item {% if page.url == "/advanced/UIColor.html" %}active{% endif %}">
+						UIColor
+				</a>
+				<a href="{{ "/advanced/UIControlState" | prepend: site.baseurl }}" 
+					class="list-group-item {% if page.url == "/advanced/UIControlState.html" %}active{% endif %}">
+						UIControlState
+				</a>
+				<a href="{{ "/advanced/UIFont" | prepend: site.baseurl }}" 
+					class="list-group-item {% if page.url == "/advanced/UIFont.html" %}active{% endif %}">
+						UIFont
+				</a>
+				<a href="{{ "/advanced/UIImage" | prepend: site.baseurl }}" 
+					class="list-group-item {% if page.url == "/advanced/UIImage.html" %}active{% endif %}">
+						UIImage
+				</a>
+				<a href="{{ "/advanced/NSTextAlignment" | prepend: site.baseurl }}" 
+					class="list-group-item {% if page.url == "/advanced/NSTextAlignment.html" %}active{% endif %}">
+						NSTextAlignment
+				</a>
+				<a href="{{ "/advanced/UIControlContentHorizontalAlignment" | prepend: site.baseurl }}" 
+					class="list-group-item {% if page.url == "/advanced/UIControlContentHorizontalAlignment.html" %}active{% endif %}">
+						UIControlContentHorizontalAlignment
+				</a>
+				<a href="{{ "/advanced/UIControlContentVerticalAlignment" | prepend: site.baseurl }}" 
+					class="list-group-item {% if page.url == "/advanced/UIControlContentVerticalAlignment.html" %}active{% endif %}">
+						UIControlContentVerticalAlignment
+				</a>
+			</div>
+		</div>
+		<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+			{{ content }}
+
+			{{page.url}}
+		</div>
+	</div>
+</div>

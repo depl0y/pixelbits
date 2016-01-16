@@ -67,7 +67,7 @@
 			<br/>
 			<div class="list-group">
 				<a href="/pixelbits/advanced/converters" 
-					class="list-group-item active">
+					class="list-group-item ">
 						Converters
 				</a>
 				<a href="/pixelbits/advanced/dictionary-key" 
@@ -87,7 +87,7 @@
 						UIFont
 				</a>
 				<a href="/pixelbits/advanced/UIImage" 
-					class="list-group-item ">
+					class="list-group-item active">
 						UIImage
 				</a>
 				<a href="/pixelbits/advanced/NSTextAlignment" 
@@ -105,26 +105,23 @@
 			</div>
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
-			<h1 id="converters">Converters</h1>
+			<h2 id="uiimage">UIImage</h2>
+<p>Handled by: <code>UIImageConverter</code></p>
 
-<p>Pixelbits relies heavily on it’s so-called ‘Converters’, these translate the values you
-put in your stylesheets to values Swift actually understands.</p>
+<p>For loading <code class="highlighter-rouge">UIImage</code> objects we use an approach a bit more like CSS. You need to put the name of the image between <code class="highlighter-rouge">image(</code> and <code class="highlighter-rouge">)</code>.</p>
 
-<p>Currently these are the converters that are supported, but the list could be infinitly long, so we still will probably never have everything covered.</p>
+<p><strong>Example</strong></p>
 
-<ol>
-  <li><a href="dictionary-key/">Dictionary Keys</a></li>
-  <li><a href="UIColor/">UIColor</a></li>
-  <li><a href="UIControlState/">UIControlState</a></li>
-  <li><a href="UIFont/">UIFont</a></li>
-  <li><a href="UIImage/">UIImage</a></li>
-  <li><a href="NSTextAlignment/">NSTextAlignment</a></li>
-  <li><a href="UIControlContentHorizontalAlignment/">UIControlContentHorizontalAlignment</a></li>
-  <li><a href="UIControlContentVerticalAlignment/">UIControlContentVerticalAlignment</a></li>
-</ol>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">"background-image"</span> <span class="err">:</span> <span class="s2">"image(my-image-name.jpg)"</span>
+<span class="p">}</span></code></pre></figure>
+
+<div class="alert alert-danger">
+Currently only images from the <code>mainBundle</code> are supported.
+</div>
 
 
-			/advanced/converters.html
+			/advanced/UIImage.html
 		</div>
 	</div>
 </div>

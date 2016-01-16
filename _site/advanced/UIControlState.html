@@ -67,7 +67,7 @@
 			<br/>
 			<div class="list-group">
 				<a href="/pixelbits/advanced/converters" 
-					class="list-group-item active">
+					class="list-group-item ">
 						Converters
 				</a>
 				<a href="/pixelbits/advanced/dictionary-key" 
@@ -79,7 +79,7 @@
 						UIColor
 				</a>
 				<a href="/pixelbits/advanced/UIControlState" 
-					class="list-group-item ">
+					class="list-group-item active">
 						UIControlState
 				</a>
 				<a href="/pixelbits/advanced/UIFont" 
@@ -105,26 +105,62 @@
 			</div>
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
-			<h1 id="converters">Converters</h1>
+			<h2 id="uicontrolstate">UIControlState</h2>
+<p>Handled by: <code>UIControlStateConverter</code></p>
 
-<p>Pixelbits relies heavily on it’s so-called ‘Converters’, these translate the values you
-put in your stylesheets to values Swift actually understands.</p>
+<p>A conversion from a <code class="highlighter-rouge">String</code> value to <code class="highlighter-rouge">UIControlState</code>, according to the following table:</p>
 
-<p>Currently these are the converters that are supported, but the list could be infinitly long, so we still will probably never have everything covered.</p>
+<table>
+  <thead>
+    <tr>
+      <th>String</th>
+      <th>UIControlState</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">normal</code></td>
+      <td><code class="highlighter-rouge">UIControlState.Normal</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">highlighted</code></td>
+      <td><code class="highlighter-rouge">UIControlState.Highlighted</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">disabled</code></td>
+      <td><code class="highlighter-rouge">UIControlState.Disabled</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">selected</code></td>
+      <td><code class="highlighter-rouge">UIControlState.Selected</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">focused</code></td>
+      <td><code class="highlighter-rouge">UIControlState.Focused</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">application</code></td>
+      <td><code class="highlighter-rouge">UIControlState.Application</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">reserved</code></td>
+      <td><code class="highlighter-rouge">UIControlState.Reserved</code></td>
+    </tr>
+  </tbody>
+</table>
 
-<ol>
-  <li><a href="dictionary-key/">Dictionary Keys</a></li>
-  <li><a href="UIColor/">UIColor</a></li>
-  <li><a href="UIControlState/">UIControlState</a></li>
-  <li><a href="UIFont/">UIFont</a></li>
-  <li><a href="UIImage/">UIImage</a></li>
-  <li><a href="NSTextAlignment/">NSTextAlignment</a></li>
-  <li><a href="UIControlContentHorizontalAlignment/">UIControlContentHorizontalAlignment</a></li>
-  <li><a href="UIControlContentVerticalAlignment/">UIControlContentVerticalAlignment</a></li>
-</ol>
+<p><strong>Example</strong></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">"title:normal"</span> <span class="err">:</span> <span class="s2">"An awesome title"</span>
+<span class="p">}</span></code></pre></figure>
+
+<div class="alert alert-info">
+The `UIControlState` should be specified in the <code>key</code> of your definition and should be <strong>lowercase</strong>.
+</div>
 
 
-			/advanced/converters.html
+			/advanced/UIControlState.html
 		</div>
 	</div>
 </div>

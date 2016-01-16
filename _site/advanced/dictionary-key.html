@@ -67,11 +67,11 @@
 			<br/>
 			<div class="list-group">
 				<a href="/pixelbits/advanced/converters" 
-					class="list-group-item active">
+					class="list-group-item ">
 						Converters
 				</a>
 				<a href="/pixelbits/advanced/dictionary-key" 
-					class="list-group-item ">
+					class="list-group-item active">
 						Dictionary Key
 				</a>
 				<a href="/pixelbits/advanced/UIColor" 
@@ -105,26 +105,25 @@
 			</div>
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
-			<h1 id="converters">Converters</h1>
+			<h2 id="dictionary-key">Dictionary Key</h2>
+<p>Handled by: <code>DictionaryKeyConverter</code></p>
 
-<p>Pixelbits relies heavily on it’s so-called ‘Converters’, these translate the values you
-put in your stylesheets to values Swift actually understands.</p>
+<p>This converts the keys in your stylesheet to the property names on an <code class="highlighter-rouge">UIView</code>. I <strong>recommend</strong> using the EXACT name of the property in your stylesheet, but you can deviate from 
+that a bit, for readability.</p>
 
-<p>Currently these are the converters that are supported, but the list could be infinitly long, so we still will probably never have everything covered.</p>
+<p>It uses a very simple conversion:</p>
 
-<ol>
-  <li><a href="dictionary-key/">Dictionary Keys</a></li>
-  <li><a href="UIColor/">UIColor</a></li>
-  <li><a href="UIControlState/">UIControlState</a></li>
-  <li><a href="UIFont/">UIFont</a></li>
-  <li><a href="UIImage/">UIImage</a></li>
-  <li><a href="NSTextAlignment/">NSTextAlignment</a></li>
-  <li><a href="UIControlContentHorizontalAlignment/">UIControlContentHorizontalAlignment</a></li>
-  <li><a href="UIControlContentVerticalAlignment/">UIControlContentVerticalAlignment</a></li>
-</ol>
+<p><code class="highlighter-rouge">background-color</code> will be translated to <code class="highlighter-rouge">backgroundColor</code>. The dash will be removed from your property name and the next character after that will be converted to uppercase.</p>
+
+<p><strong>Example</strong></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="c1">// The key background-color will be converted to match the property backgroundColor</span>
+	<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span> 
+<span class="p">}</span></code></pre></figure>
 
 
-			/advanced/converters.html
+			/advanced/dictionary-key.html
 		</div>
 	</div>
 </div>

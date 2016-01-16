@@ -67,7 +67,7 @@
 			<br/>
 			<div class="list-group">
 				<a href="/pixelbits/advanced/converters" 
-					class="list-group-item active">
+					class="list-group-item ">
 						Converters
 				</a>
 				<a href="/pixelbits/advanced/dictionary-key" 
@@ -91,7 +91,7 @@
 						UIImage
 				</a>
 				<a href="/pixelbits/advanced/NSTextAlignment" 
-					class="list-group-item ">
+					class="list-group-item active">
 						NSTextAlignment
 				</a>
 				<a href="/pixelbits/advanced/UIControlContentHorizontalAlignment" 
@@ -105,26 +105,52 @@
 			</div>
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
-			<h1 id="converters">Converters</h1>
+			<h2 id="nstextalignment">NSTextAlignment</h2>
+<p>Handled by: <code>NSTextAlignment</code></p>
 
-<p>Pixelbits relies heavily on it’s so-called ‘Converters’, these translate the values you
-put in your stylesheets to values Swift actually understands.</p>
+<table>
+  <thead>
+    <tr>
+      <th>String</th>
+      <th>NSTextAlignment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">left</code></td>
+      <td><code class="highlighter-rouge">NSTextAlignment.Left</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">right</code></td>
+      <td><code class="highlighter-rouge">NSTextAlignment.Right</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">center</code></td>
+      <td><code class="highlighter-rouge">NSTextAlignment.Center</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">justified</code></td>
+      <td><code class="highlighter-rouge">NSTextAlignment.Justified</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">natural</code></td>
+      <td><code class="highlighter-rouge">NSTextAlignment.Natural</code></td>
+    </tr>
+  </tbody>
+</table>
 
-<p>Currently these are the converters that are supported, but the list could be infinitly long, so we still will probably never have everything covered.</p>
+<p><strong>Example</strong></p>
 
-<ol>
-  <li><a href="dictionary-key/">Dictionary Keys</a></li>
-  <li><a href="UIColor/">UIColor</a></li>
-  <li><a href="UIControlState/">UIControlState</a></li>
-  <li><a href="UIFont/">UIFont</a></li>
-  <li><a href="UIImage/">UIImage</a></li>
-  <li><a href="NSTextAlignment/">NSTextAlignment</a></li>
-  <li><a href="UIControlContentHorizontalAlignment/">UIControlContentHorizontalAlignment</a></li>
-  <li><a href="UIControlContentVerticalAlignment/">UIControlContentVerticalAlignment</a></li>
-</ol>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">"text-alignment"</span> <span class="err">:</span> <span class="s2">"left"</span>
+<span class="p">}</span></code></pre></figure>
+
+<div class="alert alert-info">
+The string should be <strong>lowercase</strong>.
+</div>
 
 
-			/advanced/converters.html
+			/advanced/NSTextAlignment.html
 		</div>
 	</div>
 </div>
