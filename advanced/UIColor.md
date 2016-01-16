@@ -1,5 +1,6 @@
 ---
 layout: converter
+title: UIColor
 ---
 
 ## UIColor

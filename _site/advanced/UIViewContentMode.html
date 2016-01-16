@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Pixelbits - UIControlContentHorizontalAlignment</title>
+	<title>Pixelbits - UIViewContentMode</title>
 	<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 ">
 
@@ -95,7 +95,7 @@
 						NSTextAlignment
 				</a>
 				<a href="/pixelbits/advanced/UIControlContentHorizontalAlignment" 
-					class="list-group-item active">
+					class="list-group-item ">
 						UIControlContentHorizontalAlignment
 				</a>
 				<a href="/pixelbits/advanced/UIControlContentVerticalAlignment" 
@@ -103,46 +103,88 @@
 						UIControlContentVerticalAlignment
 				</a>
 				<a href="/pixelbits/advanced/UIViewContentMode" 
-					class="list-group-item ">
+					class="list-group-item active">
 						UIViewContentMode
 				</a>
 			</div>
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
-			<h2 id="uicontrolcontenthorizontalalignment">UIControlContentHorizontalAlignment</h2>
-<p>Handled by: <code>UIControlContentHorizontalAlignmentConverter</code></p>
+			<h2 id="uiviewcontentmode">UIViewContentMode</h2>
+<p>Handled by: <code>UIViewContentModeConverter</code></p>
+
+<p>A conversion from a <code class="highlighter-rouge">String</code> value to <code class="highlighter-rouge">UIViewContentMode</code>, according to the following table:</p>
 
 <table>
   <thead>
     <tr>
       <th>String</th>
-      <th>UIControlContentHorizontalAlignment</th>
+      <th>UIViewContentMode</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">content-left</code></td>
-      <td><code class="highlighter-rouge">UIControlContentHorizontalAlignment.Left</code></td>
+      <td><code class="highlighter-rouge">UIViewContentModeScaleToFill</code></td>
+      <td><code class="highlighter-rouge">UIViewContentMode.ScaleToFill</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content-right</code></td>
-      <td><code class="highlighter-rouge">UIControlContentHorizontalAlignment.Right</code></td>
+      <td><code class="highlighter-rouge">UIViewContentModeScaleAspectFit</code></td>
+      <td><code class="highlighter-rouge">UIViewContentMode.ScaleAspectFit</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content-center</code></td>
-      <td><code class="highlighter-rouge">UIControlContentHorizontalAlignment.Center</code></td>
+      <td><code class="highlighter-rouge">UIViewContentModeScaleAspectFill</code></td>
+      <td><code class="highlighter-rouge">UIViewContentMode.ScaleAspectFill</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content-fill</code></td>
-      <td><code class="highlighter-rouge">UIControlContentHorizontalAlignment.Fill</code></td>
+      <td><code class="highlighter-rouge">UIViewContentModeRedraw</code></td>
+      <td><code class="highlighter-rouge">UIViewContentMode.Redraw</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIViewContentModeCenter</code></td>
+      <td><code class="highlighter-rouge">UIViewContentMode.Center</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIViewContentModeTop</code></td>
+      <td><code class="highlighter-rouge">UIViewContentMode.Top</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIViewContentModeBottom</code></td>
+      <td><code class="highlighter-rouge">UIViewContentMode.Bottom</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIViewContentModeLeft</code></td>
+      <td><code class="highlighter-rouge">UIViewContentMode.Left</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIViewContentModeRight</code></td>
+      <td><code class="highlighter-rouge">UIViewContentMode.Right</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIViewContentModeTopLeft</code></td>
+      <td><code class="highlighter-rouge">UIViewContentMode.TopLeft</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIViewContentModeTopRight</code></td>
+      <td><code class="highlighter-rouge">UIViewContentMode.TopRight</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIViewContentModeBottom</code></td>
+      <td><code class="highlighter-rouge">UIViewContentMode.Bottom</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIViewContentModeBottomLeft</code></td>
+      <td><code class="highlighter-rouge">UIViewContentMode.BottomLeft</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIViewContentModeBottomRight</code></td>
+      <td><code class="highlighter-rouge">UIViewContentMode.BottomRight</code></td>
     </tr>
   </tbody>
 </table>
 
 <p><strong>Example</strong></p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">"UIButton"</span> <span class="err">:</span> <span class="p">{</span>
-	<span class="s2">"contentHorizontalAlignment"</span> <span class="err">:</span> <span class="s2">"content-right"</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">"contentMode"</span> <span class="err">:</span> <span class="s2">"UIViewContentModeTop"</span>
 <span class="p">}</span></code></pre></figure>
 
 <div class="alert alert-info">

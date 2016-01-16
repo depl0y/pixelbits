@@ -44,12 +44,14 @@ layout: page
 					class="list-group-item {% if page.url == "/advanced/UIControlContentVerticalAlignment.html" %}active{% endif %}">
 						UIControlContentVerticalAlignment
 				</a>
+				<a href="{{ "/advanced/UIViewContentMode" | prepend: site.baseurl }}" 
+					class="list-group-item {% if page.url == "/advanced/UIViewContentMode.html" %}active{% endif %}">
+						UIViewContentMode
+				</a>
 			</div>
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
 			{{ content }}
-
-			{{page.url}}
 		</div>
 	</div>
 </div>

@@ -1,5 +1,6 @@
 ---
 layout: converter
+title: UIFont
 ---
 
 ## UIFont
@@ -57,3 +58,7 @@ Handled by: <code>UIFontTextStyleConverter</code>
 	"some-other-font" : "UIFontTextStyleHeadline"
 }
 {% endhighlight %}
+
+<div class="alert alert-info">
+The string is <strong>case sensitive</strong>.
+</div>

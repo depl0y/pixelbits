@@ -1,5 +1,6 @@
 ---
 layout: converter
+title: NSTextAlignment
 ---
 
 ## NSTextAlignment
@@ -21,5 +22,5 @@ Handled by: <code>NSTextAlignment</code>
 {% endhighlight %}
 
 <div class="alert alert-info">
-The string should be <strong>lowercase</strong>.
+The string is <strong>case sensitive</strong>.
 </div>

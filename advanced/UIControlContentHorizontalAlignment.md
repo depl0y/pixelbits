@@ -1,5 +1,6 @@
 ---
 layout: converter
+title: UIControlContentHorizontalAlignment
 ---
 
 ## UIControlContentHorizontalAlignment
@@ -20,5 +21,5 @@ Handled by: <code>UIControlContentHorizontalAlignmentConverter</code>
 {% endhighlight %}
 
 <div class="alert alert-info">
-The string should be <strong>lowercase</strong>.
+The string is <strong>case sensitive</strong>.
 </div>

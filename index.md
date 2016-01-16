@@ -8,7 +8,7 @@ layout: page
 Currently you can only include pixelbits by using cocoapods directly from this git repository, add the following to your `Podfile`.
 
 {% highlight bash %}
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
 pod 'pixelbits', :git => 'https://github.com/depl0y/pixelbits.git'
