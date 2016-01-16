@@ -201,10 +201,10 @@ Handled by: <code>UIControlContentHorizontalAlignmentConverter</code>
 
 | String | UIControlContentHorizontalAlignment |
 | ------ | -------------- |
-| `content-horizontal-left` | `UIControlContentHorizontalAlignment.Left` |
-| `content-horizontal-right` | `UIControlContentHorizontalAlignment.Right` |
-| `content-horizontal-center` | `UIControlContentHorizontalAlignment.Center` |
-| `content-horizontal-fill` | `UIControlContentHorizontalAlignment.Fill` |
+| `content-left` | `UIControlContentHorizontalAlignment.Left` |
+| `content-right` | `UIControlContentHorizontalAlignment.Right` |
+| `content-center` | `UIControlContentHorizontalAlignment.Center` |
+| `content-fill` | `UIControlContentHorizontalAlignment.Fill` |
 
 **Example**
 {% highlight JS %}
@@ -224,10 +224,10 @@ Handled by: <code>UIControlContentVerticalAlignmentConverter</code>
 
 | String | UIControlContentVerticalAlignment |
 | ------ | -------------- |
-| `content-vertical-top` | `UIControlContentVerticalAlignment.Top` |
-| `content-vertical-bottom` | `UIControlContentVerticalAlignment.Bottom` |
-| `content-vertical-center` | `UIControlContentVerticalAlignment.Center` |
-| `content-horizontal-fill` | `UIControlContentVerticalAlignment.Fill` |
+| `content-top` | `UIControlContentVerticalAlignment.Top` |
+| `content-bottom` | `UIControlContentVerticalAlignment.Bottom` |
+| `content-vcenter` | `UIControlContentVerticalAlignment.Center` |
+| `content-vfill` | `UIControlContentVerticalAlignment.Fill` |
 
 **Example**
 {% highlight JS %}
