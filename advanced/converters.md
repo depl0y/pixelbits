@@ -10,11 +10,16 @@ put in your stylesheets to values Swift actually understands.
 
 Currently these are the converters that are supported, but the list could be infinitly long, so we still will probably never have everything covered.
 
-1. [Dictionary Keys](dictionary-key)
-2. [UIColor](UIColor)
-3. [UIControlState](UIControlState)
-4. [UIFont](UIFont)
-5. [UIImage](UIImage)
-6. [NSTextAlignment](NSTextAlignment)
-7. [UIControlContentHorizontalAlignment](UIControlContentHorizontalAlignment)
-8. [UIControlContentVerticalAlignment](UIControlContentVerticalAlignment)
+* [Dictionary Keys](dictionary-key)
+* [UIColor](UIColor)
+* [UIControlState](UIControlState)
+* [UIFont](UIFont)
+* [UIImage](UIImage)
+* [NSTextAlignment](NSTextAlignment)
+* [UIControlContentHorizontalAlignment](UIControlContentHorizontalAlignment)
+* [UIControlContentVerticalAlignment](UIControlContentVerticalAlignment)
+* [UIViewContentMode](UIViewContentMode)
+
+<div class="alert alert-info">
+	For a look at the translations Pixelbits does, take a look at the <code><a href="https://github.com/depl0y/pixelbits/blob/master/pixelbits/Definitions/ConverterValues.swift">ConverterValues.swift</a></code> file
+</div>
