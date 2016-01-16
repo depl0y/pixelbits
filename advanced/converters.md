@@ -209,7 +209,7 @@ Handled by: <code>UIControlContentHorizontalAlignmentConverter</code>
 **Example**
 {% highlight JS %}
 "UIButton" : {
-	"contentHorizontalAlignment" : "content-horizontal-right"
+	"contentHorizontalAlignment" : "content-right"
 }
 {% endhighlight %}
 
@@ -232,7 +232,7 @@ Handled by: <code>UIControlContentVerticalAlignmentConverter</code>
 **Example**
 {% highlight JS %}
 "UIButton" : {
-	"contentVerticalAlignment" : "content-vertical-bottom"
+	"contentVerticalAlignment" : "content-bottom"
 }
 {% endhighlight %}
 
