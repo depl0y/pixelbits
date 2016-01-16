@@ -39,16 +39,11 @@
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/pixelbits/">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="/pixelbits/advanced/converters">Converters</a></li>
+        <li><a href="/pixelbits/advanced/selectors">Selectors</a></li>
+        <li><a href="/pixelbits/advanced/rule-priority">Rule priority</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-		<li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Advanced <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="/pixelbits/advanced/converters">Converters</a></li>
-            <li><a href="/pixelbits/advanced/selectors">Selectors</a></li>
-            <li><a href="/pixelbits/advanced/rule-priority">Rule priority</a></li>
-          </ul>
-        </li>
         <li><a href="https://github.com/depl0y/pixelbits/tree/master">Github</a></li>
       </ul>
     </div>
@@ -60,7 +55,18 @@
     <div class="page-content">
       <div class="wrapper">
         <div class="container">
-    <h1 id="getting-started">Getting started</h1>
+    <h1 id="introduction">Introduction</h1>
+
+<p>Pixelbits is an open-source Swift based framework, that enables you to style your applications easily using an external configuration file.
+It’s like CSS for iOS, but for the file format I currently only support JSON (instead of CSS files).</p>
+
+<h1 id="getting-started">Getting started</h1>
+
+<h3 id="requirements">Requirements</h3>
+
+<p>I have been testing Pixelbits on iOS 9 and above, with a Swift 2.1 example project.</p>
+
+<p>Pixelbits relies on error handling introduced in Swift 2.0, so Swift 2.0 is probably the minimal supported version.</p>
 
 <h3 id="installation">Installation</h3>
 <p>Currently you can only include pixelbits by using cocoapods directly from this git repository, add the following to your <code class="highlighter-rouge">Podfile</code>.</p>

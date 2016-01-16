@@ -2,7 +2,18 @@
 layout: page
 ---
 
+# Introduction
+
+Pixelbits is an open-source Swift based framework, that enables you to style your applications easily using an external configuration file.
+It's like CSS for iOS, but for the file format I currently only support JSON (instead of CSS files).
+
 # Getting started
+
+### Requirements
+
+I have been testing Pixelbits on iOS 9 and above, with a Swift 2.1 example project.
+
+Pixelbits relies on error handling introduced in Swift 2.0, so Swift 2.0 is probably the minimal supported version.
 	
 ### Installation
 Currently you can only include pixelbits by using cocoapods directly from this git repository, add the following to your `Podfile`.
