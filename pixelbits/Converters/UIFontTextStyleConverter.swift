@@ -10,7 +10,7 @@ internal class UIFontTextStyleConverter {
 	
 	static func fromString(stringValue: String) -> UIFont? {
 
-		if let style = Conversions.UIFontTextStyles[stringValue] {
+		if let style = ConverterValues.UIFontTextStyles[stringValue] {
 			return UIFont.preferredFontForTextStyle(style)
 		}
 		

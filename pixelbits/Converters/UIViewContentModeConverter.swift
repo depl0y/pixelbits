@@ -12,7 +12,7 @@ internal class UIViewContentModeConverter {
 
 	static func fromString(stringValue: String) -> UIViewContentMode? {
 		
-		if let style = Conversions.UIViewContentModes[stringValue] {
+		if let style = ConverterValues.UIViewContentModes[stringValue] {
 			return style
 		}
 		

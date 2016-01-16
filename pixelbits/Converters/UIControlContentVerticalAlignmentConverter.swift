@@ -11,7 +11,7 @@ import UIKit
 internal class UIControlContentVerticalAlignmentConverter {
 
 	static func fromString(alignmentString: String) -> UIControlContentVerticalAlignment? {
-		return Conversions.UIControlContentVerticalAlignments[alignmentString]
+		return ConverterValues.UIControlContentVerticalAlignments[alignmentString]
 	}
 	
 }

@@ -11,7 +11,7 @@ import UIKit
 internal class UIControlContentHorizontalAlignmentConverter {
 	
 	static func fromString(alignmentString: String) -> UIControlContentHorizontalAlignment? {
-		return Conversions.UIControlContentHorizontalAlignments[alignmentString]
+		return ConverterValues.UIControlContentHorizontalAlignments[alignmentString]
 	}
 
 }

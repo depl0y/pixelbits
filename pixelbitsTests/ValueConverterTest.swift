@@ -25,7 +25,7 @@ class ValueConverterTest: XCTestCase {
 
 		let propertyKey = "my-key"
 		
-		for (key, value) in Conversions.NSTextAlignments {
+		for (key, value) in ConverterValues.NSTextAlignments {
 			let prop = ValueToPropertyConverter.fromAnyObject(propertyKey, value: key)
 			XCTAssertEqual(prop.key, propertyKey)
 			

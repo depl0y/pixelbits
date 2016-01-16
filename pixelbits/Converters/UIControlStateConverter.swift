@@ -13,7 +13,7 @@ internal class UIControlStateConverter {
 	
 	static func fromString(controlState: String) -> UIControlState {
 		
-		if let controlState = Conversions.UIControlStates[controlState.lowercaseString] {
+		if let controlState = ConverterValues.UIControlStates[controlState.lowercaseString] {
 			return controlState
 		}
 

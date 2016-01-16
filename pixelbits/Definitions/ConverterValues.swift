@@ -6,7 +6,7 @@
 //  Copyright © 2016 Wim Haanstra. All rights reserved.
 //
 
-internal class Conversions: NSObject {
+internal class ConverterValues: NSObject {
 
 	static let NSTextAlignments = [
 		"left"						: NSTextAlignment.Left,
