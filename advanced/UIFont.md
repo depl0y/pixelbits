@@ -28,28 +28,18 @@ the settings screen.
 ## UIFontTextStyle
 Handled by: <code>UIFontTextStyleConverter</code>
 
-| String | UIFontTextStyle |
+| String (short) | UIFontTextStyle |
 | ------ | -------------- |
-| `UIFontTextStyleTitle1` | `UIFontTextStyleTitle1` |
-| `title1` | `UIFontTextStyleTitle1` |
-| `UIFontTextStyleTitle2` | `UIFontTextStyleTitle2` |
-| `title2` | `UIFontTextStyleTitle2` |
-| `UIFontTextStyleTitle3` | `UIFontTextStyleTitle3` |
-| `title3` | `UIFontTextStyleTitle3` |
-| `UIFontTextStyleHeadline` | `UIFontTextStyleHeadline` |
-| `headline` | `UIFontTextStyleHeadline` |
-| `UIFontTextStyleSubheadline` | `UIFontTextStyleSubheadline` |
-| `subheadline` | `UIFontTextStyleSubheadline` |
-| `UIFontTextStyleBody` | `UIFontTextStyleBody` |
-| `body` | `UIFontTextStyleBody` |
-| `UIFontTextStyleFootnote` | `UIFontTextStyleFootnote` |
-| `footnote` | `UIFontTextStyleFootnote` |
-| `UIFontTextStyleCaption1` | `UIFontTextStyleCaption1` |
-| `caption1` | `UIFontTextStyleCaption1` |
-| `UIFontTextStyleCaption2` | `UIFontTextStyleCaption2` |
-| `caption2` | `UIFontTextStyleCaption2` |
-| `UIFontTextStyleCallout` | `UIFontTextStyleCallout` |
-| `callout` | `UIFontTextStyleCallout` |
+| `UIFontTextStyleTitle1` (`title1`) | `UIFontTextStyleTitle1` |
+| `UIFontTextStyleTitle2` (`title2`) | `UIFontTextStyleTitle2` |
+| `UIFontTextStyleTitle3` (`title3`) | `UIFontTextStyleTitle3` |
+| `UIFontTextStyleHeadline` (`headline`) | `UIFontTextStyleHeadline` |
+| `UIFontTextStyleSubheadline` (`subheadline`) | `UIFontTextStyleSubheadline` |
+| `UIFontTextStyleBody` (`body`) | `UIFontTextStyleBody` |
+| `UIFontTextStyleFootnote` (`footnote`) | `UIFontTextStyleFootnote` |
+| `UIFontTextStyleCaption1` (`caption1`) | `UIFontTextStyleCaption1` |
+| `UIFontTextStyleCaption2` (`caption2`) | `UIFontTextStyleCaption2` |
+| `UIFontTextStyleCallout` (`callout`) | `UIFontTextStyleCallout` |
 
 **Example**
 {% highlight JS %}
