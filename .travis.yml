@@ -4,4 +4,4 @@ xcode_project: pixelbits.xcodeproj
 xcode_scheme: 
     - pixelbits
 xcode_sdk:
-    - iphonesimulator9.0
+    - iphonesimulator9.2
