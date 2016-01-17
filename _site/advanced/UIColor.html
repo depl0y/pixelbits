@@ -39,9 +39,9 @@
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/pixelbits/">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="/pixelbits/advanced/converters">Converters</a></li>
-        <li><a href="/pixelbits/advanced/selectors">Selectors</a></li>
-        <li><a href="/pixelbits/advanced/rule-priority">Rule priority</a></li>
+        <li><a href="/pixelbits/advanced/converters.html">Converters</a></li>
+        <li><a href="/pixelbits/advanced/selectors.html">Selectors</a></li>
+        <li><a href="/pixelbits/advanced/rule-priority.html">Rule priority</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="https://github.com/depl0y/pixelbits/tree/master">Github</a></li>
@@ -61,51 +61,51 @@
 		<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
 			<br/>
 			<div class="list-group">
-				<a href="/pixelbits/advanced/converters" 
+				<a href="/pixelbits/advanced/converters.html" 
 					class="list-group-item ">
 						Converters
 				</a>
-				<a href="/pixelbits/advanced/dictionary-key" 
+				<a href="/pixelbits/advanced/dictionary-key.html" 
 					class="list-group-item ">
 						Dictionary Key
 				</a>
-				<a href="/pixelbits/advanced/UIColor" 
+				<a href="/pixelbits/advanced/UIColor.html" 
 					class="list-group-item active">
 						UIColor
 				</a>
-				<a href="/pixelbits/advanced/UIControlState" 
+				<a href="/pixelbits/advanced/UIControlState.html" 
 					class="list-group-item ">
 						UIControlState
 				</a>
-				<a href="/pixelbits/advanced/UIFont" 
+				<a href="/pixelbits/advanced/UIFont.html" 
 					class="list-group-item ">
 						UIFont
 				</a>
-				<a href="/pixelbits/advanced/UIImage" 
+				<a href="/pixelbits/advanced/UIImage.html" 
 					class="list-group-item ">
 						UIImage
 				</a>
-				<a href="/pixelbits/advanced/NSTextAlignment" 
+				<a href="/pixelbits/advanced/NSTextAlignment.html" 
 					class="list-group-item ">
 						NSTextAlignment
 				</a>
-				<a href="/pixelbits/advanced/UIControlContentHorizontalAlignment" 
+				<a href="/pixelbits/advanced/UIControlContentHorizontalAlignment.html" 
 					class="list-group-item ">
 						UIControlContentHorizontalAlignment
 				</a>
-				<a href="/pixelbits/advanced/UIControlContentVerticalAlignment" 
+				<a href="/pixelbits/advanced/UIControlContentVerticalAlignment.html" 
 					class="list-group-item ">
 						UIControlContentVerticalAlignment
 				</a>
-				<a href="/pixelbits/advanced/UIViewContentMode" 
+				<a href="/pixelbits/advanced/UIViewContentMode.html" 
 					class="list-group-item ">
 						UIViewContentMode
 				</a>
-				<a href="/pixelbits/advanced/UIEdgeInsets" 
+				<a href="/pixelbits/advanced/UIEdgeInsets.html" 
 					class="list-group-item ">
 						UIEdgeInsets
 				</a>
-				<a href="/pixelbits/advanced/UIViewTintAdjustmentMode" 
+				<a href="/pixelbits/advanced/UIViewTintAdjustmentMode.html" 
 					class="list-group-item ">
 						UIViewTintAdjustmentMode
 				</a>
@@ -117,18 +117,18 @@
 
 <p>You have 2 methods of defining colors in your stylesheet, you can either use the web-based hexadecimal way of describing them, or you can use the named colors Swift already understands.</p>
 
-<p>The hexadecimal way <strong>requires</strong> you to prefix your color with the <code class="highlighter-rouge">#</code>, so it can recognize you are using a color. e.g. <code class="highlighter-rouge">#ff0000</code> will produce a bright red color. 
+<p>The hexadecimal way <strong>requires</strong> you to prefix your color with the <code>#</code>, so it can recognize you are using a color. e.g. <code>#ff0000</code> will produce a bright red color. 
 The hexadecimal way supports RGB (12 bits), RGB (24 bits) and ARGB (32 bits).</p>
 
-<p>Using named colors is a bit different, so if specify a named color, you need to make sure it is an exact match to the method on the <code class="highlighter-rouge">UIColor</code> class. For example, if you want to use
-the red color that <code class="highlighter-rouge">UIColor.redColor()</code> gives you, you need to put <code class="highlighter-rouge">red</code> as the value for your color in your stylesheet.</p>
+<p>Using named colors is a bit different, so if specify a named color, you need to make sure it is an exact match to the method on the <code>UIColor</code> class. For example, if you want to use
+the red color that <code>UIColor.redColor()</code> gives you, you need to put <code>red</code> as the value for your color in your stylesheet.</p>
 
 <p><strong>Example</strong></p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
-	<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span><span class="p">,</span> <span class="c1">// triggers the UIColor.redColor() method</span>
-	<span class="s2">"text-color"</span> <span class="err">:</span> <span class="s2">"#efefef"</span> <span class="c1">// converts the color from HEX to light gray</span>
-<span class="p">}</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">&quot;background-color&quot;</span> <span class="o">:</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="c1">// triggers the UIColor.redColor() method</span>
+	<span class="s2">&quot;text-color&quot;</span> <span class="o">:</span> <span class="s2">&quot;#efefef&quot;</span> <span class="c1">// converts the color from HEX to light gray</span>
+<span class="p">}</span></code></pre></div>
 
 <div class="alert alert-info">
 Take a look at the <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIColor_Class/#//apple_ref/doc/uid/TP40006892-CH3-SW18">Apple Documentation</a> to see 
@@ -147,6 +147,8 @@ which colors are support using this method.
     <script type="text/javascript">
 	$(document).ready(function() {
     	$("table").addClass("table").addClass("table-striped").addClass("table-condensed");
+		
+		$("table").wrap("<div class='table-responsive'></div>");
 	});
 </script>
 

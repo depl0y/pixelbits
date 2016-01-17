@@ -39,9 +39,9 @@
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/pixelbits/">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="/pixelbits/advanced/converters">Converters</a></li>
-        <li><a href="/pixelbits/advanced/selectors">Selectors</a></li>
-        <li><a href="/pixelbits/advanced/rule-priority">Rule priority</a></li>
+        <li><a href="/pixelbits/advanced/converters.html">Converters</a></li>
+        <li><a href="/pixelbits/advanced/selectors.html">Selectors</a></li>
+        <li><a href="/pixelbits/advanced/rule-priority.html">Rule priority</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="https://github.com/depl0y/pixelbits/tree/master">Github</a></li>
@@ -75,12 +75,12 @@ It’s like CSS for iOS, but for the file format I currently only support JSON (
 <p>Pixelbits relies on error handling introduced in Swift 2.0, so Swift 2.0 is probably the minimal supported version.</p>
 
 <h3 id="installation">Installation</h3>
-<p>Currently you can only include pixelbits by using cocoapods directly from this git repository, add the following to your <code class="highlighter-rouge">Podfile</code>.</p>
+<p>Currently you can only include pixelbits by using cocoapods directly from this git repository, add the following to your <code>Podfile</code>.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">platform :ios, <span class="s1">'9.0'</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">platform :ios, <span class="s1">&#39;9.0&#39;</span>
 use_frameworks!
 
-pod <span class="s1">'pixelbits'</span>, :git <span class="o">=</span>&gt; <span class="s1">'https://github.com/depl0y/pixelbits.git'</span></code></pre></figure>
+pod <span class="s1">&#39;pixelbits&#39;</span>, :git <span class="o">=</span>&gt; <span class="s1">&#39;https://github.com/depl0y/pixelbits.git&#39;</span></code></pre></div>
 
 <h3 id="stylesheets">Stylesheets</h3>
 <p>Pixelbits (in it’s current state) uses JSON as ‘stylesheets’. You can add some hierarchy to your JSON file to target specific UIViews.</p>
@@ -107,38 +107,38 @@ pod <span class="s1">'pixelbits'</span>, :git <span class="o">=</span>&gt; <span
 
 <p>To style a <code>UIButton</code>, specifically targeting this hierarchy, you can put the following code in your stylesheet file:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
-	<span class="s2">"MyViewController"</span> <span class="err">:</span> <span class="p">{</span>
-		<span class="s2">"UIView"</span> <span class="err">:</span> <span class="p">{</span>
-			<span class="s2">"MyCustomView"</span> <span class="err">:</span> <span class="p">{</span>
-				<span class="s2">"UIButton"</span> <span class="err">:</span> <span class="p">{</span>
-					<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"yellow"</span>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+	<span class="s2">&quot;MyViewController&quot;</span> <span class="o">:</span> <span class="p">{</span>
+		<span class="s2">&quot;UIView&quot;</span> <span class="o">:</span> <span class="p">{</span>
+			<span class="s2">&quot;MyCustomView&quot;</span> <span class="o">:</span> <span class="p">{</span>
+				<span class="s2">&quot;UIButton&quot;</span> <span class="o">:</span> <span class="p">{</span>
+					<span class="s2">&quot;background-color&quot;</span> <span class="o">:</span> <span class="s2">&quot;yellow&quot;</span>
 				<span class="p">}</span>
 			<span class="p">}</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span></code></pre></div>
 
-<p>This will target every <code class="highlighter-rouge">UIButton</code> that is within this hierarchy, so if you added more <code class="highlighter-rouge">UIButtons</code> in your <code class="highlighter-rouge">MyCustomView</code>, they will all have a nice yellow background color.</p>
+<p>This will target every <code>UIButton</code> that is within this hierarchy, so if you added more <code>UIButtons</code> in your <code>MyCustomView</code>, they will all have a nice yellow background color.</p>
 
 <h4 id="style">Style</h4>
 
-<p>This is the exact reason that Pixelbits has added a nice <code class="highlighter-rouge">style</code> property to <strong>all</strong> your <code class="highlighter-rouge">UIView</code> objects. 
-This way you can set the <code class="highlighter-rouge">style</code>-property to (for example) <code class="highlighter-rouge">yellow-background</code>.</p>
+<p>This is the exact reason that Pixelbits has added a nice <code>style</code> property to <strong>all</strong> your <code>UIView</code> objects. 
+This way you can set the <code>style</code>-property to (for example) <code>yellow-background</code>.</p>
 
 <p>Now if you update your stylesheet like this, it will only make the one with the applied style yellow.</p>
 
-<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-	</span><span class="nt">"MyViewController"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-		</span><span class="nt">"UIView"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-			</span><span class="nt">"MyCustomView"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-				</span><span class="nt">"UIButton.yellow-background"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-					</span><span class="nt">"background-color"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"yellow"</span><span class="w">
-				</span><span class="p">}</span><span class="w">
-			</span><span class="p">}</span><span class="w">
-		</span><span class="p">}</span><span class="w">
-	</span><span class="p">}</span><span class="w">
-</span><span class="p">}</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
+	<span class="nt">&quot;MyViewController&quot;</span> <span class="p">:</span> <span class="p">{</span>
+		<span class="nt">&quot;UIView&quot;</span> <span class="p">:</span> <span class="p">{</span>
+			<span class="nt">&quot;MyCustomView&quot;</span> <span class="p">:</span> <span class="p">{</span>
+				<span class="nt">&quot;UIButton.yellow-background&quot;</span> <span class="p">:</span> <span class="p">{</span>
+					<span class="nt">&quot;background-color&quot;</span> <span class="p">:</span> <span class="s2">&quot;yellow&quot;</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
 
 </div>
 
@@ -148,6 +148,8 @@ This way you can set the <code class="highlighter-rouge">style</code>-property t
     <script type="text/javascript">
 	$(document).ready(function() {
     	$("table").addClass("table").addClass("table-striped").addClass("table-condensed");
+		
+		$("table").wrap("<div class='table-responsive'></div>");
 	});
 </script>
 

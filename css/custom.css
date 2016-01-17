@@ -22,3 +22,11 @@
 .pixelbits {
 	font-weight: 900;
 }
+
+code,
+pre,
+samp {
+ word-break: keep-all;
+ word-wrap: normal;
+ overflow-x: scroll;
+}

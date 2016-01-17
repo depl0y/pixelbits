@@ -39,9 +39,9 @@
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/pixelbits/">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="/pixelbits/advanced/converters">Converters</a></li>
-        <li><a href="/pixelbits/advanced/selectors">Selectors</a></li>
-        <li><a href="/pixelbits/advanced/rule-priority">Rule priority</a></li>
+        <li><a href="/pixelbits/advanced/converters.html">Converters</a></li>
+        <li><a href="/pixelbits/advanced/selectors.html">Selectors</a></li>
+        <li><a href="/pixelbits/advanced/rule-priority.html">Rule priority</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="https://github.com/depl0y/pixelbits/tree/master">Github</a></li>
@@ -61,51 +61,51 @@
 		<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
 			<br/>
 			<div class="list-group">
-				<a href="/pixelbits/advanced/converters" 
+				<a href="/pixelbits/advanced/converters.html" 
 					class="list-group-item ">
 						Converters
 				</a>
-				<a href="/pixelbits/advanced/dictionary-key" 
+				<a href="/pixelbits/advanced/dictionary-key.html" 
 					class="list-group-item ">
 						Dictionary Key
 				</a>
-				<a href="/pixelbits/advanced/UIColor" 
+				<a href="/pixelbits/advanced/UIColor.html" 
 					class="list-group-item ">
 						UIColor
 				</a>
-				<a href="/pixelbits/advanced/UIControlState" 
+				<a href="/pixelbits/advanced/UIControlState.html" 
 					class="list-group-item ">
 						UIControlState
 				</a>
-				<a href="/pixelbits/advanced/UIFont" 
+				<a href="/pixelbits/advanced/UIFont.html" 
 					class="list-group-item ">
 						UIFont
 				</a>
-				<a href="/pixelbits/advanced/UIImage" 
+				<a href="/pixelbits/advanced/UIImage.html" 
 					class="list-group-item ">
 						UIImage
 				</a>
-				<a href="/pixelbits/advanced/NSTextAlignment" 
+				<a href="/pixelbits/advanced/NSTextAlignment.html" 
 					class="list-group-item ">
 						NSTextAlignment
 				</a>
-				<a href="/pixelbits/advanced/UIControlContentHorizontalAlignment" 
+				<a href="/pixelbits/advanced/UIControlContentHorizontalAlignment.html" 
 					class="list-group-item ">
 						UIControlContentHorizontalAlignment
 				</a>
-				<a href="/pixelbits/advanced/UIControlContentVerticalAlignment" 
+				<a href="/pixelbits/advanced/UIControlContentVerticalAlignment.html" 
 					class="list-group-item active">
 						UIControlContentVerticalAlignment
 				</a>
-				<a href="/pixelbits/advanced/UIViewContentMode" 
+				<a href="/pixelbits/advanced/UIViewContentMode.html" 
 					class="list-group-item ">
 						UIViewContentMode
 				</a>
-				<a href="/pixelbits/advanced/UIEdgeInsets" 
+				<a href="/pixelbits/advanced/UIEdgeInsets.html" 
 					class="list-group-item ">
 						UIEdgeInsets
 				</a>
-				<a href="/pixelbits/advanced/UIViewTintAdjustmentMode" 
+				<a href="/pixelbits/advanced/UIViewTintAdjustmentMode.html" 
 					class="list-group-item ">
 						UIViewTintAdjustmentMode
 				</a>
@@ -124,29 +124,29 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">content-top</code></td>
-      <td><code class="highlighter-rouge">UIControlContentVerticalAlignment.Top</code></td>
+      <td><code>content-top</code></td>
+      <td><code>UIControlContentVerticalAlignment.Top</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content-bottom</code></td>
-      <td><code class="highlighter-rouge">UIControlContentVerticalAlignment.Bottom</code></td>
+      <td><code>content-bottom</code></td>
+      <td><code>UIControlContentVerticalAlignment.Bottom</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content-vcenter</code></td>
-      <td><code class="highlighter-rouge">UIControlContentVerticalAlignment.Center</code></td>
+      <td><code>content-vcenter</code></td>
+      <td><code>UIControlContentVerticalAlignment.Center</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">content-vfill</code></td>
-      <td><code class="highlighter-rouge">UIControlContentVerticalAlignment.Fill</code></td>
+      <td><code>content-vfill</code></td>
+      <td><code>UIControlContentVerticalAlignment.Fill</code></td>
     </tr>
   </tbody>
 </table>
 
 <p><strong>Example</strong></p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">"UIButton"</span> <span class="err">:</span> <span class="p">{</span>
-	<span class="s2">"contentVerticalAlignment"</span> <span class="err">:</span> <span class="s2">"content-bottom"</span>
-<span class="p">}</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">&quot;UIButton&quot;</span> <span class="o">:</span> <span class="p">{</span>
+	<span class="s2">&quot;contentVerticalAlignment&quot;</span> <span class="o">:</span> <span class="s2">&quot;content-bottom&quot;</span>
+<span class="p">}</span></code></pre></div>
 
 <div class="alert alert-info">
 The string is <strong>case sensitive</strong>.
@@ -164,6 +164,8 @@ The string is <strong>case sensitive</strong>.
     <script type="text/javascript">
 	$(document).ready(function() {
     	$("table").addClass("table").addClass("table-striped").addClass("table-condensed");
+		
+		$("table").wrap("<div class='table-responsive'></div>");
 	});
 </script>
 
