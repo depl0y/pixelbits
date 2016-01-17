@@ -117,14 +117,28 @@
 
 <p>You can specify <code class="highlighter-rouge">UIEdgeInsets</code> in your stylesheet in a couple of ways. It is comparable as the <code class="highlighter-rouge">padding</code> attribute in CSS.</p>
 
-<p><code class="highlighter-rouge">insets(5)</code><br />
-This is translated to <code class="highlighter-rouge">UIEdgeInsets(5, 5, 5, 5)</code></p>
-
-<p><code class="highlighter-rouge">insets(5, 10)</code><br />
-This is translated to <code class="highlighter-rouge">UIEdgeInsets(5, 10, 5, 10)</code></p>
-
-<p><code class="highlighter-rouge">insets(1, 2, 3, 4)</code><br />
-This is translated to <code class="highlighter-rouge">UIEdgeInsets(1, 2, 3, 4)</code></p>
+<table>
+  <thead>
+    <tr>
+      <th>String</th>
+      <th>Translated to UIEdgeInsets</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">insets(5)</code></td>
+      <td><code class="highlighter-rouge">UIEdgeInsets(5, 5, 5, 5)</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">insets(5, 10)</code></td>
+      <td><code class="highlighter-rouge">UIEdgeInsets(5, 10, 5, 10)</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">insets(1, 2, 3, 4)</code></td>
+      <td><code class="highlighter-rouge">UIEdgeInsets(1, 2, 3, 4)</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <p><strong>Example</strong></p>
 
@@ -143,7 +157,7 @@ This is translated to <code class="highlighter-rouge">UIEdgeInsets(1, 2, 3, 4)</
 
     <script type="text/javascript">
 	$(document).ready(function() {
-    	$("table").addClass("table").addClass("table-bordered");
+    	$("table").addClass("table").addClass("table-striped").addClass("table-condensed");
 	});
 </script>
 
