@@ -44,24 +44,12 @@ internal class PBProperty: NSObject {
 		
 		if self.controlState != nil && view.respondsToSelector(self.selector) {
 			
-			do {
-				try TryCatch.tryBlock({ () -> Void in
-					view.setValue(self.value, forKey: self.key, forState: self.controlState!)
-				})
-			} catch {
-				Log.debug("Could not apply \(self.value) to \(self.key)")
-			}
+				view.setValue(self.value, forKey: self.key, forState: self.controlState!)
 			
 		}
 		else if self.controlState == nil && view.respondsToSelector(self.selector) {
 			
-			do {
-				try TryCatch.tryBlock({ () -> Void in
-					view.setValue(self.value, forKey: self.key)
-				})
-			} catch {
-				Log.debug("Could not apply \(self.value) to \(self.key)")
-			}
+				view.setValue(self.value, forKey: self.key)
 			
 		}
 		else {

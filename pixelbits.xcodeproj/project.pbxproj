@@ -27,8 +27,6 @@
 		AB473B331C4A984D00538FE6 /* UIViewContentModeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB473B271C4A984D00538FE6 /* UIViewContentModeConverter.swift */; };
 		AB473B341C4A984D00538FE6 /* ValueToPropertyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB473B281C4A984D00538FE6 /* ValueToPropertyConverter.swift */; };
 		AB637E5F1C47A61B00B0A845 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB637E5E1C47A61B00B0A845 /* String+Regex.swift */; };
-		AB637E631C47AC4200B0A845 /* TryCatch.h in Headers */ = {isa = PBXBuildFile; fileRef = AB637E611C47AC4200B0A845 /* TryCatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB637E641C47AC4200B0A845 /* TryCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = AB637E621C47AC4200B0A845 /* TryCatch.m */; };
 		AB7C54DF1C48B681005FDF1B /* pixelbits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3984BF1C26906A00A38589 /* pixelbits.framework */; };
 		AB7C54E61C48B6CC005FDF1B /* pathFindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7C54E51C48B6CC005FDF1B /* pathFindingTests.swift */; };
 		ABB440261C48E946009028B8 /* UIColorConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440251C48E946009028B8 /* UIColorConverterTest.swift */; };
@@ -83,8 +81,6 @@
 		AB473B271C4A984D00538FE6 /* UIViewContentModeConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewContentModeConverter.swift; sourceTree = "<group>"; };
 		AB473B281C4A984D00538FE6 /* ValueToPropertyConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueToPropertyConverter.swift; sourceTree = "<group>"; };
 		AB637E5E1C47A61B00B0A845 /* String+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Regex.swift"; path = "Extensions/String+Regex.swift"; sourceTree = "<group>"; };
-		AB637E611C47AC4200B0A845 /* TryCatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TryCatch.h; path = Other/TryCatch.h; sourceTree = "<group>"; };
-		AB637E621C47AC4200B0A845 /* TryCatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TryCatch.m; path = Other/TryCatch.m; sourceTree = "<group>"; };
 		AB7C54DA1C48B681005FDF1B /* pixelbitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pixelbitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7C54DE1C48B681005FDF1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB7C54E51C48B6CC005FDF1B /* pathFindingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pathFindingTests.swift; sourceTree = "<group>"; };
@@ -191,8 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				AB364C811C41B2FF00FDCA5C /* Log.swift */,
-				AB637E611C47AC4200B0A845 /* TryCatch.h */,
-				AB637E621C47AC4200B0A845 /* TryCatch.m */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -248,7 +242,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB637E631C47AC4200B0A845 /* TryCatch.h in Headers */,
 				AB3984C31C26906A00A38589 /* pixelbits.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,7 +347,6 @@
 				ABB56CEF1C4A9A1600032346 /* ConverterValues.swift in Sources */,
 				AB473B331C4A984D00538FE6 /* UIViewContentModeConverter.swift in Sources */,
 				AB364C821C41B2FF00FDCA5C /* Log.swift in Sources */,
-				AB637E641C47AC4200B0A845 /* TryCatch.m in Sources */,
 				AB35DD421C45093600E60F32 /* UIViewLocation.swift in Sources */,
 				AB473B341C4A984D00538FE6 /* ValueToPropertyConverter.swift in Sources */,
 				AB637E5F1C47A61B00B0A845 /* String+Regex.swift in Sources */,
