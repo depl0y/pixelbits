@@ -1,1 +1,7 @@
 language: objective-c
+osx_image: xcode7.2
+xcode_project: pixelbits.xcodeproj
+xcode_scheme: 
+    - pixelbits
+xcode_sdk:
+    - iphonesimulator9.0
