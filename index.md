@@ -2,6 +2,12 @@
 layout: page
 ---
 
+#Pixelbits
+[![Build Status](https://travis-ci.org/depl0y/pixelbits.svg?branch=master)](https://travis-ci.org/depl0y/pixelbits)
+![Pod version](https://img.shields.io/cocoapods/v/pixelbits.svg?style=flat) 
+![Platform](https://cocoapod-badges.herokuapp.com/p/pixelbits/badge.png)
+![License](https://cocoapod-badges.herokuapp.com/l/pixelbits/badge.png)
+
 # Introduction
 
 Pixelbits is an open-source Swift based framework, that enables you to style your applications easily using an external configuration file.
