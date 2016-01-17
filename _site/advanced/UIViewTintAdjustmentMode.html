@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Pixelbits - UIColor</title>
+	<title>Pixelbits - UIViewTintAdjustmentMode</title>
 	<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 ">
 
@@ -70,7 +70,7 @@
 						Dictionary Key
 				</a>
 				<a href="/pixelbits/advanced/UIColor" 
-					class="list-group-item active">
+					class="list-group-item ">
 						UIColor
 				</a>
 				<a href="/pixelbits/advanced/UIControlState" 
@@ -106,33 +106,46 @@
 						UIEdgeInsets
 				</a>
 				<a href="/pixelbits/advanced/UIViewTintAdjustmentMode" 
-					class="list-group-item ">
+					class="list-group-item active">
 						UIViewTintAdjustmentMode
 				</a>
 			</div>
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
-			<h2 id="uicolor">UIColor</h2>
-<p>Handled by: <code>UIColorConverter</code></p>
+			<h2 id="uiviewtintadjustmentmode">UIViewTintAdjustmentMode</h2>
+<p>Handled by: <code>UIViewTintAdjustmentModeConverter</code></p>
 
-<p>You have 2 methods of defining colors in your stylesheet, you can either use the web-based hexadecimal way of describing them, or you can use the named colors Swift already understands.</p>
-
-<p>The hexadecimal way <strong>requires</strong> you to prefix your color with the <code class="highlighter-rouge">#</code>, so it can recognize you are using a color. e.g. <code class="highlighter-rouge">#ff0000</code> will produce a bright red color. 
-The hexadecimal way supports RGB (12 bits), RGB (24 bits) and ARGB (32 bits).</p>
-
-<p>Using named colors is a bit different, so if specify a named color, you need to make sure it is an exact match to the method on the <code class="highlighter-rouge">UIColor</code> class. For example, if you want to use
-the red color that <code class="highlighter-rouge">UIColor.redColor()</code> gives you, you need to put <code class="highlighter-rouge">red</code> as the value for your color in your stylesheet.</p>
+<table>
+  <thead>
+    <tr>
+      <th>String</th>
+      <th>UIViewTintAdjustmentMode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">UIViewTintAdjustmentModeAutomatic</code></td>
+      <td><code class="highlighter-rouge">UIViewTintAdjustmentMode.Automatic</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIViewTintAdjustmentModeNormal</code></td>
+      <td><code class="highlighter-rouge">UIViewTintAdjustmentMode.Normal</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UIViewTintAdjustmentModeDimmed</code></td>
+      <td><code class="highlighter-rouge">UIViewTintAdjustmentMode.Dimmed</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <p><strong>Example</strong></p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
-	<span class="s2">"background-color"</span> <span class="err">:</span> <span class="s2">"red"</span><span class="p">,</span> <span class="c1">// triggers the UIColor.redColor() method</span>
-	<span class="s2">"text-color"</span> <span class="err">:</span> <span class="s2">"#efefef"</span> <span class="c1">// converts the color from HEX to light gray</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">"UIView"</span> <span class="err">:</span> <span class="p">{</span>
+	<span class="s2">"tintAdjustmentMode"</span> <span class="err">:</span> <span class="s2">"UIViewTintAdjustmentModeDimmed"</span>
 <span class="p">}</span></code></pre></figure>
 
 <div class="alert alert-info">
-Take a look at the <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIColor_Class/#//apple_ref/doc/uid/TP40006892-CH3-SW18">Apple Documentation</a> to see 
-which colors are support using this method.
+The string is <strong>case sensitive</strong>.
 </div>
 
 		</div>
