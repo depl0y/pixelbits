@@ -9,7 +9,7 @@
 import XCTest
 @testable import pixelbits
 
-class ValueConverterTest: XCTestCase {
+class ValueToPropertyConverterTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -37,6 +37,11 @@ class ValueConverterTest: XCTestCase {
 			}
 		}
 		
+	}
+	
+	func testUIColor() {
+		let prop = ValueToPropertyConverter.fromAnyObject("my-key", value: "red")
+		XCTAssertEqual(prop.value as? UIColor, UIColor.redColor())
 	}
 	
 	

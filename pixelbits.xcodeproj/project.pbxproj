@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F463B92485F5431A3BCC095 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97B9927BDBF8AB41EE5560C /* Pods.framework */; };
 		AB35DD421C45093600E60F32 /* UIViewLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35DD411C45093600E60F32 /* UIViewLocation.swift */; };
 		AB35DD441C46675400E60F32 /* PBNodeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35DD431C46675400E60F32 /* PBNodeCollection.swift */; };
 		AB35DD461C467BA300E60F32 /* Array+remove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35DD451C467BA300E60F32 /* Array+remove.swift */; };
@@ -44,7 +43,7 @@
 		ABB440381C494257009028B8 /* UIViewExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440371C494257009028B8 /* UIViewExtensionTest.swift */; };
 		ABB4403A1C494381009028B8 /* ArrayExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440391C494381009028B8 /* ArrayExtensionTest.swift */; };
 		ABB4403E1C4990AC009028B8 /* UIViewContentModeConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB4403D1C4990AC009028B8 /* UIViewContentModeConverterTest.swift */; };
-		ABB440401C4992EE009028B8 /* ValueConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB4403F1C4992EE009028B8 /* ValueConverterTest.swift */; };
+		ABB440401C4992EE009028B8 /* ValueToPropertyConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB4403F1C4992EE009028B8 /* ValueToPropertyConverterTest.swift */; };
 		ABB56CEE1C4A9A1600032346 /* AssociationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB56CEC1C4A9A1600032346 /* AssociationKeys.swift */; };
 		ABB56CEF1C4A9A1600032346 /* ConverterValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB56CED1C4A9A1600032346 /* ConverterValues.swift */; };
 		ABE17D1D1C42FF6B00755B1F /* PBNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE17D1C1C42FF6B00755B1F /* PBNode.swift */; };
@@ -62,8 +61,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		62D502DC563920273B59A114 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		91ED8E759875735D7D64A2B6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AB35DD411C45093600E60F32 /* UIViewLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewLocation.swift; sourceTree = "<group>"; };
 		AB35DD431C46675400E60F32 /* PBNodeCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBNodeCollection.swift; sourceTree = "<group>"; };
 		AB35DD451C467BA300E60F32 /* Array+remove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+remove.swift"; path = "Extensions/Array+remove.swift"; sourceTree = "<group>"; };
@@ -103,12 +100,11 @@
 		ABB440371C494257009028B8 /* UIViewExtensionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTest.swift; sourceTree = "<group>"; };
 		ABB440391C494381009028B8 /* ArrayExtensionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTest.swift; sourceTree = "<group>"; };
 		ABB4403D1C4990AC009028B8 /* UIViewContentModeConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewContentModeConverterTest.swift; sourceTree = "<group>"; };
-		ABB4403F1C4992EE009028B8 /* ValueConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueConverterTest.swift; sourceTree = "<group>"; };
+		ABB4403F1C4992EE009028B8 /* ValueToPropertyConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueToPropertyConverterTest.swift; sourceTree = "<group>"; };
 		ABB56CEC1C4A9A1600032346 /* AssociationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssociationKeys.swift; sourceTree = "<group>"; };
 		ABB56CED1C4A9A1600032346 /* ConverterValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterValues.swift; sourceTree = "<group>"; };
 		ABE17D1C1C42FF6B00755B1F /* PBNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBNode.swift; sourceTree = "<group>"; };
 		ABE17D221C439CA400755B1F /* PBProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBProperty.swift; sourceTree = "<group>"; };
-		C97B9927BDBF8AB41EE5560C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +112,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F463B92485F5431A3BCC095 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,22 +126,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8C6695D18C8FC1900F91A62C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C97B9927BDBF8AB41EE5560C /* Pods.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		AB3984B51C26906A00A38589 = {
 			isa = PBXGroup;
 			children = (
 				AB3984C11C26906A00A38589 /* pixelbits */,
 				AB7C54DB1C48B681005FDF1B /* pixelbitsTests */,
 				AB3984C01C26906A00A38589 /* Products */,
-				F365937B3C623D5CA8D0867B /* Pods */,
-				8C6695D18C8FC1900F91A62C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,7 +214,7 @@
 				ABB4402F1C490875009028B8 /* UIImageConverterTest.swift */,
 				ABB4403D1C4990AC009028B8 /* UIViewContentModeConverterTest.swift */,
 				ABB440371C494257009028B8 /* UIViewExtensionTest.swift */,
-				ABB4403F1C4992EE009028B8 /* ValueConverterTest.swift */,
+				ABB4403F1C4992EE009028B8 /* ValueToPropertyConverterTest.swift */,
 			);
 			path = pixelbitsTests;
 			sourceTree = "<group>";
@@ -256,15 +241,6 @@
 			path = Parser;
 			sourceTree = "<group>";
 		};
-		F365937B3C623D5CA8D0867B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				91ED8E759875735D7D64A2B6 /* Pods.debug.xcconfig */,
-				62D502DC563920273B59A114 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -284,12 +260,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB3984C71C26906A00A38589 /* Build configuration list for PBXNativeTarget "pixelbits" */;
 			buildPhases = (
-				16C1D7EA817E7B388A13A310 /* Check Pods Manifest.lock */,
 				AB3984BA1C26906A00A38589 /* Sources */,
 				AB3984BB1C26906A00A38589 /* Frameworks */,
 				AB3984BC1C26906A00A38589 /* Headers */,
 				AB3984BD1C26906A00A38589 /* Resources */,
-				9BD2021139B144F00F4CE062 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,39 +346,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		16C1D7EA817E7B388A13A310 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		9BD2021139B144F00F4CE062 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		AB3984BA1C26906A00A38589 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -451,7 +392,7 @@
 				ABB440361C4915A9009028B8 /* UIFontConverterTest.swift in Sources */,
 				ABB4402A1C48F571009028B8 /* UIControlContentVerticalAlignmentConverterTest.swift in Sources */,
 				ABB440301C490875009028B8 /* UIImageConverterTest.swift in Sources */,
-				ABB440401C4992EE009028B8 /* ValueConverterTest.swift in Sources */,
+				ABB440401C4992EE009028B8 /* ValueToPropertyConverterTest.swift in Sources */,
 				ABB440281C48EF79009028B8 /* NSTextAlignmentConverterTest.swift in Sources */,
 				ABB440261C48E946009028B8 /* UIColorConverterTest.swift in Sources */,
 				ABB4403A1C494381009028B8 /* ArrayExtensionTest.swift in Sources */,
@@ -506,7 +447,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -548,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -560,7 +501,6 @@
 		};
 		AB3984C81C26906A00A38589 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91ED8E759875735D7D64A2B6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -571,11 +511,7 @@
 				INFOPLIST_FILE = pixelbits/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					"\"YamlSwift\"",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sortedbits.pixelbits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -587,7 +523,6 @@
 		};
 		AB3984C91C26906A00A38589 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62D502DC563920273B59A114 /* Pods.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -598,11 +533,7 @@
 				INFOPLIST_FILE = pixelbits/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					"\"YamlSwift\"",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sortedbits.pixelbits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -615,7 +546,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = pixelbitsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sortedbits.pixelbitsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -626,7 +557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = pixelbitsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sortedbits.pixelbitsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

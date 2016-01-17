@@ -19,7 +19,7 @@ public extension UIView {
 				newValue,
 				objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
 			
-			self.setNeedsDisplay()
+			self.updateStyling()
 		}
 		get {
 			return objc_getAssociatedObject(

@@ -20,11 +20,11 @@ internal class ValueToPropertyConverter {
 			else if let font = UIFontConverter.fromString(valueString) {
 				return PBProperty(key: key, value: font, type: PBPropertyType.UIFont)
 			}
-			else if let image = UIImageConverter.fromString(valueString) {
-				return PBProperty(key: key, value: image, type: PBPropertyType.UIImage)
-			}
 			else if let fontStyle = UIFontTextStyleConverter.fromString(valueString) {
 				return PBProperty(key: key, value: fontStyle, type: PBPropertyType.UIFontTextStyle)
+			}
+			else if let image = UIImageConverter.fromString(valueString) {
+				return PBProperty(key: key, value: image, type: PBPropertyType.UIImage)
 			}
 			else if let textAlignment = NSTextAlignmentConverter.fromString(valueString) {
 				return PBProperty(key: key, value: textAlignment.rawValue, type: PBPropertyType.NSTextAlignment)
