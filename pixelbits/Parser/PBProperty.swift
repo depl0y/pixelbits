@@ -10,8 +10,9 @@ import UIKit
 
 internal class PBProperty: NSObject {
 	
-	var key: String
+	var key: String = ""
 	var value: AnyObject
+	
 	var type: PBPropertyType = PBPropertyType.Other
 	
 	/// Is a `UIControlState` set for this property
@@ -19,6 +20,29 @@ internal class PBProperty: NSObject {
 	
 	init(key: String, value: AnyObject, type: PBPropertyType = PBPropertyType.Other) {
 		
+		self.value = value
+		self.type = type
+		
+		super.init()
+
+		self.parseKey(key)
+	}
+	
+	func apply(view: UIView) {
+				
+		if self.controlState != nil && view.respondsToSelector(self.selector) {
+			view.setValue(self.value, forKey: self.key, forState: self.controlState!)
+		}
+		else if self.controlState == nil && view.respondsToSelector(self.selector) {
+			view.setValue(self.value, forKey: self.key)
+		}
+		else {
+			Log.error("Could not apply '\(key)' to '\(view), property does not exist")
+		}
+		
+	}
+	
+	private func parseKey(key: String) {
 		if key.containsString(":") {
 			var keyParts = key.characters.split { $0 == ":" }.map(String.init)
 			
@@ -33,29 +57,6 @@ internal class PBProperty: NSObject {
 		else {
 			self.key = key
 		}
-		
-		self.value = value
-		self.type = type
-		
-		super.init()
-	}
-	
-	func apply(view: UIView) {
-		
-		if self.controlState != nil && view.respondsToSelector(self.selector) {
-			
-				view.setValue(self.value, forKey: self.key, forState: self.controlState!)
-			
-		}
-		else if self.controlState == nil && view.respondsToSelector(self.selector) {
-			
-				view.setValue(self.value, forKey: self.key)
-			
-		}
-		else {
-			Log.error("Could not apply '\(key)' to '\(view), property does not exist")
-		}
-		
 	}
 	
 	private var selector: Selector {

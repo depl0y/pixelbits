@@ -38,6 +38,12 @@ internal class ValueToPropertyConverter {
 			else if let contentMode = UIViewContentModeConverter.fromString(valueString) {
 				return PBProperty(key: key, value: contentMode.rawValue, type: PBPropertyType.UIViewContentMode)
 			}
+			else if let adjustmentMode = UIViewTintAdjustmentModeConverter.fromString(valueString) {
+				return PBProperty(key: key, value: adjustmentMode.rawValue, type: PBPropertyType.UIViewTintAdjustmentMode)
+			}
+			else if let edgeInsets = UIEdgeInsetsConverter.fromString(valueString) {
+				return PBProperty(key: key, value: edgeInsets, type: PBPropertyType.UIEdgeInsets)
+			}
 		}
 
 		return PBProperty(key: key, value: value, type: .Other)

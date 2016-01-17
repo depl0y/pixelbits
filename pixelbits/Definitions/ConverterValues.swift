@@ -92,4 +92,12 @@ internal class ConverterValues: NSObject {
 		"UIFontTextStyleCallout"		: UIFontTextStyleCallout
 	]
 	
+	static let UIViewTintAdjustmentModes = [
+		"UIViewTintAdjustmentModeAutomatic" : UIViewTintAdjustmentMode.Automatic,
+		"UIViewTintAdjustmentModeNormal" : UIViewTintAdjustmentMode.Normal,
+		"UIViewTintAdjustmentModeDimmed" : UIViewTintAdjustmentMode.Dimmed
+	]
+	
+
+	
 }
