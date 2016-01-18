@@ -42,6 +42,7 @@
         <li><a href="/pixelbits/advanced/converters.html">Converters</a></li>
         <li><a href="/pixelbits/advanced/selectors.html">Selectors</a></li>
         <li><a href="/pixelbits/advanced/rule-priority.html">Rule priority</a></li>
+        <li><a href="/pixelbits/apps.html">Apps</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="https://github.com/depl0y/pixelbits/tree/master">Github</a></li>
@@ -135,19 +136,27 @@
   </thead>
   <tbody>
     <tr>
+      <td><code>"true"</code></td>
+      <td><code>true</code></td>
+    </tr>
+    <tr>
+      <td><code>"yes"</code></td>
+      <td><code>true</code></td>
+    </tr>
+    <tr>
       <td><code>true</code></td>
       <td><code>true</code></td>
     </tr>
     <tr>
-      <td><code>yes</code></td>
-      <td><code>true</code></td>
+      <td><code>"false"</code></td>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <td><code>"no"</code></td>
+      <td><code>false</code></td>
     </tr>
     <tr>
       <td><code>false</code></td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>no</code></td>
       <td><code>false</code></td>
     </tr>
   </tbody>
@@ -156,11 +165,12 @@
 <p><strong>Example</strong></p>
 
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="s2">&quot;UIButton&quot;</span> <span class="o">:</span> <span class="p">{</span>
-	<span class="s2">&quot;hidden&quot;</span> <span class="o">:</span> <span class="s2">&quot;false&quot;</span>
+	<span class="s2">&quot;hidden&quot;</span> <span class="o">:</span> <span class="s2">&quot;false&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;userInteractionEnabled&quot;</span> <span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span></code></pre></div>
 
 <div class="alert alert-info">
-The boolean value should be defined as string and is <strong>case sensitive</strong>.
+The <code>Bool</code> value can be specified as string or as direct value, the string is <strong>case sensitive</strong>.
 </div>
 
 		</div>

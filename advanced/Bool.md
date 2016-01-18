@@ -8,18 +8,21 @@ Handled by: <code>BooleanConverter</code>
 
 | String | Bool |
 | ------ | -------------- |
+| `"true"` | `true` |
+| `"yes"` | `true` |
 | `true` | `true` |
-| `yes` | `true` |
+| `"false"` | `false` |
+| `"no"` | `false` |
 | `false` | `false` |
-| `no` | `false` |
 
 **Example**
 {% highlight JS %}
 "UIButton" : {
-	"hidden" : "false"
+	"hidden" : "false",
+	"userInteractionEnabled" : true
 }
 {% endhighlight %}
 
 <div class="alert alert-info">
-The boolean value should be defined as string and is <strong>case sensitive</strong>.
+The <code>Bool</code> value can be specified as string or as direct value, the string is <strong>case sensitive</strong>.
 </div>

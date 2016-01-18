@@ -30,3 +30,26 @@ samp {
  word-wrap: normal;
  overflow-x: scroll;
 }
+
+.app .title {
+
+	font-size: 20px;
+	font-weight: 200;
+	width: 100%;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.app .icon {
+	width: 100%;
+}
+
+.app {
+	background-color: white;
+	border: solid 1px #dcdcdc;
+	padding: 10px;
+}
+
+.app-row {
+	padding: 10px;
+}
