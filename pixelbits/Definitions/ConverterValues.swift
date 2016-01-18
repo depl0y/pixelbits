@@ -98,6 +98,12 @@ internal class ConverterValues: NSObject {
 		"UIViewTintAdjustmentModeDimmed" : UIViewTintAdjustmentMode.Dimmed
 	]
 	
+	static let BooleanValues = [
+		"true" : true,
+		"false" : false,
+		"yes" : true,
+		"no" : false
+	]
 
 	
 }

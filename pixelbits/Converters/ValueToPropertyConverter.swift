@@ -14,7 +14,10 @@ internal class ValueToPropertyConverter {
 		
 		if let valueString = value as? String {
 			
-			if let color = UIColorConverter.fromString(valueString) {
+			if let boolValue = BooleanConverter.fromString(valueString) {
+				return PBProperty(key: key, value: boolValue, type: PBPropertyType.Boolean)
+			}
+			else if let color = UIColorConverter.fromString(valueString) {
 				return PBProperty(key: key, value: color, type: PBPropertyType.UIColor)
 			}
 			else if let font = UIFontConverter.fromString(valueString) {
@@ -44,8 +47,15 @@ internal class ValueToPropertyConverter {
 			else if let edgeInsets = UIEdgeInsetsConverter.fromString(valueString) {
 				return PBProperty(key: key, value: edgeInsets, type: PBPropertyType.UIEdgeInsets)
 			}
+			else if let rect = CGRectConverter.fromString(valueString) {
+				return PBProperty(key: key, value: rect, type: PBPropertyType.CGRect)
+			}
 		}
-
+		
+		if value is NSNumber {
+			return PBProperty(key: key, value: value, type: PBPropertyType.Number)
+		}
+		
 		return PBProperty(key: key, value: value, type: .Other)
 		
 		

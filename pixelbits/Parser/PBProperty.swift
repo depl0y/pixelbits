@@ -24,12 +24,12 @@ internal class PBProperty: NSObject {
 		self.type = type
 		
 		super.init()
-
+		
 		self.parseKey(key)
 	}
 	
 	func apply(view: UIView) {
-				
+		
 		if self.controlState != nil && view.respondsToSelector(self.selector) {
 			view.setValue(self.value, forKey: self.key, forState: self.controlState!)
 		}
@@ -37,7 +37,15 @@ internal class PBProperty: NSObject {
 			view.setValue(self.value, forKey: self.key)
 		}
 		else {
-			Log.error("Could not apply '\(key)' to '\(view), property does not exist")
+			if self.key == "hidden" && self.type == .Boolean {
+				view.hidden = self.value as! Bool
+			}
+			else if self.key == "userInteractionEnabled" && self.type == .Boolean {
+				view.userInteractionEnabled = self.value as! Bool
+			}
+			else {
+				Log.error("Could not apply '\(key)' to '\(view), property does not exist")
+			}
 		}
 		
 	}

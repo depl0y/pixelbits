@@ -10,6 +10,9 @@
 		AB12432E1C4B7154009F29E8 /* UIViewTintAdjustmentModeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12432D1C4B7154009F29E8 /* UIViewTintAdjustmentModeConverter.swift */; };
 		AB1243301C4B756B009F29E8 /* UIEdgeInsetsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12432F1C4B756B009F29E8 /* UIEdgeInsetsConverter.swift */; };
 		AB1243321C4B78D3009F29E8 /* UIEdgeInsetsConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1243311C4B78D3009F29E8 /* UIEdgeInsetsConverterTest.swift */; };
+		AB1243341C4CA7CF009F29E8 /* IConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1243331C4CA7CF009F29E8 /* IConverter.swift */; };
+		AB1243361C4CBA2F009F29E8 /* BooleanConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1243351C4CBA2F009F29E8 /* BooleanConverter.swift */; };
+		AB12433A1C4CD261009F29E8 /* CGRectConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1243391C4CD261009F29E8 /* CGRectConverter.swift */; };
 		AB35DD421C45093600E60F32 /* UIViewLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35DD411C45093600E60F32 /* UIViewLocation.swift */; };
 		AB35DD441C46675400E60F32 /* PBNodeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35DD431C46675400E60F32 /* PBNodeCollection.swift */; };
 		AB35DD461C467BA300E60F32 /* Array+remove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35DD451C467BA300E60F32 /* Array+remove.swift */; };
@@ -65,6 +68,9 @@
 		AB12432D1C4B7154009F29E8 /* UIViewTintAdjustmentModeConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTintAdjustmentModeConverter.swift; sourceTree = "<group>"; };
 		AB12432F1C4B756B009F29E8 /* UIEdgeInsetsConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsConverter.swift; sourceTree = "<group>"; };
 		AB1243311C4B78D3009F29E8 /* UIEdgeInsetsConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsConverterTest.swift; sourceTree = "<group>"; };
+		AB1243331C4CA7CF009F29E8 /* IConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IConverter.swift; sourceTree = "<group>"; };
+		AB1243351C4CBA2F009F29E8 /* BooleanConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooleanConverter.swift; sourceTree = "<group>"; };
+		AB1243391C4CD261009F29E8 /* CGRectConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectConverter.swift; sourceTree = "<group>"; };
 		AB35DD411C45093600E60F32 /* UIViewLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewLocation.swift; sourceTree = "<group>"; };
 		AB35DD431C46675400E60F32 /* PBNodeCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBNodeCollection.swift; sourceTree = "<group>"; };
 		AB35DD451C467BA300E60F32 /* Array+remove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+remove.swift"; path = "Extensions/Array+remove.swift"; sourceTree = "<group>"; };
@@ -174,6 +180,8 @@
 		AB473B1C1C4A984D00538FE6 /* Converters */ = {
 			isa = PBXGroup;
 			children = (
+				AB1243351C4CBA2F009F29E8 /* BooleanConverter.swift */,
+				AB1243391C4CD261009F29E8 /* CGRectConverter.swift */,
 				AB473B1E1C4A984D00538FE6 /* DictionaryKeyConverter.swift */,
 				AB473B1F1C4A984D00538FE6 /* NSTextAlignmentConverter.swift */,
 				AB473B201C4A984D00538FE6 /* UIColorConverter.swift */,
@@ -227,6 +235,7 @@
 			children = (
 				ABB56CEC1C4A9A1600032346 /* AssociationKeys.swift */,
 				ABB56CED1C4A9A1600032346 /* ConverterValues.swift */,
+				AB1243331C4CA7CF009F29E8 /* IConverter.swift */,
 			);
 			path = Definitions;
 			sourceTree = "<group>";
@@ -355,6 +364,7 @@
 			files = (
 				ABB56CEF1C4A9A1600032346 /* ConverterValues.swift in Sources */,
 				AB473B331C4A984D00538FE6 /* UIViewContentModeConverter.swift in Sources */,
+				AB1243361C4CBA2F009F29E8 /* BooleanConverter.swift in Sources */,
 				AB364C821C41B2FF00FDCA5C /* Log.swift in Sources */,
 				AB35DD421C45093600E60F32 /* UIViewLocation.swift in Sources */,
 				AB473B341C4A984D00538FE6 /* ValueToPropertyConverter.swift in Sources */,
@@ -369,10 +379,12 @@
 				AB473B2B1C4A984D00538FE6 /* NSTextAlignmentConverter.swift in Sources */,
 				ABE17D1D1C42FF6B00755B1F /* PBNode.swift in Sources */,
 				AB35DD461C467BA300E60F32 /* Array+remove.swift in Sources */,
+				AB1243341C4CA7CF009F29E8 /* IConverter.swift in Sources */,
 				ABB56CEE1C4A9A1600032346 /* AssociationKeys.swift in Sources */,
 				AB473B301C4A984D00538FE6 /* UIFontConverter.swift in Sources */,
 				AB473B2D1C4A984D00538FE6 /* UIControlContentHorizontalAlignmentConverter.swift in Sources */,
 				AB473B2A1C4A984D00538FE6 /* DictionaryKeyConverter.swift in Sources */,
+				AB12433A1C4CD261009F29E8 /* CGRectConverter.swift in Sources */,
 				AB35DD441C46675400E60F32 /* PBNodeCollection.swift in Sources */,
 				AB3A4A4E1C44DA9200BB44FE /* PBPropertyType.swift in Sources */,
 				AB473B2E1C4A984D00538FE6 /* UIControlContentVerticalAlignmentConverter.swift in Sources */,

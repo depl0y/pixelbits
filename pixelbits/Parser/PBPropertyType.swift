@@ -10,6 +10,8 @@ import UIKit
 
 internal enum PBPropertyType: Int {
 	case UIColor = 0
+	case Number
+	case Boolean
 	case UIImage
 	case UIFont
 	case NSTextAlignment
@@ -19,5 +21,6 @@ internal enum PBPropertyType: Int {
 	case UIViewContentMode
 	case UIViewTintAdjustmentMode
 	case UIEdgeInsets
+	case CGRect
 	case Other
 }

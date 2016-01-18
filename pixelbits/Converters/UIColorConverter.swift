@@ -8,11 +8,11 @@
 
 import UIKit
 
-internal class UIColorConverter {
-
-	static func fromString(colorString: String) -> UIColor? {
+internal class UIColorConverter : Converter {
+	
+	static func fromString(value: String) -> UIColor? {
 		
-		var colorValue = colorString
+		var colorValue = value
 		
 		let sel = NSSelectorFromString(colorValue + "Color")
 		
