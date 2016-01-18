@@ -13,6 +13,9 @@
 		AB1243341C4CA7CF009F29E8 /* IConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1243331C4CA7CF009F29E8 /* IConverter.swift */; };
 		AB1243361C4CBA2F009F29E8 /* BooleanConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1243351C4CBA2F009F29E8 /* BooleanConverter.swift */; };
 		AB12433A1C4CD261009F29E8 /* CGRectConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1243391C4CD261009F29E8 /* CGRectConverter.swift */; };
+		AB1243401C4CF204009F29E8 /* BoolConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12433F1C4CF204009F29E8 /* BoolConverterTest.swift */; };
+		AB1243421C4CF2B2009F29E8 /* UIViewTintAdjustmentModeConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1243411C4CF2B2009F29E8 /* UIViewTintAdjustmentModeConverterTest.swift */; };
+		AB1243441C4CF369009F29E8 /* CGRectConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1243431C4CF369009F29E8 /* CGRectConverterTest.swift */; };
 		AB35DD421C45093600E60F32 /* UIViewLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35DD411C45093600E60F32 /* UIViewLocation.swift */; };
 		AB35DD441C46675400E60F32 /* PBNodeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35DD431C46675400E60F32 /* PBNodeCollection.swift */; };
 		AB35DD461C467BA300E60F32 /* Array+remove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35DD451C467BA300E60F32 /* Array+remove.swift */; };
@@ -71,6 +74,9 @@
 		AB1243331C4CA7CF009F29E8 /* IConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IConverter.swift; sourceTree = "<group>"; };
 		AB1243351C4CBA2F009F29E8 /* BooleanConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooleanConverter.swift; sourceTree = "<group>"; };
 		AB1243391C4CD261009F29E8 /* CGRectConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectConverter.swift; sourceTree = "<group>"; };
+		AB12433F1C4CF204009F29E8 /* BoolConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolConverterTest.swift; sourceTree = "<group>"; };
+		AB1243411C4CF2B2009F29E8 /* UIViewTintAdjustmentModeConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTintAdjustmentModeConverterTest.swift; sourceTree = "<group>"; };
+		AB1243431C4CF369009F29E8 /* CGRectConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectConverterTest.swift; sourceTree = "<group>"; };
 		AB35DD411C45093600E60F32 /* UIViewLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewLocation.swift; sourceTree = "<group>"; };
 		AB35DD431C46675400E60F32 /* PBNodeCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBNodeCollection.swift; sourceTree = "<group>"; };
 		AB35DD451C467BA300E60F32 /* Array+remove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+remove.swift"; path = "Extensions/Array+remove.swift"; sourceTree = "<group>"; };
@@ -210,6 +216,9 @@
 		AB7C54DB1C48B681005FDF1B /* pixelbitsTests */ = {
 			isa = PBXGroup;
 			children = (
+				AB1243431C4CF369009F29E8 /* CGRectConverterTest.swift */,
+				AB1243411C4CF2B2009F29E8 /* UIViewTintAdjustmentModeConverterTest.swift */,
+				AB12433F1C4CF204009F29E8 /* BoolConverterTest.swift */,
 				ABB440391C494381009028B8 /* ArrayExtensionTest.swift */,
 				ABB440331C490A78009028B8 /* DictionaryKeyConverterTest.swift */,
 				AB7C54DE1C48B681005FDF1B /* Info.plist */,
@@ -403,11 +412,14 @@
 				ABB4402C1C48F60C009028B8 /* UIControlContentHorizontalAlignmentConverterTest.swift in Sources */,
 				ABB440381C494257009028B8 /* UIViewExtensionTest.swift in Sources */,
 				ABB4403E1C4990AC009028B8 /* UIViewContentModeConverterTest.swift in Sources */,
+				AB1243401C4CF204009F29E8 /* BoolConverterTest.swift in Sources */,
 				AB7C54E61C48B6CC005FDF1B /* pathFindingTests.swift in Sources */,
+				AB1243441C4CF369009F29E8 /* CGRectConverterTest.swift in Sources */,
 				ABB440361C4915A9009028B8 /* UIFontConverterTest.swift in Sources */,
 				ABB4402A1C48F571009028B8 /* UIControlContentVerticalAlignmentConverterTest.swift in Sources */,
 				ABB440301C490875009028B8 /* UIImageConverterTest.swift in Sources */,
 				ABB440401C4992EE009028B8 /* ValueToPropertyConverterTest.swift in Sources */,
+				AB1243421C4CF2B2009F29E8 /* UIViewTintAdjustmentModeConverterTest.swift in Sources */,
 				AB1243321C4B78D3009F29E8 /* UIEdgeInsetsConverterTest.swift in Sources */,
 				ABB440281C48EF79009028B8 /* NSTextAlignmentConverterTest.swift in Sources */,
 				ABB440261C48E946009028B8 /* UIColorConverterTest.swift in Sources */,
