@@ -29,6 +29,28 @@ public extension UIView {
 		}
 	}
 	
+	public var updatingStyle: Bool {
+		set {
+			objc_setAssociatedObject(
+				self,
+				&AssociationKeys.UIViewUpdatingStyle,
+				newValue,
+				objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+		}
+		get {
+			if let v = objc_getAssociatedObject(
+				self,
+				&AssociationKeys.UIViewUpdatingStyle
+				) as? Bool {
+					return v
+			}
+			else {
+				return false
+			}
+		}
+		
+	}
+	
 	public var viewController: UIViewController? {
 		get {
 			if let viewController = self.nextResponder() as? UIViewController {
@@ -44,13 +66,12 @@ public extension UIView {
 	Update styling for this `UIView` and it's subviews
 	*/
 	public func updateStyling() {
-		
 		Pixelbits.sharedInstance.applyStyle(self)
-		
-		for subview in self.subviews {
-			subview.updateStyling()
-		}
-		
+	}
+	
+	func pixelbitsSetNeedsDisplay() {
+		self.pixelbitsSetNeedsDisplay()
+		self.updateStyling()
 	}
 	
 	/**

@@ -23,6 +23,7 @@
 		AB3984CB1C2690EC00A38589 /* Pixelbits.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3984CA1C2690EC00A38589 /* Pixelbits.swift */; };
 		AB3984CE1C26927300A38589 /* UIView+Bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3984CD1C26927300A38589 /* UIView+Bits.swift */; };
 		AB3A4A4E1C44DA9200BB44FE /* PBPropertyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3A4A4D1C44DA9200BB44FE /* PBPropertyType.swift */; };
+		AB3E860D1C4E135100695EC1 /* Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E860C1C4E135100695EC1 /* Swizzling.swift */; };
 		AB473B2A1C4A984D00538FE6 /* DictionaryKeyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB473B1E1C4A984D00538FE6 /* DictionaryKeyConverter.swift */; };
 		AB473B2B1C4A984D00538FE6 /* NSTextAlignmentConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB473B1F1C4A984D00538FE6 /* NSTextAlignmentConverter.swift */; };
 		AB473B2C1C4A984D00538FE6 /* UIColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB473B201C4A984D00538FE6 /* UIColorConverter.swift */; };
@@ -89,6 +90,7 @@
 		AB3984CA1C2690EC00A38589 /* Pixelbits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pixelbits.swift; sourceTree = "<group>"; };
 		AB3984CD1C26927300A38589 /* UIView+Bits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Bits.swift"; path = "Extensions/UIView+Bits.swift"; sourceTree = "<group>"; };
 		AB3A4A4D1C44DA9200BB44FE /* PBPropertyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBPropertyType.swift; sourceTree = "<group>"; };
+		AB3E860C1C4E135100695EC1 /* Swizzling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swizzling.swift; sourceTree = "<group>"; };
 		AB473B1E1C4A984D00538FE6 /* DictionaryKeyConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryKeyConverter.swift; sourceTree = "<group>"; };
 		AB473B1F1C4A984D00538FE6 /* NSTextAlignmentConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTextAlignmentConverter.swift; sourceTree = "<group>"; };
 		AB473B201C4A984D00538FE6 /* UIColorConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorConverter.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				ABAF56F01C4E06DA00D4EA23 /* Log.swift */,
 				ABAF56F11C4E06DA00D4EA23 /* SwiftExceptionHandling.h */,
 				ABAF56F21C4E06DA00D4EA23 /* SwiftExceptionHandling.m */,
+				AB3E860C1C4E135100695EC1 /* Swizzling.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				AB35DD421C45093600E60F32 /* UIViewLocation.swift in Sources */,
 				AB473B341C4A984D00538FE6 /* ValueToPropertyConverter.swift in Sources */,
 				AB637E5F1C47A61B00B0A845 /* String+Regex.swift in Sources */,
+				AB3E860D1C4E135100695EC1 /* Swizzling.swift in Sources */,
 				AB12432E1C4B7154009F29E8 /* UIViewTintAdjustmentModeConverter.swift in Sources */,
 				AB473B2C1C4A984D00538FE6 /* UIColorConverter.swift in Sources */,
 				AB3984CE1C26927300A38589 /* UIView+Bits.swift in Sources */,

@@ -14,4 +14,6 @@ struct AssociationKeys {
 	
 	/// Key used to store the class name of a `UIView`
 	static var UIViewClassName = "akUIViewClassName"
+	
+	static var UIViewUpdatingStyle = "akUIViewUpdatingStyle"
 }

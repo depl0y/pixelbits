@@ -18,7 +18,8 @@ public class Pixelbits {
 	private init() {
 		
 		Log.logLevel = (self.debug) ? 0 : 2
-		
+		Swizzling.setup()
+				
 	}
 	
 	public var debug: Bool = true {
@@ -51,11 +52,17 @@ public class Pixelbits {
 
 	public func applyStyle(view: UIView) {
 		
-		let location = UIViewLocation.fromView(view)
-		Log.debug(location.toString())
+		guard !view.updatingStyle else {
+			return
+		}
 		
+		view.updatingStyle = true
+		
+		let location = UIViewLocation.fromView(view)
 		let style = self.rootNodes.compileNodeForLocation(location)
 		style.apply(view)
+		
+		view.updatingStyle = false
 	}
 	
 	private func loadStylesheets() {

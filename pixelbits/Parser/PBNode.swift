@@ -66,8 +66,6 @@ internal class PBNode: NSObject {
 		
 		
 		Log.debug("Loading style for \(key)")
-		Log.debug("\(style)")
-		
 		
 		if style.keys.count == 0 {
 			Log.error("Loading with key \(self.key) failed, styling missing")
