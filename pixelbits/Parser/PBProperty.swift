@@ -30,8 +30,6 @@ internal class PBProperty: NSObject {
 	
 	func apply(view: UIView) {
 		
-
-		
 		if self.controlState != nil && view.respondsToSelector(self.selector) {
 			
 			do {

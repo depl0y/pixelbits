@@ -41,7 +41,6 @@
 		ABAF56F41C4E06DA00D4EA23 /* SwiftExceptionHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = ABAF56F11C4E06DA00D4EA23 /* SwiftExceptionHandling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABAF56F51C4E06DA00D4EA23 /* SwiftExceptionHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAF56F21C4E06DA00D4EA23 /* SwiftExceptionHandling.m */; };
 		ABAF56F81C4E07B900D4EA23 /* SwiftExceptionHandling.h in Sources */ = {isa = PBXBuildFile; fileRef = ABAF56F11C4E06DA00D4EA23 /* SwiftExceptionHandling.h */; };
-		ABAF56FA1C4E080D00D4EA23 /* pixelbits-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = ABAF56F91C4E080D00D4EA23 /* pixelbits-Bridging-Header.h */; };
 		ABB440261C48E946009028B8 /* UIColorConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440251C48E946009028B8 /* UIColorConverterTest.swift */; };
 		ABB440281C48EF79009028B8 /* NSTextAlignmentConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440271C48EF79009028B8 /* NSTextAlignmentConverterTest.swift */; };
 		ABB4402A1C48F571009028B8 /* UIControlContentVerticalAlignmentConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440291C48F571009028B8 /* UIControlContentVerticalAlignmentConverterTest.swift */; };
@@ -108,7 +107,6 @@
 		ABAF56F01C4E06DA00D4EA23 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		ABAF56F11C4E06DA00D4EA23 /* SwiftExceptionHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftExceptionHandling.h; sourceTree = "<group>"; };
 		ABAF56F21C4E06DA00D4EA23 /* SwiftExceptionHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftExceptionHandling.m; sourceTree = "<group>"; };
-		ABAF56F91C4E080D00D4EA23 /* pixelbits-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pixelbits-Bridging-Header.h"; sourceTree = "<group>"; };
 		ABB440251C48E946009028B8 /* UIColorConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorConverterTest.swift; sourceTree = "<group>"; };
 		ABB440271C48EF79009028B8 /* NSTextAlignmentConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTextAlignmentConverterTest.swift; sourceTree = "<group>"; };
 		ABB440291C48F571009028B8 /* UIControlContentVerticalAlignmentConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlContentVerticalAlignmentConverterTest.swift; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 				ABE17D191C42FF2500755B1F /* Parsing */,
 				AB3984C21C26906A00A38589 /* pixelbits.h */,
 				AB3984CA1C2690EC00A38589 /* Pixelbits.swift */,
-				ABAF56F91C4E080D00D4EA23 /* pixelbits-Bridging-Header.h */,
 			);
 			path = pixelbits;
 			sourceTree = "<group>";
@@ -279,7 +276,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABAF56FA1C4E080D00D4EA23 /* pixelbits-Bridging-Header.h in Headers */,
 				ABAF56F41C4E06DA00D4EA23 /* SwiftExceptionHandling.h in Headers */,
 				AB3984C31C26906A00A38589 /* pixelbits.h in Headers */,
 			);
