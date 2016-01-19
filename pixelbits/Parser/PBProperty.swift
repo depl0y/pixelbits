@@ -30,11 +30,29 @@ internal class PBProperty: NSObject {
 	
 	func apply(view: UIView) {
 		
+
+		
 		if self.controlState != nil && view.respondsToSelector(self.selector) {
-			view.setValue(self.value, forKey: self.key, forState: self.controlState!)
+			
+			do {
+				try SwiftExceptionHandling.performBlock { () -> Void in
+					view.setValue(self.value, forKey: self.key, forState: self.controlState!)
+				}
+			} catch {
+				Log.error("Error while setting value for \(self.key) on \(view)")
+			}
+			
 		}
 		else if self.controlState == nil && view.respondsToSelector(self.selector) {
-			view.setValue(self.value, forKey: self.key)
+			
+			do {
+				try SwiftExceptionHandling.performBlock { () -> Void in
+					view.setValue(self.value, forKey: self.key)
+				}
+			} catch {
+				Log.error("Error while setting value for \(self.key) on \(view)")
+			}
+
 		}
 		else {
 			if self.key == "hidden" && self.type == .Boolean {

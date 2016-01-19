@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SwiftExceptionHandling.h"
 
 //! Project version number for pixelbits.
 FOUNDATION_EXPORT double pixelbitsVersionNumber;
 
 //! Project version string for pixelbits.
 FOUNDATION_EXPORT const unsigned char pixelbitsVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <pixelbits/PublicHeader.h>
-
 

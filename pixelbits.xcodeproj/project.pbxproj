@@ -19,7 +19,6 @@
 		AB35DD421C45093600E60F32 /* UIViewLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35DD411C45093600E60F32 /* UIViewLocation.swift */; };
 		AB35DD441C46675400E60F32 /* PBNodeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35DD431C46675400E60F32 /* PBNodeCollection.swift */; };
 		AB35DD461C467BA300E60F32 /* Array+remove.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB35DD451C467BA300E60F32 /* Array+remove.swift */; };
-		AB364C821C41B2FF00FDCA5C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB364C811C41B2FF00FDCA5C /* Log.swift */; };
 		AB3984C31C26906A00A38589 /* pixelbits.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3984C21C26906A00A38589 /* pixelbits.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB3984CB1C2690EC00A38589 /* Pixelbits.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3984CA1C2690EC00A38589 /* Pixelbits.swift */; };
 		AB3984CE1C26927300A38589 /* UIView+Bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3984CD1C26927300A38589 /* UIView+Bits.swift */; };
@@ -38,6 +37,11 @@
 		AB637E5F1C47A61B00B0A845 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB637E5E1C47A61B00B0A845 /* String+Regex.swift */; };
 		AB7C54DF1C48B681005FDF1B /* pixelbits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3984BF1C26906A00A38589 /* pixelbits.framework */; };
 		AB7C54E61C48B6CC005FDF1B /* pathFindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7C54E51C48B6CC005FDF1B /* pathFindingTests.swift */; };
+		ABAF56F31C4E06DA00D4EA23 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF56F01C4E06DA00D4EA23 /* Log.swift */; };
+		ABAF56F41C4E06DA00D4EA23 /* SwiftExceptionHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = ABAF56F11C4E06DA00D4EA23 /* SwiftExceptionHandling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABAF56F51C4E06DA00D4EA23 /* SwiftExceptionHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAF56F21C4E06DA00D4EA23 /* SwiftExceptionHandling.m */; };
+		ABAF56F81C4E07B900D4EA23 /* SwiftExceptionHandling.h in Sources */ = {isa = PBXBuildFile; fileRef = ABAF56F11C4E06DA00D4EA23 /* SwiftExceptionHandling.h */; };
+		ABAF56FA1C4E080D00D4EA23 /* pixelbits-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = ABAF56F91C4E080D00D4EA23 /* pixelbits-Bridging-Header.h */; };
 		ABB440261C48E946009028B8 /* UIColorConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440251C48E946009028B8 /* UIColorConverterTest.swift */; };
 		ABB440281C48EF79009028B8 /* NSTextAlignmentConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440271C48EF79009028B8 /* NSTextAlignmentConverterTest.swift */; };
 		ABB4402A1C48F571009028B8 /* UIControlContentVerticalAlignmentConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB440291C48F571009028B8 /* UIControlContentVerticalAlignmentConverterTest.swift */; };
@@ -80,7 +84,6 @@
 		AB35DD411C45093600E60F32 /* UIViewLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewLocation.swift; sourceTree = "<group>"; };
 		AB35DD431C46675400E60F32 /* PBNodeCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBNodeCollection.swift; sourceTree = "<group>"; };
 		AB35DD451C467BA300E60F32 /* Array+remove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+remove.swift"; path = "Extensions/Array+remove.swift"; sourceTree = "<group>"; };
-		AB364C811C41B2FF00FDCA5C /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		AB3984BF1C26906A00A38589 /* pixelbits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pixelbits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3984C21C26906A00A38589 /* pixelbits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pixelbits.h; sourceTree = "<group>"; };
 		AB3984C41C26906A00A38589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,6 +105,10 @@
 		AB7C54DA1C48B681005FDF1B /* pixelbitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pixelbitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7C54DE1C48B681005FDF1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB7C54E51C48B6CC005FDF1B /* pathFindingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pathFindingTests.swift; sourceTree = "<group>"; };
+		ABAF56F01C4E06DA00D4EA23 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		ABAF56F11C4E06DA00D4EA23 /* SwiftExceptionHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftExceptionHandling.h; sourceTree = "<group>"; };
+		ABAF56F21C4E06DA00D4EA23 /* SwiftExceptionHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftExceptionHandling.m; sourceTree = "<group>"; };
+		ABAF56F91C4E080D00D4EA23 /* pixelbits-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pixelbits-Bridging-Header.h"; sourceTree = "<group>"; };
 		ABB440251C48E946009028B8 /* UIColorConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorConverterTest.swift; sourceTree = "<group>"; };
 		ABB440271C48EF79009028B8 /* NSTextAlignmentConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTextAlignmentConverterTest.swift; sourceTree = "<group>"; };
 		ABB440291C48F571009028B8 /* UIControlContentVerticalAlignmentConverterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlContentVerticalAlignmentConverterTest.swift; sourceTree = "<group>"; };
@@ -165,10 +172,11 @@
 				ABB56CEB1C4A9A1600032346 /* Definitions */,
 				AB3984CC1C26925200A38589 /* Extensions */,
 				AB3984C41C26906A00A38589 /* Info.plist */,
-				AB637E601C47AC2C00B0A845 /* Other */,
+				ABAF56EF1C4E06DA00D4EA23 /* Other */,
 				ABE17D191C42FF2500755B1F /* Parsing */,
 				AB3984C21C26906A00A38589 /* pixelbits.h */,
 				AB3984CA1C2690EC00A38589 /* Pixelbits.swift */,
+				ABAF56F91C4E080D00D4EA23 /* pixelbits-Bridging-Header.h */,
 			);
 			path = pixelbits;
 			sourceTree = "<group>";
@@ -205,14 +213,6 @@
 			path = Converters;
 			sourceTree = "<group>";
 		};
-		AB637E601C47AC2C00B0A845 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				AB364C811C41B2FF00FDCA5C /* Log.swift */,
-			);
-			name = Other;
-			sourceTree = "<group>";
-		};
 		AB7C54DB1C48B681005FDF1B /* pixelbitsTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +237,16 @@
 				ABB4403F1C4992EE009028B8 /* ValueToPropertyConverterTest.swift */,
 			);
 			path = pixelbitsTests;
+			sourceTree = "<group>";
+		};
+		ABAF56EF1C4E06DA00D4EA23 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				ABAF56F01C4E06DA00D4EA23 /* Log.swift */,
+				ABAF56F11C4E06DA00D4EA23 /* SwiftExceptionHandling.h */,
+				ABAF56F21C4E06DA00D4EA23 /* SwiftExceptionHandling.m */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		ABB56CEB1C4A9A1600032346 /* Definitions */ = {
@@ -269,6 +279,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABAF56FA1C4E080D00D4EA23 /* pixelbits-Bridging-Header.h in Headers */,
+				ABAF56F41C4E06DA00D4EA23 /* SwiftExceptionHandling.h in Headers */,
 				AB3984C31C26906A00A38589 /* pixelbits.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,10 +383,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABAF56F81C4E07B900D4EA23 /* SwiftExceptionHandling.h in Sources */,
 				ABB56CEF1C4A9A1600032346 /* ConverterValues.swift in Sources */,
 				AB473B331C4A984D00538FE6 /* UIViewContentModeConverter.swift in Sources */,
+				ABAF56F51C4E06DA00D4EA23 /* SwiftExceptionHandling.m in Sources */,
 				AB1243361C4CBA2F009F29E8 /* BooleanConverter.swift in Sources */,
-				AB364C821C41B2FF00FDCA5C /* Log.swift in Sources */,
 				AB35DD421C45093600E60F32 /* UIViewLocation.swift in Sources */,
 				AB473B341C4A984D00538FE6 /* ValueToPropertyConverter.swift in Sources */,
 				AB637E5F1C47A61B00B0A845 /* String+Regex.swift in Sources */,
@@ -394,6 +407,7 @@
 				AB473B2D1C4A984D00538FE6 /* UIControlContentHorizontalAlignmentConverter.swift in Sources */,
 				AB473B2A1C4A984D00538FE6 /* DictionaryKeyConverter.swift in Sources */,
 				AB12433A1C4CD261009F29E8 /* CGRectConverter.swift in Sources */,
+				ABAF56F31C4E06DA00D4EA23 /* Log.swift in Sources */,
 				AB35DD441C46675400E60F32 /* PBNodeCollection.swift in Sources */,
 				AB3A4A4E1C44DA9200BB44FE /* PBPropertyType.swift in Sources */,
 				AB473B2E1C4A984D00538FE6 /* UIControlContentVerticalAlignmentConverter.swift in Sources */,
@@ -442,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -490,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -530,6 +546,7 @@
 		AB3984C81C26906A00A38589 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
@@ -552,6 +569,7 @@
 		AB3984C91C26906A00A38589 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
