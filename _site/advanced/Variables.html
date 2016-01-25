@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Pixelbits - Converters</title>
+	<title>Pixelbits - Variables</title>
 	<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 ">
 
@@ -56,88 +56,23 @@
     <div class="page-content">
       <div class="wrapper">
         <div class="container">
-    <div class="container">
+    <h1 id="variables">Variables</h1>
 
-	<div class="row">
-		<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
-			<br/>
-			<div class="list-group">
-				<a href="/pixelbits/advanced/converters.html" 
-					class="list-group-item active">
-						Converters
-				</a>
-				<a href="/pixelbits/advanced/dictionary-key.html" 
-					class="list-group-item ">
-						Dictionary Key
-				</a>
-				<a href="/pixelbits/advanced/UIColor.html" 
-					class="list-group-item ">
-						UIColor
-				</a>
-				<a href="/pixelbits/advanced/UIControlState.html" 
-					class="list-group-item ">
-						UIControlState
-				</a>
-				<a href="/pixelbits/advanced/UIFont.html" 
-					class="list-group-item ">
-						UIFont
-				</a>
-				<a href="/pixelbits/advanced/UIImage.html" 
-					class="list-group-item ">
-						UIImage
-				</a>
-				<a href="/pixelbits/advanced/NSTextAlignment.html" 
-					class="list-group-item ">
-						NSTextAlignment
-				</a>
-				<a href="/pixelbits/advanced/UIControlContentHorizontalAlignment.html" 
-					class="list-group-item ">
-						UIControlContentHorizontalAlignment
-				</a>
-				<a href="/pixelbits/advanced/UIControlContentVerticalAlignment.html" 
-					class="list-group-item ">
-						UIControlContentVerticalAlignment
-				</a>
-				<a href="/pixelbits/advanced/UIViewContentMode.html" 
-					class="list-group-item ">
-						UIViewContentMode
-				</a>
-				<a href="/pixelbits/advanced/UIEdgeInsets.html" 
-					class="list-group-item ">
-						UIEdgeInsets
-				</a>
-				<a href="/pixelbits/advanced/CGRect.html" 
-					class="list-group-item ">
-						CGRect
-				</a>
+<p>In your stylesheet, you can define variables to easily adjust your stylesheet with only a couple of changes. Currently variables can <strong>only</strong> be defined at the root of your stylesheet.</p>
 
-				<a href="/pixelbits/advanced/UIViewTintAdjustmentMode.html" 
-					class="list-group-item ">
-						UIViewTintAdjustmentMode
-				</a>
+<p>Variables are ALWAYS prefixed with a dollar (<strong>$</strong>) sign.</p>
 
-				<a href="/pixelbits/advanced/Bool.html" 
-					class="list-group-item ">
-						Bool
-				</a>
+<p>Here’s an example:</p>
 
-			</div>
-		</div>
-		<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
-			<h1 id="converters">Converters</h1>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">{</span>
+    <span class="s2">&quot;$button-background-color&quot;</span> <span class="o">:</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MyCustomView&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;UIButton&quot;</span> <span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;background-color&quot;</span> <span class="o">:</span> <span class="s2">&quot;$button-background-color&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
 
-<p>Pixelbits relies heavily on it’s so-called ‘Converters’, these translate the values you
-put in your stylesheets to values Swift actually understands.</p>
-
-<p>Currently the supported converters are listed here, but the list could be infinitly long, so we still will probably never have everything covered.</p>
-
-<div class="alert alert-info">
-	For a look at the translations Pixelbits does, take a look at the <code><a href="https://github.com/depl0y/pixelbits/blob/master/pixelbits/Definitions/ConverterValues.swift">ConverterValues.swift</a></code> file
-</div>
-
-		</div>
-	</div>
-</div>
 
 </div>
 
