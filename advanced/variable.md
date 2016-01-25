@@ -22,4 +22,4 @@ Here's an example:
 }
 {% endhighlight %} 
 
-
+You can use numbers, letters, dashes and underscores in a variable name.
