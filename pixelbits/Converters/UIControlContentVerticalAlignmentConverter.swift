@@ -8,10 +8,17 @@
 
 import UIKit
 
-internal class UIControlContentVerticalAlignmentConverter {
+internal class UIControlContentVerticalAlignmentConverter : Converter {
 
 	static func fromString(alignmentString: String) -> UIControlContentVerticalAlignment? {
-		return ConverterValues.UIControlContentVerticalAlignments[alignmentString]
+		return ConverterValues.UIControlContentVerticalAlignments[alignmentString.variableValue()]
+	}
+	
+	static func toString(value: UIControlContentVerticalAlignment) -> String? {
+		if let index = ConverterValues.UIControlContentVerticalAlignments.indexOf( { $0.1 == value } ) {
+			return ConverterValues.UIControlContentVerticalAlignments[index].0
+		}
+		return nil
 	}
 	
 }

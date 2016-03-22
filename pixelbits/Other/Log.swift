@@ -12,25 +12,25 @@ class Log: NSObject {
 	
 	static var logLevel: Int = 0;
 	
-	class func debug(message: String, function: String = __FUNCTION__, filePath: String = __FILE__, fileLine: Int = __LINE__) {
+	class func debug(message: String, function: String = #function, filePath: String = #file, fileLine: Int = #line) {
 		if (Log.logLevel == 0) {
 			Log.output("DEBUG", function: function, fileName: filePath, fileLine: fileLine, message: message);
 		}
 	}
 	
-	class func info(message: String, function: String = __FUNCTION__, filePath: String = __FILE__, fileLine: Int = __LINE__) {
+	class func info(message: String, function: String = #function, filePath: String = #file, fileLine: Int = #line) {
 		if (Log.logLevel <= 1) {
 			Log.output("INFO", function: function, fileName: filePath, fileLine: fileLine, message: message);
 		}
 	}
 	
-	class func error(message: String, function: String = __FUNCTION__, filePath: String = __FILE__, fileLine: Int = __LINE__) {
+	class func error(message: String, function: String = #function, filePath: String = #file, fileLine: Int = #line) {
 		if (Log.logLevel <= 2) {
 			Log.output("ERROR", function: function, fileName: filePath, fileLine: fileLine, message: message);
 		}
 	}
 	
-	class func warning(message: String, function: String = __FUNCTION__, filePath: String = __FILE__, fileLine: Int = __LINE__) {
+	class func warning(message: String, function: String = #function, filePath: String = #file, fileLine: Int = #line) {
 		if (Log.logLevel <= 3) {
 			Log.output("WARNING", function: function, fileName: filePath, fileLine: fileLine, message: message);
 		}

@@ -13,7 +13,7 @@ internal class ValueToPropertyConverter {
 	static func fromAnyObject(key: String, value: AnyObject) -> PBProperty {
 		
 		if let valueString = value as? String {
-			
+            
 			if let boolValue = BooleanConverter.fromString(valueString) {
 				return PBProperty(key: key, value: boolValue, type: PBPropertyType.Boolean)
 			}

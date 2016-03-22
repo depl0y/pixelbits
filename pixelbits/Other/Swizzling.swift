@@ -9,7 +9,7 @@
 internal class Swizzling {
 
 	internal static func setup() {
-		Swizzling.swizzle(UIView.self, originalSelector: Selector("setNeedsDisplay"), swizzledClass: UIView.self, swizzledSelector: "pixelbitsSetNeedsDisplay")
+		Swizzling.swizzle(UIView.self, originalSelector: #selector(UIView.setNeedsDisplay), swizzledClass: UIView.self, swizzledSelector: Selector("pixelbitsSetNeedsDisplay"))
 	}
 	
 	private static func swizzle(originalClass: AnyClass!, originalSelector: Selector, swizzledClass: AnyClass!, swizzledSelector: Selector) {

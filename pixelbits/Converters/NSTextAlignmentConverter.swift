@@ -11,7 +11,7 @@ import UIKit
 internal class NSTextAlignmentConverter {
 	
 	static func fromString(alignmentString: String) -> NSTextAlignment? {
-		return ConverterValues.NSTextAlignments[alignmentString]
+		return ConverterValues.NSTextAlignments[alignmentString.variableValue()]
 	}
 
 }

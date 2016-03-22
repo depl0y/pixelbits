@@ -6,7 +6,7 @@
 //  Copyright © 2016 Wim Haanstra. All rights reserved.
 //
 
-internal class ConverterValues: NSObject {
+internal class ConverterValues {
 
 	static let NSTextAlignments = [
 		"left"						: NSTextAlignment.Left,
@@ -98,6 +98,11 @@ internal class ConverterValues: NSObject {
 		"UIViewTintAdjustmentModeDimmed" : UIViewTintAdjustmentMode.Dimmed
 	]
 	
+	static let UIProgressViewStyles = [
+		"UIProgressViewStyleBar" : UIProgressViewStyle.Bar,
+		"UIProgressViewStyleDefault" :  UIProgressViewStyle.Default
+	]
+	
 	static let BooleanValues = [
 		"true" : true,
 		"false" : false,
@@ -105,5 +110,15 @@ internal class ConverterValues: NSObject {
 		"no" : false
 	]
 
-	
+	static let enumValues: Dictionary<String, Any> = [
+		"NSTextAlignments" : ConverterValues.NSTextAlignments,
+		"UIControlContentHorizontalAlignments" : ConverterValues.UIControlContentHorizontalAlignments,
+		"UIControlContentVerticalAlignments" : ConverterValues.UIControlContentVerticalAlignments,
+		"UIViewContentModes" : ConverterValues.UIViewContentModes,
+		"UIControlStates" : ConverterValues.UIControlStates,
+		"UIFontTextStyles" : ConverterValues.UIFontTextStyles,
+		"UIViewTintAdjustmentModes" : ConverterValues.UIViewTintAdjustmentModes,
+		"UIProgressViewStyles" : ConverterValues.UIProgressViewStyles,
+		"BooleanValues" : ConverterValues.BooleanValues
+	]
 }

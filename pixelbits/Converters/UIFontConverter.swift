@@ -15,12 +15,15 @@ internal class UIFontConverter {
 		var parts = fontString.characters.split { $0 == "," }.map(String.init)
 		
 		if parts.count == 1 {
-			let font = UIFont(name: parts[0], size: 12)
+			let font = UIFont(name: parts[0].variableValue(), size: 12)
 			return font
 		}
 		else if parts.count == 2 {
-			if let fontSize = NSNumberFormatter().numberFromString(parts[1]) {
-				let font = UIFont(name: parts[0], size: CGFloat(fontSize.floatValue))
+            let fontName = parts[0].variableValue()
+            let fontSize = parts[1].variableValue()
+            
+			if let fontSize = NSNumberFormatter().numberFromString(fontSize) {
+				let font = UIFont(name: fontName, size: CGFloat(fontSize.floatValue))
 				return font
 			}
 		}

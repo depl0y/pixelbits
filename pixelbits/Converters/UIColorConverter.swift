@@ -12,7 +12,7 @@ internal class UIColorConverter : Converter {
 	
 	static func fromString(value: String) -> UIColor? {
 		
-		var colorValue = value
+		var colorValue = value.variableValue()
 		
 		let sel = NSSelectorFromString(colorValue + "Color")
 		
@@ -33,6 +33,10 @@ internal class UIColorConverter : Converter {
 			}
 		}
 		
+		return nil
+	}
+	
+	static func toString(value: UIColor) -> String? {
 		return nil
 	}
 	

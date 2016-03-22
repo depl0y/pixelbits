@@ -41,7 +41,8 @@ class CGRectConverterTest: XCTestCase {
 	func testInvalid() {
 		XCTAssertNil(CGRectConverter.fromString("rect(stringvalue)"))
 		XCTAssertNil(CGRectConverter.fromString("rect(4,stringvalue)"))
-		XCTAssertNil(CGRectConverter.fromString("rect(4,4,4)"))
+        XCTAssertNil(CGRectConverter.fromString("rect(4,4,4)"))
+        XCTAssertNil(CGRectConverter.fromString("rect(4,5,5,a)"))
 		XCTAssertNil(CGRectConverter.fromString("rect(4,stringvalue,4)"))
 		
 	}

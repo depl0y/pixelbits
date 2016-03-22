@@ -11,7 +11,7 @@ import UIKit
 internal class UIViewTintAdjustmentModeConverter {
 
 	static func fromString(stringValue: String) -> UIViewTintAdjustmentMode? {
-		return ConverterValues.UIViewTintAdjustmentModes[stringValue]
+		return ConverterValues.UIViewTintAdjustmentModes[stringValue.variableValue()]
 	}
 	
 }

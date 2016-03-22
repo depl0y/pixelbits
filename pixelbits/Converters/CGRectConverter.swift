@@ -8,59 +8,48 @@
 
 import UIKit
 
-internal class CGRectConverter: NSObject {
-
-	/**
-	Converts a value `rect(4, 4, 4, 4)` to a CGRect struct
-	
-	- returns: A CGRect object or nil if invalid
-	*/
-	static func fromString(valueString: String) -> NSValue? {
-		
-		let expression = "rect\\(([0-9. ,]+?)\\)"
-		
-		let matches = valueString.matches(expression)
-		
-		if matches.count == 0 {
-			return nil
-		}
-		
-		let values = matches[0]
-		let valueParts = values.characters.split { $0 == "," }.map(String.init)
-		
-		if valueParts.count == 1 { // Same value should be applied to all sides
-			if let value = NSNumberFormatter().numberFromString(valueParts[0].stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())) {
-				
-				let rect = CGRectMake(CGFloat(value), CGFloat(value), CGFloat(value), CGFloat(value))
-				return NSValue(CGRect: rect)
-				
-			}
-		}
-		else if valueParts.count == 2 { // Apply same value to top/bottom and left/right
-			
-			if let verticalValue = NSNumberFormatter().numberFromString(valueParts[0].stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())),
-				let horizontalValue = NSNumberFormatter().numberFromString(valueParts[1].stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())) {
-					
-					let rect =  CGRectMake(CGFloat(verticalValue), CGFloat(horizontalValue), CGFloat(verticalValue), CGFloat(horizontalValue))
-					return NSValue(CGRect: rect)
-			}
-			
-		}
-		else if valueParts.count == 4 { // Apply individual value to every side
-			
-			if let topValue = NSNumberFormatter().numberFromString(valueParts[0].stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())),
-				let leftValue = NSNumberFormatter().numberFromString(valueParts[1].stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())),
-				let bottomValue = NSNumberFormatter().numberFromString(valueParts[2].stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())),
-				let rightValue = NSNumberFormatter().numberFromString(valueParts[3].stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())) {
-					
-					let rect =  CGRectMake(CGFloat(topValue), CGFloat(leftValue), CGFloat(bottomValue), CGFloat(rightValue))
-					return NSValue(CGRect: rect)
-			}
-			
-		}
-		
-		return nil
-	}
-
-	
+internal class CGRectConverter {
+    
+    /**
+     Converts a value `rect(4, 4, 4, 4)` to a CGRect struct
+     
+     - returns: A CGRect object or nil if invalid
+     */
+    static func fromString(valueString: String) -> NSValue? {
+        
+        let expression = "rect\\(([0-9. ,a-zA-Z\\$\\-_]+?)\\)"
+        
+        let matches = valueString.variableValue().matches(expression)
+        
+        if matches.count == 0 {
+            return nil
+        }
+        
+        let insets = matches[0]
+        let rectParts = insets.characters.split { $0 == "," }.map(String.init)
+        var rectValues: [CGFloat] = []
+        
+        /**
+        *  Check if all the values are convertible to NSNumber objects.
+        */
+        for index in 0..<rectParts.count {
+            if let rectValue = rectParts[index].variableValue().toNumber() {
+                rectValues.append(CGFloat(rectValue))
+            }
+        }
+        
+        switch (rectValues.count) {
+        case 1:
+            return NSValue(CGRect: CGRectMake(rectValues[0], rectValues[0], rectValues[0], rectValues[0]))
+        case 2:
+            return NSValue(CGRect: CGRectMake(rectValues[0], rectValues[1], rectValues[0], rectValues[1]))
+        case 4:
+            return NSValue(CGRect: CGRectMake(rectValues[0], rectValues[1], rectValues[2], rectValues[3]))
+        default:
+            return nil
+        }
+        
+    }
+    
+    
 }

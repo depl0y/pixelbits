@@ -9,7 +9,10 @@
 import UIKit
 
 protocol Converter {
-	typealias ConversionValue
+	associatedtype ConversionValue
 	
 	static func fromString(value: String) -> ConversionValue?
+	
+	static func toString(value: ConversionValue) -> String?
+	
 }

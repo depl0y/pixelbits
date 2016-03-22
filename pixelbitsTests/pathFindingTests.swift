@@ -13,6 +13,7 @@ class pathFindingTests: XCTestCase {
 	
 	var viewController = UIViewController()
 	var customView = UIView()
+    var noStyleView = UIView()
 	var button = UIButton(type: UIButtonType.Custom)
 	
     override func setUp() {
@@ -23,6 +24,7 @@ class pathFindingTests: XCTestCase {
 		
 		viewController.view.addSubview(customView)
 		customView.addSubview(button)
+        customView.addSubview(noStyleView)
     }
     
     override func tearDown() {
@@ -45,6 +47,8 @@ class pathFindingTests: XCTestCase {
 		let buttonPath = UIViewLocation.fromView(button).toString()
 		XCTAssertEqual(buttonPath, "/UIViewController/UIView/UIView.custom-view/UIButton.my-sample-button")
 		
+        let style = UIViewLocation.fromView(noStyleView).styleString
+        XCTAssertEqual(style, "")
     }
 	
 	func testViewViewControllerRelation() {

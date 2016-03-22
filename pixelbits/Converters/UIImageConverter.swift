@@ -14,7 +14,7 @@ internal class UIImageConverter {
 		
 		let expression = "image\\((.+?)\\)"
 		
-		let imageMatches = imageString.matches(expression)
+		let imageMatches = imageString.variableValue().matches(expression)
 		
 		if imageMatches.count == 0 {
 			return nil
