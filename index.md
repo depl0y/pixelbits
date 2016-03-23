@@ -17,9 +17,9 @@ It's like CSS for iOS, but for the file format I currently only support JSON (in
 
 ### Requirements
 
-I have been testing Pixelbits on iOS 9 and above, with a Swift 2.1 example project.
+I have been testing Pixelbits on iOS 9 and above, with a Swift 2.2 example project.
 
-Pixelbits relies on error handling introduced in Swift 2.0, so Swift 2.0 is probably the minimal supported version.
+Since the Swift 2.2 release, we updated Pixelbits to work according that standard.
 	
 ### Installation
 Currently you can only include pixelbits by using cocoapods directly from this git repository, add the following to your `Podfile`.
