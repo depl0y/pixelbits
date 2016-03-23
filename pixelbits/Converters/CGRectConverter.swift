@@ -36,6 +36,9 @@ internal class CGRectConverter {
             if let rectValue = rectParts[index].variableValue().toNumber() {
                 rectValues.append(CGFloat(rectValue))
             }
+			else {
+				return nil;
+			}
         }
         
         switch (rectValues.count) {

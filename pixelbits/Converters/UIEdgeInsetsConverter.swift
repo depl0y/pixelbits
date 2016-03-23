@@ -36,6 +36,9 @@ internal class UIEdgeInsetsConverter {
             if let insetValue = insetParts[index].variableValue().toNumber() {
                 insetValues.append(CGFloat(insetValue))
             }
+			else {
+				return nil;
+			}
         }
         
         switch (insetValues.count) {

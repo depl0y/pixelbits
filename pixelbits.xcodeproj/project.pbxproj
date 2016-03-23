@@ -209,10 +209,10 @@
 				AB473B241C4A984D00538FE6 /* UIFontConverter.swift */,
 				AB473B251C4A984D00538FE6 /* UIFontTextStyleConverter.swift */,
 				AB473B261C4A984D00538FE6 /* UIImageConverter.swift */,
+				ABC6A4F51C4F722100A20DDD /* UIProgressViewStyleConverter.swift */,
 				AB473B271C4A984D00538FE6 /* UIViewContentModeConverter.swift */,
 				AB12432D1C4B7154009F29E8 /* UIViewTintAdjustmentModeConverter.swift */,
 				AB473B281C4A984D00538FE6 /* ValueToPropertyConverter.swift */,
-				ABC6A4F51C4F722100A20DDD /* UIProgressViewStyleConverter.swift */,
 			);
 			path = Converters;
 			sourceTree = "<group>";
